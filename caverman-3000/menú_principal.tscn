@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bqj2dw434trma"]
+
+[ext_resource type="Script" uid="uid://dsddj8yqakmue" path="res://menú_principal.gd" id="1_ga2cg"]
+[ext_resource type="Texture2D" uid="uid://cl0hqiop2pibp" path="res://asets/imagen menu.png" id="2_v0lul"]
+
+[node name="Menú  principal" type="Control" unique_id=1640640316]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ga2cg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1458754083]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.67058825, 1, 1, 0.5137255)
+
+[node name="imagen menu" type="TextureRect" parent="." unique_id=860483626]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 1151.0
+offset_bottom = 645.0
+texture = ExtResource("2_v0lul")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=509817070]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -135.75
+offset_right = 179.0
+offset_bottom = 135.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1959044671]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "	JUGAR"
+
+[node name="Creditos" type="Button" parent="VBoxContainer" unique_id=698447093]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "CREDITOS
+"
+
+[node name="Quitar" type="Button" parent="VBoxContainer" unique_id=1709574095]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "QUITAR
+"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_opcion_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quitar" to="." method="_on_quitar_pressed"]

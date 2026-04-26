@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://rqox0n2cnlyd"]
+
+[ext_resource type="Script" uid="uid://bhonajspwmpwd" path="res://node.gd" id="1_qdhxh"]
+
+[node name="Node" type="Node" unique_id=783791290]
+script = ExtResource("1_qdhxh")
+
+[node name="Timer" type="Timer" parent="." unique_id=1289032345]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=788914936]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=666323033]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -6.0
+offset_right = 6.0
+offset_bottom = 28.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

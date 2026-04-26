@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://0irdkx4fuhy2"]
+
+[ext_resource type="Script" uid="uid://bxbt178pgfxti" path="res://nivel1/juego_1.gd" id="1_dcelm"]
+[ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
+[ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
+[ext_resource type="PackedScene" uid="uid://rqox0n2cnlyd" path="res://timer.tscn" id="4_dcelm"]
+
+[node name="Juego1" type="Node2D" unique_id=1086814356]
+script = ExtResource("1_dcelm")
+
+[node name="Moneda" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+position = Vector2(302, 526)
+
+[node name="Moneda2" parent="." unique_id=2025558864 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+position = Vector2(294, 150)
+
+[node name="Moneda3" parent="." unique_id=1685690697 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+position = Vector2(507, 341)
+
+[node name="Moneda4" parent="." unique_id=1953537089 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+position = Vector2(780, 165)
+
+[node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
+position = Vector2(28, 524)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1325263958]
+
+[node name="TextoItems" type="Label" parent="CanvasLayer" unique_id=1361019393]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "Items: 0"
+
+[node name="Node" parent="." unique_id=783791290 instance=ExtResource("4_dcelm")]
+
+[connection signal="recolectar_items" from="Moneda" to="." method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="Moneda2" to="." method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="Moneda3" to="." method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="Moneda4" to="." method="_on_moneda_recolectar_items"]
