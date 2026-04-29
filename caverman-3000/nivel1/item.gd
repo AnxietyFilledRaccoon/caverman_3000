@@ -1,8 +1,8 @@
 extends Area2D
 
-@onready var animacion = $Animated
-
+class_name items
 signal recolectar_items
+@onready var animacion = $Animated
 
 
 func _ready():
@@ -10,7 +10,8 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.is_in_group("cavernicola"):#referencia de que grupo entra en contacto con la moneda
-		print("moneda")
+		print("item")
+		
 		animacion.play("recojido")
 		await(animacion.animation_finished)
 		emit_signal("recolectar_items")

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
 [ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
 [ext_resource type="PackedScene" uid="uid://rqox0n2cnlyd" path="res://timer.tscn" id="4_dcelm"]
+[ext_resource type="PackedScene" uid="uid://c8rojj84k4rc3" path="res://suelo.tscn" id="5_tcv7t"]
 
 [node name="Juego1" type="Node2D" unique_id=1086814356]
 script = ExtResource("1_dcelm")
@@ -32,6 +33,8 @@ theme_override_font_sizes/font_size = 20
 text = "Items: 0"
 
 [node name="Node" parent="." unique_id=783791290 instance=ExtResource("4_dcelm")]
+
+[node name="suelo" parent="." unique_id=1334995842 instance=ExtResource("5_tcv7t")]
 
 [connection signal="recolectar_items" from="Moneda" to="." method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="Moneda2" to="." method="_on_moneda_recolectar_items"]

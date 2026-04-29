@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c8rojj84k4rc3"]
+
+[ext_resource type="Texture2D" uid="uid://cosha1p0cboy5" path="res://asets/suelo.png" id="1_qdjju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdjju"]
+size = Vector2(1169, 66)
+
+[node name="suelo" type="StaticBody2D" unique_id=1334995842]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=232094589]
+position = Vector2(575.99994, 611.99994)
+scale = Vector2(0.45390624, 0.4204544)
+texture = ExtResource("1_qdjju")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2113203250]
+position = Vector2(576.5, 608)
+shape = SubResource("RectangleShape2D_qdjju")
