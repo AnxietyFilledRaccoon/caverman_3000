@@ -22,7 +22,7 @@ position = Vector2(507, 341)
 position = Vector2(780, 165)
 
 [node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
-position = Vector2(28, 524)
+position = Vector2(26, 532)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1325263958]
 

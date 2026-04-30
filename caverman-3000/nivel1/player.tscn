@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c1pry5c200m2i" path="res://nivel1/player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://butktqqj8uklo" path="res://asets/caminata.png" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://pbjgpenwapfw" path="res://asets/idle.png" id="2_i3pqv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
 atlas = ExtResource("1_onrkg")
@@ -23,6 +22,10 @@ region = Rect2(159, 0, 53, 87)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
 atlas = ExtResource("1_onrkg")
 region = Rect2(212, 0, 53, 87)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjhrc"]
+atlas = ExtResource("1_onrkg")
+region = Rect2(53, 0, 53, 87)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b26j0"]
 animations = [{
@@ -48,7 +51,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_i3pqv")
+"texture": SubResource("AtlasTexture_vjhrc")
 }],
 "loop": true,
 "name": &"idle",
@@ -66,7 +69,7 @@ metadata/_edit_group_ = true
 position = Vector2(2.75, -1.5)
 scale = Vector2(1.0514019, 1.03125)
 sprite_frames = SubResource("SpriteFrames_b26j0")
-animation = &"caminar"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=658791487]
 position = Vector2(4, 2)
