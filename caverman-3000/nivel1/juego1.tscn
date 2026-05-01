@@ -12,14 +12,14 @@ script = ExtResource("1_dcelm")
 [node name="Moneda" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(302, 526)
 
-[node name="Moneda2" parent="." unique_id=2025558864 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
-position = Vector2(294, 150)
+[node name="Moneda2" parent="." unique_id=1749684002 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+position = Vector2(349, 264)
 
-[node name="Moneda3" parent="." unique_id=1685690697 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
-position = Vector2(507, 341)
+[node name="Moneda3" parent="." unique_id=393883410 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+position = Vector2(574, 403)
 
-[node name="Moneda4" parent="." unique_id=1953537089 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
-position = Vector2(780, 165)
+[node name="Moneda4" parent="." unique_id=245466926 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+position = Vector2(760, 261)
 
 [node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
 position = Vector2(26, 532)
@@ -36,7 +36,7 @@ text = "Items: 0"
 
 [node name="suelo" parent="." unique_id=1334995842 instance=ExtResource("5_tcv7t")]
 
-[connection signal="recolectar_items" from="Moneda" to="." method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="Moneda2" to="." method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="Moneda3" to="." method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="Moneda4" to="." method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="Moneda" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="Moneda2" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="Moneda3" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="Moneda4" to="Player" method="_on_moneda_recolectar_items"]

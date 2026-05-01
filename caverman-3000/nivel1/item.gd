@@ -13,9 +13,14 @@ func _on_body_entered(body):
 		print("item")
 		
 		animacion.play("recojido")
-		await(animacion.animation_finished)
+		#await(animacion.animation_finished)
+		finalizar()
 		emit_signal("recolectar_items")
 		queue_free()#se destruye el item(moneda)
 	#get_tree().change_scene_to_file("res://menú.tscn")
+	
+func finalizar():
+	await(animacion.animation_finished)
+	
 	
 	

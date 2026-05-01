@@ -11,6 +11,7 @@ var gravity = 1000
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	items_recolectados = 0
 	
 
 
@@ -59,3 +60,7 @@ func ganar_juego():
 	get_tree().change_scene_to_file("res://menú_principal.tscn")
 		
 	
+
+
+func _on_moneda_recolectar_items() -> void:
+	recoger_items()
