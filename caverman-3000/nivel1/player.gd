@@ -52,9 +52,9 @@ func recoger_items():
 		items_recolectados += 1
 		print("items:", items_recolectados)
 		if items_recolectados >= meta_items:
-			ganar_juego()
+			ganar_juego() # aca puedo emitir una señal que llame al ganar juego dew gestor de eventos
 		
-func ganar_juego():
+func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
 	##pasar a otra escena, menu o pantalla
 	get_tree().change_scene_to_file("res://menú_principal.tscn")

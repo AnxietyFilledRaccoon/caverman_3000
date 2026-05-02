@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
 [ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
 [ext_resource type="PackedScene" uid="uid://rqox0n2cnlyd" path="res://timer.tscn" id="4_dcelm"]
+[ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="4_swt8o"]
 [ext_resource type="PackedScene" uid="uid://c8rojj84k4rc3" path="res://suelo.tscn" id="5_tcv7t"]
 
 [node name="Juego1" type="Node2D" unique_id=1086814356]
@@ -25,12 +26,13 @@ position = Vector2(760, 261)
 position = Vector2(26, 532)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1325263958]
+script = ExtResource("4_swt8o")
 
 [node name="TextoItems" type="Label" parent="CanvasLayer" unique_id=1361019393]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 55.0
+offset_bottom = 28.0
 theme_override_font_sizes/font_size = 20
-text = "Items: 0"
+text = "item: "
 
 [node name="Node" parent="." unique_id=783791290 instance=ExtResource("4_dcelm")]
 
