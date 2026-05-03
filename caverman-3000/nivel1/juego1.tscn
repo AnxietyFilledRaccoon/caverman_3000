@@ -3,42 +3,44 @@
 [ext_resource type="Script" uid="uid://bxbt178pgfxti" path="res://nivel1/juego_1.gd" id="1_dcelm"]
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
 [ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
-[ext_resource type="PackedScene" uid="uid://rqox0n2cnlyd" path="res://timer.tscn" id="4_dcelm"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="4_swt8o"]
 [ext_resource type="PackedScene" uid="uid://c8rojj84k4rc3" path="res://suelo.tscn" id="5_tcv7t"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
+[ext_resource type="PackedScene" uid="uid://bupkagbjtumq6" path="res://game_over.tscn" id="7_328n2"]
 
 [node name="Juego1" type="Node2D" unique_id=1086814356]
 script = ExtResource("1_dcelm")
 
-[node name="Moneda" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+[node name="item" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(302, 526)
 
-[node name="Moneda2" parent="." unique_id=1749684002 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+[node name="item2" parent="." unique_id=1749684002 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(349, 264)
 
-[node name="Moneda3" parent="." unique_id=393883410 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+[node name="item3" parent="." unique_id=393883410 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(574, 403)
 
-[node name="Moneda4" parent="." unique_id=245466926 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+[node name="item4" parent="." unique_id=245466926 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(760, 261)
 
 [node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
 position = Vector2(26, 532)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1325263958]
-script = ExtResource("4_swt8o")
-
-[node name="TextoItems" type="Label" parent="CanvasLayer" unique_id=1361019393]
-offset_right = 55.0
-offset_bottom = 28.0
-theme_override_font_sizes/font_size = 20
-text = "item: "
-
-[node name="Node" parent="." unique_id=783791290 instance=ExtResource("4_dcelm")]
-
 [node name="suelo" parent="." unique_id=1334995842 instance=ExtResource("5_tcv7t")]
 
-[connection signal="recolectar_items" from="Moneda" to="Player" method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="Moneda2" to="Player" method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="Moneda3" to="Player" method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="Moneda4" to="Player" method="_on_moneda_recolectar_items"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1221312791]
+script = ExtResource("4_swt8o")
+
+[node name="items" type="Label" parent="CanvasLayer" unique_id=1419066591]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_swt8o")]
+
+[node name="Game_over" parent="." unique_id=545366684 instance=ExtResource("7_328n2")]
+visible = false
+
+[connection signal="recolectar_items" from="item" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="item2" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="item3" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="item4" to="Player" method="_on_moneda_recolectar_items"]

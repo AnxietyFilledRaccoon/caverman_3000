@@ -2,6 +2,7 @@ extends Control
 
 
 func _on_play_pressed() -> void:
+	await get_tree().create_timer(1.0).timeout 
 	get_tree().change_scene_to_file("res://nivel1/juego1.tscn")
 
 

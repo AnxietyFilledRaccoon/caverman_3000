@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dsddj8yqakmue" path="res://menú_principal.gd" id="1_ga2cg"]
 [ext_resource type="Texture2D" uid="uid://cl0hqiop2pibp" path="res://asets/imagen menu.png" id="2_v0lul"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="3_v0lul"]
 
 [node name="Menú  principal" type="Control" unique_id=1640640316]
 layout_mode = 3
@@ -46,17 +47,20 @@ theme_override_constants/separation = 16
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=1959044671]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_v0lul")
 theme_override_font_sizes/font_size = 50
 text = "	JUGAR"
 
 [node name="Creditos" type="Button" parent="VBoxContainer" unique_id=698447093]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_v0lul")
 theme_override_font_sizes/font_size = 50
 text = "CREDITOS
 "
 
 [node name="Quitar" type="Button" parent="VBoxContainer" unique_id=1709574095]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_v0lul")
 theme_override_font_sizes/font_size = 50
 text = "QUITAR
 "

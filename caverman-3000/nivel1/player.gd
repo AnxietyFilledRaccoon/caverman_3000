@@ -24,7 +24,6 @@ func _physics_process(delta):
 
 	movimiento_X()
 	animaciones()
-	#recoger_items()
 	move_and_slide()
 	
 
@@ -56,6 +55,7 @@ func recoger_items():
 		
 func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
+	
 	##pasar a otra escena, menu o pantalla
 	get_tree().change_scene_to_file("res://menú_principal.tscn")
 		

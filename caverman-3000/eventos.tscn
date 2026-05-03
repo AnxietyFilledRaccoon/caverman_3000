@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://rayxtj3essvp"]
+
+[ext_resource type="Script" uid="uid://bu4accrbt8xi2" path="res://eventos.gd" id="1_0kxka"]
+
+[node name="eventos" type="Control" unique_id=743028521]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0kxka")
+
+[node name="tiempoJuego" type="Timer" parent="." unique_id=1079924284]
+wait_time = 5.0
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2112013925]
+
+[node name="tiempo" type="Label" parent="CanvasLayer" unique_id=1831939644]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[connection signal="timeout" from="tiempoJuego" to="." method="_on_tiempo_juego_timeout"]

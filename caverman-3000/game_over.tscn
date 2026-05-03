@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bupkagbjtumq6"]
+
+[ext_resource type="Script" uid="uid://bf7jthpd5kqyj" path="res://game_over.gd" id="1_y26ei"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="2_yxx3c"]
+
+[node name="Game_over" type="Control" unique_id=545366684]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y26ei")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1008679469]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1540700247]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer" unique_id=1061700219]
+custom_minimum_size = Vector2(1152, 100)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0.64144266, 0.2810174, 1)
+theme_override_fonts/normal_font = ExtResource("2_yxx3c")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[center][wave]GAME OVER[/wave][/center]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=165718500]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -210.5
+offset_right = 109.0
+offset_bottom = -146.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=892936131]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_yxx3c")
+theme_override_font_sizes/font_size = 60
+text = "Restart
+"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

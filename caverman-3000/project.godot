@@ -17,8 +17,10 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/mode=3
+window/size/borderless=true
 window/frame_pacing/android/swappy_mode=1
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [global_group]
 
