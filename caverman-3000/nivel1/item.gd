@@ -23,4 +23,3 @@ func finalizar():
 	await(animacion.animation_finished)
 	
 	
-	

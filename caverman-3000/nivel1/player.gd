@@ -12,7 +12,6 @@ var gravity = 1000
 func _ready():
 	screen_size = get_viewport_rect().size
 	items_recolectados = 0
-	
 
 
 func _physics_process(delta):
@@ -30,9 +29,16 @@ func _physics_process(delta):
 	
 func animaciones():
 	if velocity.x:
-		animacion.play("caminar")
+		animacion.play("caminarX")
+			
 	else:
 		animacion.play("idle")
+
+		if velocity.y:
+			animacion.play("caminarup")
+			if velocity.y > 0:
+				animacion.play("caminardown")
+		
 
 func movimiento_X():
 	# Obtiene la dirección basada en las acciones (por defecto: ui_left, ui_right, ui_up, ui_down)
@@ -57,7 +63,8 @@ func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
 	
 	##pasar a otra escena, menu o pantalla
-	get_tree().change_scene_to_file("res://menú_principal.tscn")
+	
+	get_tree().change_scene_to_file("res://nivel2/juego_2.tscn")
 		
 	
 

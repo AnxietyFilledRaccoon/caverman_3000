@@ -25,6 +25,7 @@ position = Vector2(760, 261)
 
 [node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
 position = Vector2(26, 532)
+move_speed = 200
 
 [node name="suelo" parent="." unique_id=1334995842 instance=ExtResource("5_tcv7t")]
 

@@ -1,7 +1,7 @@
 extends Control
 
 
-	
+
 # Referencia al Label que muestra el tiempo
 @onready var tiempo_label = $CanvasLayer/tiempo
 @onready var game_timer = $tiempoJuego
