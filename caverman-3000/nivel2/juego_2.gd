@@ -19,8 +19,11 @@ func _on_producto_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 		emit_signal("borrate")
 		producto_actual.queue_free()
 		if productos <= 0:
+			
 			finalizar()
+			
 		print(productos)
+	
 	
 	
 func _on_mano_area_entered(area: Area2D) -> void:

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cl0hqiop2pibp" path="res://asets/imagen menu.png" id="2_v0lul"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="3_v0lul"]
 
-[node name="Menú  principal" type="Control" unique_id=1640640316]
+[node name="Main menu" type="Control" unique_id=1640640316]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
