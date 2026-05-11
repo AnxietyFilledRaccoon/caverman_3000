@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var move_speed = 200
+@export var move_speed = 100
 @onready var animacion = $jugador
 var mirando_derecha = true
 var screen_size
@@ -16,10 +16,10 @@ func _ready():
 
 func _physics_process(delta):
 	
-	position += velocity * delta
+	position += velocity * delta #esto estaba mal
 	position = position.clamp(Vector2.ZERO, screen_size)
 	if not is_on_floor():
-		velocity.y += gravity + delta
+		velocity.y += gravity * delta
 
 	movimiento_X()
 	animaciones()
