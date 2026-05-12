@@ -115,6 +115,7 @@ size = Vector2(47, 86)
 
 [node name="Player" type="CharacterBody2D" unique_id=377288202]
 script = ExtResource("1_i3pqv")
+move_speed = null
 metadata/_edit_group_ = true
 
 [node name="jugador" type="AnimatedSprite2D" parent="." unique_id=1711492198]

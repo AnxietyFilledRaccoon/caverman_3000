@@ -1,18 +1,6 @@
 [gd_scene format=3 uid="uid://cte1cfdshjlci"]
 
 [ext_resource type="Script" uid="uid://mjelxssb5nbe" path="res://nivel2/producto.gd" id="1_ax252"]
-[ext_resource type="Texture2D" uid="uid://bvf75r0sa1ix4" path="res://icon.svg" id="1_gf172"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dl81w"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_gf172")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rgpn"]
 size = Vector2(121, 124)
@@ -21,8 +9,7 @@ size = Vector2(121, 124)
 script = ExtResource("1_ax252")
 metadata/_edit_group_ = true
 
-[node name="peoductos" type="AnimatedSprite2D" parent="." unique_id=1576928768]
-sprite_frames = SubResource("SpriteFrames_dl81w")
+[node name="productos" type="Sprite2D" parent="." unique_id=2041551788]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=888584087]
 position = Vector2(-0.5, 0)

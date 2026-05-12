@@ -3,39 +3,39 @@
 [ext_resource type="Script" uid="uid://bxbt178pgfxti" path="res://nivel1/juego_1.gd" id="1_dcelm"]
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
 [ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
-[ext_resource type="Texture2D" uid="uid://do8hp7km6hxpm" path="res://asets/basura.png" id="3_oh1rj"]
+[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_utxh4"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="4_swt8o"]
-[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="4_utxh4"]
+[ext_resource type="Texture2D" uid="uid://bxdxiy2b2corp" path="res://asets/manzana.png" id="4_w6fdp"]
+[ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/pescado.png" id="5_n2edi"]
 [ext_resource type="PackedScene" uid="uid://c8rojj84k4rc3" path="res://suelo.tscn" id="5_tcv7t"]
-[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="5_w6fdp"]
-[ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/pescado.png" id="6_n2edi"]
+[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="6_rxpji"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
 [ext_resource type="PackedScene" uid="uid://bupkagbjtumq6" path="res://game_over.tscn" id="7_328n2"]
 
 [node name="Juego1" type="Node2D" unique_id=1086814356]
 script = ExtResource("1_dcelm")
 
-[node name="basura1" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+[node name="item" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(302, 526)
-textura = ExtResource("3_oh1rj")
+textura = ExtResource("3_utxh4")
 
-[node name="basura2" parent="." unique_id=1749684002 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+[node name="item2" parent="." unique_id=1749684002 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(349, 264)
-textura = ExtResource("4_utxh4")
+textura = ExtResource("4_w6fdp")
 
-[node name="basura3" parent="." unique_id=393883410 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+[node name="item3" parent="." unique_id=393883410 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(574, 403)
-textura = ExtResource("5_w6fdp")
+textura = ExtResource("5_n2edi")
 
-[node name="basura4" parent="." unique_id=245466926 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+[node name="item4" parent="." unique_id=245466926 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(760, 261)
-textura = ExtResource("6_n2edi")
+textura = ExtResource("6_rxpji")
 
 [node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
 position = Vector2(26, 532)
-move_speed = 150
+move_speed = 200
 
-[node name="plaza" parent="." unique_id=1334995842 instance=ExtResource("5_tcv7t")]
+[node name="suelo" parent="." unique_id=1334995842 instance=ExtResource("5_tcv7t")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1221312791]
 script = ExtResource("4_swt8o")
@@ -49,7 +49,7 @@ offset_bottom = 23.0
 [node name="Game_over" parent="." unique_id=545366684 instance=ExtResource("7_328n2")]
 visible = false
 
-[connection signal="recolectar_items" from="basura1" to="Player" method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="basura2" to="Player" method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="basura3" to="Player" method="_on_moneda_recolectar_items"]
-[connection signal="recolectar_items" from="basura4" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="item" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="item2" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="item3" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="item4" to="Player" method="_on_moneda_recolectar_items"]

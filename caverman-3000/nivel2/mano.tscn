@@ -20,6 +20,7 @@ height = 84.0
 
 [node name="mano" type="Area2D" unique_id=758346715]
 script = ExtResource("1_yujw3")
+"tamaño" = 0.5
 metadata/_edit_group_ = true
 
 [node name="Amano" type="AnimatedSprite2D" parent="." unique_id=1737799753]
