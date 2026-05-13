@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ctbegx3fhx38b"]
+
+[ext_resource type="Script" uid="uid://6kfa6yil3n6h" path="res://nivelketchup/escena_ketchup.gd" id="1_vocq5"]
+[ext_resource type="Texture2D" uid="uid://dkkowvmx1hvu7" path="res://asets/ketchup.png" id="2_cw45b"]
+[ext_resource type="Texture2D" uid="uid://cqnhsxfb7fjcf" path="res://asets/mano.png" id="3_h3lyt"]
+
+[node name="Main" type="Node2D" unique_id=1260215358]
+script = ExtResource("1_vocq5")
+
+[node name="Ketchup" type="Node2D" parent="." unique_id=1995843253]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ketchup" unique_id=1959737334]
+position = Vector2(417.89938, 296.0156)
+scale = Vector2(1.0184348, 1.0184349)
+texture = ExtResource("2_cw45b")
+
+[node name="Hand" type="Node2D" parent="." unique_id=1273856634]
+
+[node name="Sprite2D" type="Sprite2D" parent="Hand" unique_id=559079731]
+position = Vector2(394.61627, 279.56253)
+scale = Vector2(0.9560926, 0.9560925)
+texture = ExtResource("3_h3lyt")
