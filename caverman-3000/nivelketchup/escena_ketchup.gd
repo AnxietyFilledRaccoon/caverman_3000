@@ -24,11 +24,16 @@ func register_hit():
 	$Ketchup/AnimatedSprite2D.play("hit")
 	
 	if current_hits >= hits_required:
+		
 		explode()
+		
 
 func explode():
 	exploded = true
 	$Ketchup/AnimatedSprite2D.play("explode")
+	
+	go_to_victory()
+
 
 func go_to_victory():
-	get_tree().change_scene_to_file("res://VictoryScreen.tscn")
+	get_tree().change_scene_to_file("res://nivelketchup/VictoryScreen.tscn")

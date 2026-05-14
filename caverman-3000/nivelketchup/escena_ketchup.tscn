@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cqnhsxfb7fjcf" path="res://asets/mano.png" id="3_h3lyt"]
 [ext_resource type="Texture2D" uid="uid://b36mgmgqygfnk" path="res://asets/ketchupkya.png" id="4_vqsdr"]
 [ext_resource type="Texture2D" uid="uid://b1yvek64ybtdv" path="res://asets/shake.png" id="5_vqsdr"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="7_fvqy6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vqsdr"]
 animations = [{
@@ -62,7 +63,7 @@ script = ExtResource("1_vocq5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ketchup" unique_id=2079251074]
 position = Vector2(448, 309)
 sprite_frames = SubResource("SpriteFrames_vqsdr")
-animation = &"hit"
+animation = &"explode"
 
 [node name="Hand" type="Node2D" parent="." unique_id=1273856634]
 
@@ -70,3 +71,5 @@ animation = &"hit"
 position = Vector2(491, 300)
 sprite_frames = SubResource("SpriteFrames_fvqy6")
 animation = &"shake"
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("7_fvqy6")]

@@ -33,4 +33,4 @@ func _on_mano_area_entered(area: Area2D) -> void:
 		
 func finalizar():
 	
-		get_tree().change_scene_to_file("res://menú_principal.tscn")
+		get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
