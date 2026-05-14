@@ -74,6 +74,14 @@ scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_kslyd")
 animation = &"caminarup"
 
-[node name="Colisionador" type="CollisionShape2D" parent="." unique_id=43097648]
+[node name="Areaplayer" type="Area2D" parent="." unique_id=132061314]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Colisionadorarea" type="CollisionShape2D" parent="Areaplayer" unique_id=454268050]
 position = Vector2(-2, 4)
+shape = SubResource("RectangleShape2D_xdopc")
+
+[node name="Colisionador" type="CollisionShape2D" parent="." unique_id=43097648]
+position = Vector2(-1.9999999, 3.9999998)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_xdopc")
