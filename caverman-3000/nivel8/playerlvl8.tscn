@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://duac2uwcjf8a1"]
+
+[ext_resource type="Texture2D" uid="uid://cpsodm0n71ns6" path="res://asets/spritesheet caver.png" id="1_1v0ik"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yvdd"]
+atlas = ExtResource("1_1v0ik")
+region = Rect2(239, 548, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnenh"]
+atlas = ExtResource("1_1v0ik")
+region = Rect2(478, 548, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljmn2"]
+atlas = ExtResource("1_1v0ik")
+region = Rect2(717, 548, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfhbo"]
+atlas = ExtResource("1_1v0ik")
+region = Rect2(0, 0, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56lrq"]
+atlas = ExtResource("1_1v0ik")
+region = Rect2(239, 0, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5xdt"]
+atlas = ExtResource("1_1v0ik")
+region = Rect2(478, 0, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eamq1"]
+atlas = ExtResource("1_1v0ik")
+region = Rect2(717, 0, 239, 274)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kslyd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yvdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnenh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljmn2")
+}],
+"loop": true,
+"name": &"caminarX",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfhbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56lrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5xdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eamq1")
+}],
+"loop": true,
+"name": &"caminarup",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdopc"]
+size = Vector2(56, 84)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1947866889]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=727089018]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_kslyd")
+animation = &"caminarup"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=43097648]
+position = Vector2(-2, 4)
+shape = SubResource("RectangleShape2D_xdopc")
