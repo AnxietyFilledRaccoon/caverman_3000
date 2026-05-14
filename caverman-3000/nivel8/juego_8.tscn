@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://noikpeuje5e5"]
 
 [node name="Juego8" type="Node2D" unique_id=2104362042]
+
+[node name="semaforo" type="Sprite2D" parent="." unique_id=265902208]
+
+[node name="auto1" type="Sprite2D" parent="." unique_id=1088686971]
+
+[node name="auto2" type="Sprite2D" parent="." unique_id=1643615089]
+
+[node name="timersemaforo" type="Timer" parent="." unique_id=1400224993]
+
+[node name="timerjuego" type="Timer" parent="." unique_id=776199093]
+
+[node name="UI" type="Control" parent="." unique_id=1729826808]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelResultado" type="Label" parent="UI" unique_id=1979230885]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
