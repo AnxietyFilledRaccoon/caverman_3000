@@ -127,3 +127,5 @@ func _fin_juego(gano: bool):
 		label_resultado.text = "¡Llegaste por suerte!"
 	else:
 		label_resultado.text = "¡Te atropellaron, no se logró!"
+	await get_tree().create_timer(2.0).timeout
+	get_tree().change_scene_to_file("res://game_over.tscn")
