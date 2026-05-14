@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://u24qgi85xyv2" path="res://nivel8/juego_8.gd" id="1_buvu7"]
 [ext_resource type="PackedScene" uid="uid://duac2uwcjf8a1" path="res://nivel8/playerlvl8.tscn" id="1_woyc6"]
 [ext_resource type="Texture2D" uid="uid://bvf75r0sa1ix4" path="res://icon.svg" id="3_upafv"]
+[ext_resource type="Texture2D" uid="uid://cosha1p0cboy5" path="res://asets/suelo.png" id="4_vnrs0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnrs0"]
 size = Vector2(50.954285, 40.567677)
@@ -14,30 +15,32 @@ size = Vector2(128, 130)
 script = ExtResource("1_buvu7")
 
 [node name="player8" parent="." unique_id=1947866889 instance=ExtResource("1_woyc6")]
-position = Vector2(583, 523)
+position = Vector2(582, 534)
 
 [node name="semaforo" type="Sprite2D" parent="." unique_id=265902208]
-position = Vector2(1031, 113)
+position = Vector2(846, 76)
 texture = ExtResource("3_upafv")
 
-[node name="auto1" type="Sprite2D" parent="." unique_id=1088686971]
-position = Vector2(406, 386)
-texture = ExtResource("3_upafv")
+[node name="auto1" type="Area2D" parent="." unique_id=994284609]
+position = Vector2(67, 415)
+collision_layer = 2
 
-[node name="Areaauto1" type="Area2D" parent="auto1" unique_id=1069896686]
-
-[node name="Colisionauto1" type="CollisionShape2D" parent="auto1/Areaauto1" unique_id=1104955040]
+[node name="Colisionauto1" type="CollisionShape2D" parent="auto1" unique_id=1104955040]
 scale = Vector2(2.5120559, 3.1552217)
 shape = SubResource("RectangleShape2D_vnrs0")
 
-[node name="auto2" type="Sprite2D" parent="." unique_id=1643615089]
-position = Vector2(800, 196)
+[node name="spriteauto1" type="Sprite2D" parent="auto1" unique_id=27107194]
 texture = ExtResource("3_upafv")
 
-[node name="Areaauto2" type="Area2D" parent="auto2" unique_id=1589208681]
+[node name="auto2" type="Area2D" parent="." unique_id=888407119]
+position = Vector2(1086, 226)
+collision_layer = 2
 
-[node name="Colisionauto2" type="CollisionShape2D" parent="auto2/Areaauto2" unique_id=2002951717]
+[node name="Colisionauto2" type="CollisionShape2D" parent="auto2" unique_id=2002951717]
 shape = SubResource("RectangleShape2D_upafv")
+
+[node name="spriteauto2" type="Sprite2D" parent="auto2" unique_id=1934672846]
+texture = ExtResource("3_upafv")
 
 [node name="timersemaforo" type="Timer" parent="." unique_id=1400224993]
 
@@ -58,3 +61,13 @@ offset_bottom = 40.0
 [node name="LabelResultado" type="Label" parent="UI/VBoxContainer" unique_id=1979230885]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Veredainicial" type="Sprite2D" parent="." unique_id=1374005008]
+z_index = -2
+position = Vector2(565, 566)
+texture = ExtResource("4_vnrs0")
+
+[node name="Veredafinal" type="Sprite2D" parent="." unique_id=314653504]
+z_index = -1
+position = Vector2(134, 70)
+texture = ExtResource("4_vnrs0")

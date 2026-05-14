@@ -68,6 +68,7 @@ animations = [{
 size = Vector2(56, 84)
 
 [node name="player8" type="CharacterBody2D" unique_id=1947866889]
+collision_mask = 0
 
 [node name="Animación" type="AnimatedSprite2D" parent="." unique_id=727089018]
 scale = Vector2(0.4, 0.4)
