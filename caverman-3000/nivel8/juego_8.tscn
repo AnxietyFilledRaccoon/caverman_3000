@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://noikpeuje5e5"]
 
+[ext_resource type="Script" uid="uid://u24qgi85xyv2" path="res://nivel8/juego_8.gd" id="1_buvu7"]
+[ext_resource type="PackedScene" uid="uid://duac2uwcjf8a1" path="res://nivel8/playerlvl8.tscn" id="1_woyc6"]
+
 [node name="Juego8" type="Node2D" unique_id=2104362042]
+script = ExtResource("1_buvu7")
+
+[node name="player8" parent="." unique_id=1947866889 instance=ExtResource("1_woyc6")]
 
 [node name="semaforo" type="Sprite2D" parent="." unique_id=265902208]
 
