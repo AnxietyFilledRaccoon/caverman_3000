@@ -109,6 +109,7 @@ func _avanzar_carril():
 			_mover_player(fuera_de_pantalla_y, true)
 			
 func _mover_player(destino_y: float, es_victoria: bool):
+	#implementacion de tween a medias
 	var tween = create_tween()
 	tween.tween_property(player1, "position:y", destino_y, 0.15)
 	tween.tween_callback(func():
@@ -122,10 +123,12 @@ func _fin_juego(gano: bool):
 	timer_juego.stop()
 	
 	label_resultado.visible = true
-	
+	# colocaria una funcion de victoria de ser posible
 	if gano:
 		label_resultado.text = "¡Llegaste por suerte!"
+		get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
 	else:
 		label_resultado.text = "¡Te atropellaron, no se logró!"
-	await get_tree().create_timer(2.0).timeout
-	get_tree().change_scene_to_file("res://game_over.tscn")
+		get_tree().change_scene_to_file("res://game_over.tscn")
+	#await get_tree().create_timer(2.0).timeout
+	#get_tree().change_scene_to_file("res://game_over.tscn")

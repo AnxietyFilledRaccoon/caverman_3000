@@ -11,3 +11,4 @@ func _ready():
 		.set_ease(Tween.EASE_OUT)
 		
 	tween.parallel().tween_property(self, "modulate:a", 1.0, 0.2)
+	#colocar un timer para pasar a otra escena

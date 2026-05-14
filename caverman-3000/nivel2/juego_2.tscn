@@ -17,27 +17,27 @@ script = ExtResource("1_4cfnp")
 [node name="producto" parent="." unique_id=185042010 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(713, 332)
 textura = ExtResource("3_vhe2x")
-"tamaño" = 0.2
+"tamaño" = 0.3
 
 [node name="producto2" parent="." unique_id=961272150 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(684, 129)
 textura = ExtResource("4_sxwe6")
-"tamaño" = 0.2
+"tamaño" = 0.3
 
 [node name="producto3" parent="." unique_id=493472878 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(978, 385)
 textura = ExtResource("5_x3sni")
-"tamaño" = 0.2
+"tamaño" = 0.3
 
 [node name="producto4" parent="." unique_id=1371650510 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(608, 511)
 textura = ExtResource("6_6vlrg")
-"tamaño" = 0.2
+"tamaño" = 0.3
 
 [node name="producto5" parent="." unique_id=599523667 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(290, 470)
 textura = ExtResource("7_ss3wp")
-"tamaño" = 0.2
+"tamaño" = 0.3
 
 [node name="mano" parent="." unique_id=758346715 instance=ExtResource("3_ahtto")]
 position = Vector2(479, 313)
