@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bn53t8wyus1jo"]
 
 [ext_resource type="Script" uid="uid://b0tc81nlw1hew" path="res://nivel1/item.gd" id="1_ttk8k"]
-[ext_resource type="Texture2D" uid="uid://do8hp7km6hxpm" path="res://asets/basura.png" id="2_j6gw2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ttk8k"]
 radius = 14.56022
@@ -10,9 +9,8 @@ radius = 14.56022
 script = ExtResource("1_ttk8k")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1968917248 groups=["cavernicola"]]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1367614317 groups=["cavernicola"]]
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_j6gw2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=869620307]
 shape = SubResource("CircleShape2D_ttk8k")

@@ -3,26 +3,41 @@
 [ext_resource type="Script" uid="uid://ddxmo3f37vrtg" path="res://nivel2/juego_2.gd" id="1_4cfnp"]
 [ext_resource type="PackedScene" uid="uid://cte1cfdshjlci" path="res://nivel2/producto.tscn" id="2_llckx"]
 [ext_resource type="PackedScene" uid="uid://chdtdhsfw7jap" path="res://nivel2/mano.tscn" id="3_ahtto"]
+[ext_resource type="Texture2D" uid="uid://xxikjj5drt8y" path="res://asets/gaseosaA.png" id="3_vhe2x"]
 [ext_resource type="Script" uid="uid://b7ejbbwv0uo7a" path="res://canvas_layer.gd" id="4_13cvf"]
+[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/gaseosaN.png" id="4_sxwe6"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="5_4cfnp"]
+[ext_resource type="Texture2D" uid="uid://n0v22bd2mqjy" path="res://asets/gaseosaNA.png" id="5_x3sni"]
+[ext_resource type="Texture2D" uid="uid://us0owsye1w5r" path="res://asets/gaseosaR.png" id="6_6vlrg"]
+[ext_resource type="Texture2D" uid="uid://gk6q5q65jsp7" path="res://asets/gaseosaU.png" id="7_ss3wp"]
 
 [node name="juego2" type="Node2D" unique_id=2041482656]
 script = ExtResource("1_4cfnp")
 
 [node name="producto" parent="." unique_id=185042010 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(713, 332)
+textura = ExtResource("3_vhe2x")
+"tamaño" = 0.2
 
 [node name="producto2" parent="." unique_id=961272150 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(684, 129)
+textura = ExtResource("4_sxwe6")
+"tamaño" = 0.2
 
 [node name="producto3" parent="." unique_id=493472878 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(978, 385)
+textura = ExtResource("5_x3sni")
+"tamaño" = 0.2
 
 [node name="producto4" parent="." unique_id=1371650510 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(608, 511)
+textura = ExtResource("6_6vlrg")
+"tamaño" = 0.2
 
 [node name="producto5" parent="." unique_id=599523667 groups=["productos"] instance=ExtResource("2_llckx")]
 position = Vector2(290, 470)
+textura = ExtResource("7_ss3wp")
+"tamaño" = 0.2
 
 [node name="mano" parent="." unique_id=758346715 instance=ExtResource("3_ahtto")]
 position = Vector2(479, 313)

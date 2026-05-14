@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://ctbegx3fhx38b"]
+
+[ext_resource type="Script" uid="uid://6kfa6yil3n6h" path="res://nivelketchup/escena_ketchup.gd" id="1_vocq5"]
+[ext_resource type="Texture2D" uid="uid://dkkowvmx1hvu7" path="res://asets/ketchup.png" id="2_cw45b"]
+[ext_resource type="Texture2D" uid="uid://7iw07w8fpm6h" path="res://asets/ketchupexplotado.png" id="3_3n60b"]
+[ext_resource type="Texture2D" uid="uid://cqnhsxfb7fjcf" path="res://asets/mano.png" id="3_h3lyt"]
+[ext_resource type="Texture2D" uid="uid://b36mgmgqygfnk" path="res://asets/ketchupkya.png" id="4_vqsdr"]
+[ext_resource type="Texture2D" uid="uid://b1yvek64ybtdv" path="res://asets/shake.png" id="5_vqsdr"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="7_fvqy6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vqsdr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cw45b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3n60b")
+}],
+"loop": true,
+"name": &"explode",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cw45b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vqsdr")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cw45b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fvqy6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vqsdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h3lyt")
+}],
+"loop": true,
+"name": &"shake",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D" unique_id=1260215358]
+script = ExtResource("1_vocq5")
+
+[node name="Ketchup" type="Node2D" parent="." unique_id=1995843253]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ketchup" unique_id=2079251074]
+position = Vector2(448, 309)
+sprite_frames = SubResource("SpriteFrames_vqsdr")
+animation = &"explode"
+
+[node name="Hand" type="Node2D" parent="." unique_id=1273856634]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hand" unique_id=353861519]
+position = Vector2(491, 300)
+sprite_frames = SubResource("SpriteFrames_fvqy6")
+animation = &"shake"
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("7_fvqy6")]

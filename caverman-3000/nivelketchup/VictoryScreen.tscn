@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b82b681vvvhno"]
+
+[ext_resource type="Script" uid="uid://d2ttq45vluyly" path="res://nivelketchup/victory_screen.gd" id="1_tlnmi"]
+[ext_resource type="Texture2D" uid="uid://c8420p3bg7i1d" path="res://asets/winketchup.png" id="2_jpa0v"]
+
+[node name="Control" type="Control" unique_id=1106840533]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tlnmi")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=827587207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jpa0v")
