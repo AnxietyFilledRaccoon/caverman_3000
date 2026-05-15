@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cqu3ibuolwd4l"]
+
+[ext_resource type="Script" uid="uid://dv41ddj7hvgu4" path="res://opening.gd" id="1_tdt4t"]
+[ext_resource type="Texture2D" uid="uid://bhn6pq4p7sm6f" path="res://OP2.png" id="2_psf0h"]
+[ext_resource type="Texture2D" uid="uid://m06qmlpo1aby" path="res://OP3.png" id="3_mha44"]
+[ext_resource type="Texture2D" uid="uid://cxtfvgwb0fo6l" path="res://OP4.png" id="4_7vh34"]
+[ext_resource type="Texture2D" uid="uid://byewhybwltt6n" path="res://OP5.png" id="6_74jx4"]
+[ext_resource type="Texture2D" uid="uid://dq3qjdtex2130" path="res://OP6.png" id="7_blsoy"]
+[ext_resource type="Texture2D" uid="uid://da8kskbitbjel" path="res://OP7.png" id="8_rbkd8"]
+[ext_resource type="Texture2D" uid="uid://d4i8xo1gd3tr" path="res://OP8.png" id="9_ghaoo"]
+[ext_resource type="Texture2D" uid="uid://04yu8orkmh5l" path="res://OP9.png" id="10_gcdm6"]
+[ext_resource type="Texture2D" uid="uid://dpdeekt0g8grf" path="res://OP10.png" id="11_44d1i"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4qvrg"]
+load_path = "res://.godot/imported/OP1.png-4113619296eca61e4727cefb9d635911.ctex"
+
+[sub_resource type="Animation" id="Animation_tdt4t"]
+length = 0.001
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [SubResource("CompressedTexture2D_4qvrg")]
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n13d8"]
+load_path = "res://.godot/imported/OP1.png-4113619296eca61e4727cefb9d635911.ctex"
+
+[sub_resource type="Animation" id="Animation_74jx4"]
+resource_name = "introduccion"
+length = 37.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8, 12, 16, 20, 24, 28, 32, 36),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [SubResource("CompressedTexture2D_n13d8"), ExtResource("2_psf0h"), ExtResource("3_mha44"), ExtResource("4_7vh34"), ExtResource("6_74jx4"), ExtResource("7_blsoy"), ExtResource("8_rbkd8"), ExtResource("9_ghaoo"), ExtResource("10_gcdm6"), ExtResource("11_44d1i")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_blsoy"]
+_data = {
+&"RESET": SubResource("Animation_tdt4t"),
+&"introduccion": SubResource("Animation_74jx4")
+}
+
+[node name="Opening" type="Control" unique_id=1901903344]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tdt4t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1643620894]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1680499703]
+libraries/ = SubResource("AnimationLibrary_blsoy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1189355540]
+position = Vector2(577.996, 309.99997)
+scale = Vector2(3.3314679, 2.9145298)
+texture = SubResource("CompressedTexture2D_4qvrg")
