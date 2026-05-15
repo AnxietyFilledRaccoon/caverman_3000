@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c8k14nb1tbbwk"]
+
+[ext_resource type="Script" uid="uid://cppx8c66bul4i" path="res://Nivel0/nivel_intro.gd" id="1_c74on"]
+[ext_resource type="Texture2D" uid="uid://dcv8ujp13w8ti" path="res://asets/placeholder1.png" id="2_c74on"]
+[ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="2_ke3u4"]
+[ext_resource type="Texture2D" uid="uid://dyyqhcwk6v4f0" path="res://asets/moneda.png" id="4_c74on"]
+[ext_resource type="Texture2D" uid="uid://df8yu5huydbb4" path="res://asets/2pesos.png" id="5_pumfm"]
+[ext_resource type="PackedScene" uid="uid://dguvi0ev8ud5h" path="res://Nivel0/player_intro.tscn" id="6_sbnaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pb2dg"]
+size = Vector2(1999.2694, 43.479004)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf6g7"]
+size = Vector2(2021.3391, 46.177856)
+
+[node name="NivelIntro" type="Node2D" unique_id=1381418629]
+script = ExtResource("1_c74on")
+
+[node name="fondo" type="StaticBody2D" parent="." unique_id=1724737625]
+position = Vector2(575, 323.49997)
+scale = Vector2(0.57771116, 0.4331081)
+
+[node name="Sprite2D" type="Sprite2D" parent="fondo" unique_id=1645049067]
+scale = Vector2(0.99999994, 1)
+texture = ExtResource("2_c74on")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo" unique_id=834076591]
+position = Vector2(3.4619613, 749.2357)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_pb2dg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="fondo" unique_id=1341011605]
+position = Vector2(3.6784058, 361.3418)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_mf6g7")
+
+[node name="item" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("2_ke3u4")]
+position = Vector2(160, 585)
+textura = ExtResource("4_c74on")
+"tamaño" = 0.5
+
+[node name="item2" parent="." unique_id=482945455 groups=["cavernicola"] instance=ExtResource("2_ke3u4")]
+position = Vector2(688, 614)
+textura = ExtResource("5_pumfm")
+"tamaño" = 0.2
+
+[node name="item3" parent="." unique_id=216755964 groups=["cavernicola"] instance=ExtResource("2_ke3u4")]
+position = Vector2(478, 577)
+textura = ExtResource("4_c74on")
+"tamaño" = 0.5
+
+[node name="item4" parent="." unique_id=653965781 groups=["cavernicola"] instance=ExtResource("2_ke3u4")]
+position = Vector2(291, 621)
+textura = ExtResource("5_pumfm")
+"tamaño" = 0.2
+
+[node name="player_intro" parent="." unique_id=1103507205 groups=["cavernicola"] instance=ExtResource("6_sbnaj")]
+position = Vector2(17, 534)
+
+[connection signal="recolectar_items" from="item" to="player_intro" method="_on_item_recolectar_items"]
+[connection signal="recolectar_items" from="item2" to="player_intro" method="_on_item_recolectar_items"]
+[connection signal="recolectar_items" from="item3" to="player_intro" method="_on_item_recolectar_items"]
+[connection signal="recolectar_items" from="item4" to="player_intro" method="_on_item_recolectar_items"]

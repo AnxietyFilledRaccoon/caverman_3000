@@ -10,8 +10,3 @@ func _on_opcion_pressed() -> void:
 
 func _on_quitar_pressed() -> void:
 	get_tree().quit()
-
-# Hice esta funcion que basicamente pasaria al nivel del ketchup pero no quiero arruinarte el codigo metiendo mano
-# asi que usala cuando sientas que sea correcto, seria tecnicamente cuando termine el nivel 2.	
-#func go_to_next_level():
-#	get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")

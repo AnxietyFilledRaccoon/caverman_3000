@@ -13,10 +13,10 @@ func _input(event):
 	if event is InputEventKey or event is InputEventMouseButton:
 		finalizar_intro()
 
-func _on_animation_finished(anim_name):
+func _on_animation_finished():
 	finalizar_intro()
 
 func finalizar_intro():
 	
 	print(" fin")
-	get_tree().change_scene_to_file("res://nivel1/juego1.tscn")
+	get_tree().change_scene_to_file("res://Nivel0/nivelIntro.tscn")

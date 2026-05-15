@@ -11,7 +11,7 @@ func _ready():
 	scale = Vector2(tamaño, tamaño)
 
 func _on_body_entered(body):
-	if body.is_in_group("cavernicola"):#referencia de que grupo entra en contacto con la moneda
+	if body.is_in_group("cavernicola"):#referencia de que grupo entra en contacto 
 	
 		get_parent().item +=1
 		#animacion.play("recojido")
