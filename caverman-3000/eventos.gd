@@ -5,13 +5,15 @@ extends Control
 # Referencia al Label que muestra el tiempo
 @onready var tiempo_label = $CanvasLayer/tiempo
 @onready var game_timer = $tiempoJuego
+@export var tiempo_persoonalizar = 0
 
 func _ready():
+	$tiempoJuego.wait_time = tiempo_persoonalizar #me permite modificar timer por inspector para distintas escenas
 	# Iniciar el timer al comenzar
 	await get_tree().create_timer(1.0).timeout #desactivo el "AUTOSTART" en el inspector
 											   #con este await le doy un tiempo de retraso al timer
 	game_timer.start()#inicia el timer
-
+	
 func _process(_delta):
 	# Actualizar el texto del label cada frame con el tiempo restante
 	# ceil() redondea hacia arriba para mostrar el segundo actual correcto

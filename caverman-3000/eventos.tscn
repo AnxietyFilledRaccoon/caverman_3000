@@ -25,5 +25,6 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
 
 [connection signal="timeout" from="tiempoJuego" to="." method="_on_tiempo_juego_timeout"]

@@ -50,6 +50,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_4cfnp")]
+tiempo_persoonalizar = 8
 
 [connection signal="borrate" from="." to="producto" method="_on_juego_2_borrate"]
 [connection signal="input_event" from="producto" to="." method="_on_producto_input_event"]

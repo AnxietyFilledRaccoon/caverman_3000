@@ -61,9 +61,8 @@ func recoger_items():
 		
 func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
-	
+	#aca hay que sumar plata al score
 	##pasar a otra escena, menu o pantalla
-	
 	get_tree().change_scene_to_file("res://nivel2/juego_2.tscn")
 		
 	
