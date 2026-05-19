@@ -34,3 +34,10 @@ func _on_mano_area_entered(area: Area2D) -> void:
 func finalizar():
 	
 		get_tree().change_scene_to_file("res://nivel8/juego_8.tscn")
+
+
+func _on_reiniciar_pressed() -> void:
+		# Quita la pausa por si el juego estaba pausado al perder
+	get_tree().paused = false 
+	# Recarga el nivel actual
+	get_tree().reload_current_scene()

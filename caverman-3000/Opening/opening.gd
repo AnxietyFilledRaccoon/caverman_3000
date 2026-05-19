@@ -20,3 +20,4 @@ func finalizar_intro():
 	
 	print(" fin")
 	get_tree().change_scene_to_file("res://Nivel0/nivelIntro.tscn")
+	#aca colocar que se dirija al menu de juego

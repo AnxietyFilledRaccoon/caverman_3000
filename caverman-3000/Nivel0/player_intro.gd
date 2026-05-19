@@ -41,7 +41,7 @@ func animaciones():
 
 func movimiento_X():
 	# Obtiene la dirección basada en las acciones (por defecto: ui_left, ui_right, ui_up, ui_down)
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction = Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
 	# Aplica la velocidad a la dirección
 	velocity = direction * move_speed
 	
@@ -61,7 +61,7 @@ func recoger_items():
 func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
 	#pasar a otra escena, menu o pantalla
-	get_tree().change_scene_to_file("res://nivel1/juego1.tscn")
+	get_tree().change_scene_to_file("res://menú_principal.tscn")
 	
 	
 

@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://n0v22bd2mqjy" path="res://asets/gaseosaNA.png" id="5_x3sni"]
 [ext_resource type="Texture2D" uid="uid://us0owsye1w5r" path="res://asets/gaseosaR.png" id="6_6vlrg"]
 [ext_resource type="Texture2D" uid="uid://gk6q5q65jsp7" path="res://asets/gaseosaU.png" id="7_ss3wp"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_sxwe6"]
 
 [node name="juego2" type="Node2D" unique_id=2041482656]
 script = ExtResource("1_4cfnp")
@@ -52,6 +53,27 @@ offset_bottom = 23.0
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_4cfnp")]
 tiempo_persoonalizar = 8
 
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_sxwe6")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1653418413]
+visible = false
+
+[node name="Reiniciar" type="Button" parent="CanvasLayer2" unique_id=1104207621]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+text = " Reiniciar "
+
 [connection signal="borrate" from="." to="producto" method="_on_juego_2_borrate"]
 [connection signal="input_event" from="producto" to="." method="_on_producto_input_event"]
 [connection signal="input_event" from="producto2" to="." method="_on_producto_input_event"]
@@ -59,3 +81,4 @@ tiempo_persoonalizar = 8
 [connection signal="input_event" from="producto4" to="." method="_on_producto_input_event"]
 [connection signal="input_event" from="producto5" to="." method="_on_producto_input_event"]
 [connection signal="area_entered" from="mano" to="." method="_on_mano_area_entered"]
+[connection signal="pressed" from="CanvasLayer2/Reiniciar" to="." method="_on_reiniciar_pressed"]

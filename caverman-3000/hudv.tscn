@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c3awgd1drqfri"]
+
+[ext_resource type="Script" uid="uid://b7d8phrcokc6w" path="res://hudv.gd" id="1_tnee2"]
+
+[node name="HUDV" type="CanvasLayer" unique_id=1486512705]
+script = ExtResource("1_tnee2")
+
+[node name="Control" type="Control" parent="." unique_id=1047263227]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=195903778]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 536.0
+offset_right = 576.0
+offset_bottom = 23.0
+grow_horizontal = 2

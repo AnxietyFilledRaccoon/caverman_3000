@@ -3,7 +3,8 @@ extends Control
 
 func _on_play_pressed() -> void:
 	await get_tree().create_timer(1.0).timeout 
-	get_tree().change_scene_to_file("res://Opening/opening.tscn")
+	get_tree().change_scene_to_file("res://nivel1/juego1.tscn")
+	#aca colocar al nivel 1
 
 func _on_opcion_pressed() -> void:
 	pass # Replace with function body.

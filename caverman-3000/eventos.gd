@@ -6,6 +6,7 @@ extends Control
 @onready var tiempo_label = $CanvasLayer/tiempo
 @onready var game_timer = $tiempoJuego
 @export var tiempo_persoonalizar = 0
+@onready var restart_menu: CanvasLayer = $"../CanvasLayer2"
 
 func _ready():
 	$tiempoJuego.wait_time = tiempo_persoonalizar #me permite modificar timer por inspector para distintas escenas
@@ -25,4 +26,6 @@ func _on_tiempo_juego_timeout() -> void:
 	print("se acabo el tiempo")
 # Esta función se ejecuta cuando el tiempo llega a cero
 # aca puedo cambiar de escena o activar Game Over
-	get_tree().change_scene_to_file("res://game_over.tscn")
+	GameManager.perder_vida()
+	restart_menu.visible = true # aparece el boton cuando se pierde
+	#get_tree().change_scene_to_file("res://game_over.tscn")
