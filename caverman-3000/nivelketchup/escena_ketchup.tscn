@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b1yvek64ybtdv" path="res://asets/shake.png" id="5_vqsdr"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="7_fvqy6"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="8_op7ai"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="9_tmawc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vqsdr"]
 animations = [{
@@ -77,10 +78,10 @@ animation = &"shake"
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("8_op7ai")]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=282351141]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1993820548]
 visible = false
 
-[node name="Reiniciar" type="Button" parent="CanvasLayer2" unique_id=409627720]
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=519324357]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -94,6 +95,6 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("9_tmawc")
+theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
-
-[connection signal="pressed" from="CanvasLayer2/Reiniciar" to="." method="_on_reiniciar_pressed"]

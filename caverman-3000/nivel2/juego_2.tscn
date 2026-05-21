@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://us0owsye1w5r" path="res://asets/gaseosaR.png" id="6_6vlrg"]
 [ext_resource type="Texture2D" uid="uid://gk6q5q65jsp7" path="res://asets/gaseosaU.png" id="7_ss3wp"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_sxwe6"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_x3sni"]
 
 [node name="juego2" type="Node2D" unique_id=2041482656]
 script = ExtResource("1_4cfnp")
@@ -55,10 +56,10 @@ tiempo_persoonalizar = 8
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_sxwe6")]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1653418413]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1359174143]
 visible = false
 
-[node name="Reiniciar" type="Button" parent="CanvasLayer2" unique_id=1104207621]
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=244914278]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -72,6 +73,8 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("12_x3sni")
+theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
 
 [connection signal="borrate" from="." to="producto" method="_on_juego_2_borrate"]
@@ -81,4 +84,3 @@ text = " Reiniciar "
 [connection signal="input_event" from="producto4" to="." method="_on_producto_input_event"]
 [connection signal="input_event" from="producto5" to="." method="_on_producto_input_event"]
 [connection signal="area_entered" from="mano" to="." method="_on_mano_area_entered"]
-[connection signal="pressed" from="CanvasLayer2/Reiniciar" to="." method="_on_reiniciar_pressed"]

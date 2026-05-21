@@ -6,7 +6,7 @@ extends Control
 @onready var tiempo_label = $CanvasLayer/tiempo
 @onready var game_timer = $tiempoJuego
 @export var tiempo_persoonalizar = 0
-@onready var restart_menu: CanvasLayer = $"../CanvasLayer2"
+@onready var restart_menu: CanvasLayer = $"../botonreinicio"
 
 func _ready():
 	$tiempoJuego.wait_time = tiempo_persoonalizar #me permite modificar timer por inspector para distintas escenas

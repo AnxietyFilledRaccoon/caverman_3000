@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c8rojj84k4rc3" path="res://Opening/suelo.tscn" id="5_tcv7t"]
 [ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="6_rxpji"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_n2edi"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="12_w6fdp"]
 
 [node name="Juego1" type="Node2D" unique_id=1086814356]
@@ -49,10 +50,10 @@ tiempo_persoonalizar = 11
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("12_w6fdp")]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1394240221]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1394240221]
 visible = false
 
-[node name="Reiniciar" type="Button" parent="CanvasLayer2" unique_id=1422301051]
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1422301051]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -66,10 +67,12 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("12_n2edi")
+theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
 
 [connection signal="recolectar_items" from="item" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="item2" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="item3" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="item4" to="Player" method="_on_moneda_recolectar_items"]
-[connection signal="pressed" from="CanvasLayer2/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
