@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cog0gm8pc6yy8"]
+
+[ext_resource type="Script" uid="uid://cqal1mrw5iuxh" path="res://nivel7/juego_7.gd" id="1_3fou4"]
+[ext_resource type="Texture2D" uid="uid://cpsodm0n71ns6" path="res://asets/spritesheet caver.png" id="2_px4uh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se0u2"]
+size = Vector2(118, 238)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yvdd"]
+atlas = ExtResource("2_px4uh")
+region = Rect2(239, 548, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnenh"]
+atlas = ExtResource("2_px4uh")
+region = Rect2(478, 548, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljmn2"]
+atlas = ExtResource("2_px4uh")
+region = Rect2(717, 548, 239, 274)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_so5ex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yvdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnenh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljmn2")
+}],
+"loop": true,
+"name": &"caminarX",
+"speed": 10.0
+}]
+
+[node name="Juego7" type="Node2D" unique_id=1767808173]
+script = ExtResource("1_3fou4")
+
+[node name="Playerlvl7" type="CharacterBody2D" parent="." unique_id=571720245]
+
+[node name="AreaPlayer" type="Area2D" parent="Playerlvl7" unique_id=2031255446]
+
+[node name="ColisionAreaPlayer" type="CollisionShape2D" parent="Playerlvl7/AreaPlayer" unique_id=306637459]
+position = Vector2(-7, 0)
+shape = SubResource("RectangleShape2D_se0u2")
+
+[node name="AnimationPlayer" type="AnimatedSprite2D" parent="Playerlvl7" unique_id=1530869642]
+sprite_frames = SubResource("SpriteFrames_so5ex")
+animation = &"caminarX"
+
+[node name="ColisionPlayer" type="CollisionShape2D" parent="Playerlvl7" unique_id=603512375]
+position = Vector2(-7, 0)
+shape = SubResource("RectangleShape2D_se0u2")
+
+[node name="Productos" type="Node2D" parent="." unique_id=1944213664]
+
+[node name="SpriteProductos" type="Sprite2D" parent="Productos" unique_id=1545149059]
+
+[node name="Camion" type="Node2D" parent="." unique_id=708783186]
+
+[node name="SpriteCamion" type="Sprite2D" parent="Camion" unique_id=546110142]
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=547638500]
+
+[node name="LabelTiempo" type="Label" parent="Ui" unique_id=422744335]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LabelPRestantes" type="Label" parent="Ui" unique_id=547260389]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LabelResultado" type="Label" parent="Ui" unique_id=1357982695]
+offset_right = 40.0
+offset_bottom = 23.0
