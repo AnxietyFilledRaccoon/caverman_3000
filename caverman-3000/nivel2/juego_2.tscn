@@ -52,7 +52,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_4cfnp")]
-tiempo_persoonalizar = 8
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_sxwe6")]
 
@@ -84,3 +83,4 @@ text = " Reiniciar "
 [connection signal="input_event" from="producto4" to="." method="_on_producto_input_event"]
 [connection signal="input_event" from="producto5" to="." method="_on_producto_input_event"]
 [connection signal="area_entered" from="mano" to="." method="_on_mano_area_entered"]
+[connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]

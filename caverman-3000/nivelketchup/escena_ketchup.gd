@@ -5,6 +5,7 @@ extends Node2D
 var current_hits : int = 0
 var exploded : bool = false
 
+
 func _ready():
 	$Ketchup/AnimatedSprite2D.animation_finished.connect(_on_animation_finished)
 

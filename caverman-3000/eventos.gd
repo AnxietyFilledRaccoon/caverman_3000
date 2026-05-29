@@ -5,11 +5,11 @@ extends Control
 # Referencia al Label que muestra el tiempo
 @onready var tiempo_label = $CanvasLayer/tiempo
 @onready var game_timer = $tiempoJuego
-@export var tiempo_persoonalizar = 0
+@export var tiempo_personalizar = 0
 @onready var restart_menu: CanvasLayer = $"../botonreinicio"
 
 func _ready():
-	$tiempoJuego.wait_time = tiempo_persoonalizar #me permite modificar timer por inspector para distintas escenas
+	$tiempoJuego.wait_time = tiempo_personalizar #me permite modificar timer por inspector para distintas escenas
 	# Iniciar el timer al comenzar
 	await get_tree().create_timer(1.0).timeout #desactivo el "AUTOSTART" en el inspector
 											   #con este await le doy un tiempo de retraso al timer

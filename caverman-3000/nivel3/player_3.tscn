@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://dp3j2hu0te8ni"]
+
+[ext_resource type="Texture2D" uid="uid://vnjm143tma0y" path="res://asets/cavermoto3.png" id="1_0e4s8"]
+[ext_resource type="Script" uid="uid://b6avre6j2au75" path="res://nivel3/player_3.gd" id="1_jfnxq"]
+[ext_resource type="Texture2D" uid="uid://c7mfwf1wxifnv" path="res://asets/cavermoto5.png" id="3_oxg53"]
+[ext_resource type="Texture2D" uid="uid://cjtvvluck8221" path="res://asets/cavermoto6.png" id="4_nlx2k"]
+[ext_resource type="Texture2D" uid="uid://7yiqkll4yjnu" path="res://asets/cavermoto1.png" id="5_vttjm"]
+[ext_resource type="Texture2D" uid="uid://dxioglb3iq0e7" path="res://asets/cavermoto.png" id="6_tu1fd"]
+[ext_resource type="Texture2D" uid="uid://m3t0kbvph4cm" path="res://asets/cavermoto2.png" id="7_nlx2k"]
+[ext_resource type="Texture2D" uid="uid://dp3vy3r4bx51g" path="res://asets/cavermoto4.png" id="8_vttjm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi273"]
+atlas = ExtResource("1_0e4s8")
+region = Rect2(0, 0, 535, 633)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwbw6"]
+atlas = ExtResource("3_oxg53")
+region = Rect2(0, 0, 334, 679)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8d8i"]
+atlas = ExtResource("4_nlx2k")
+region = Rect2(0, 0, 340, 651)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6pkw"]
+atlas = ExtResource("5_vttjm")
+region = Rect2(0, 0, 355, 675)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbco1"]
+atlas = ExtResource("6_tu1fd")
+region = Rect2(0, 0, 349, 686)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tu1fd"]
+atlas = ExtResource("1_0e4s8")
+region = Rect2(0, 0, 535, 633)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rrsb"]
+atlas = ExtResource("7_nlx2k")
+region = Rect2(0, 0, 524, 643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws8r4"]
+atlas = ExtResource("8_vttjm")
+region = Rect2(0, 0, 529, 667)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtyuj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi273")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwbw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8d8i")
+}],
+"loop": true,
+"name": &"pedaleardown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6pkw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbco1")
+}],
+"loop": true,
+"name": &"pedalearup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tu1fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rrsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws8r4")
+}],
+"loop": true,
+"name": &"pedalearx",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0e4s8"]
+radius = 26.0
+height = 80.0
+
+[node name="Player3" type="CharacterBody2D" unique_id=873905687]
+script = ExtResource("1_jfnxq")
+metadata/_edit_group_ = true
+
+[node name="jugador" type="AnimatedSprite2D" parent="." unique_id=50501026]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_wtyuj")
+animation = &"pedalearx"
+frame_progress = 0.9485029
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=829301601]
+shape = SubResource("CapsuleShape2D_0e4s8")

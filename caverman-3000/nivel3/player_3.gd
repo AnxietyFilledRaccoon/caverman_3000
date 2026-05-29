@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 @export var move_speed = 200
 @onready var animacion = $jugador
 var mirando_derecha = true
@@ -28,15 +29,15 @@ func _physics_process(delta):
 	
 func animaciones():
 	if velocity.x:
-		animacion.play("caminarX")
+		animacion.play("pedalearx")
 			
 	else:
 		animacion.play("idle")
 
 		if velocity.y:
-			animacion.play("caminarup")
+			animacion.play("pedalearup")
 			if velocity.y > 0:
-				animacion.play("caminardown")
+				animacion.play("pedaleardown")
 		
 
 func movimiento_X():
@@ -60,12 +61,16 @@ func recoger_items():
 		
 func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
-	#pasar a otra escena, menu o pantalla
-	get_tree().change_scene_to_file("res://nivel1/juego1.tscn")
+	#aca hay que sumar plata al score
+	##pasar a otra escena, menu o pantalla
 	
+	get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
+		
 	
 
 
-func _on_item_recolectar_items():
-	print("funciona")
+
+
+
+func _on_item_recolectar_items() -> void:
 	recoger_items()

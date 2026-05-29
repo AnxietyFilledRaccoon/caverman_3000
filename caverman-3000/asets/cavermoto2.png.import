@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4b6bc5skws4c"
-path="res://.godot/imported/pedaleo2.png-294cd77b574268cebeaebf9f482a8e0b.ctex"
+uid="uid://m3t0kbvph4cm"
+path="res://.godot/imported/cavermoto2.png-91285321bee1195133a496c51ef75656.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/pedaleo2.png"
-dest_files=["res://.godot/imported/pedaleo2.png-294cd77b574268cebeaebf9f482a8e0b.ctex"]
+source_file="res://asets/cavermoto2.png"
+dest_files=["res://.godot/imported/cavermoto2.png-91285321bee1195133a496c51ef75656.ctex"]
 
 [params]
 

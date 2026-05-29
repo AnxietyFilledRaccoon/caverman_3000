@@ -19,5 +19,5 @@ func _on_animation_finished():
 func finalizar_intro():
 	
 	print(" fin")
-	get_tree().change_scene_to_file("res://Nivel0/nivelIntro.tscn")
+	get_tree().change_scene_to_file("res://menú_principal.tscn")
 	#aca colocar que se dirija al menu de juego

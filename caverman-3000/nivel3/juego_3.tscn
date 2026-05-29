@@ -1,43 +1,78 @@
-[gd_scene format=3 uid="uid://cvxcat115qosa"]
+[gd_scene format=3 uid="uid://cusbq7ay6vnbl"]
 
-[ext_resource type="Script" uid="uid://cnag2gu0l3kb" path="res://nivel3/juego_3.gd" id="1_gj05j"]
-[ext_resource type="Script" uid="uid://bt48pemfy6rm1" path="res://nivel3/compresor.gd" id="2_pxmnl"]
-[ext_resource type="Texture2D" uid="uid://bvf75r0sa1ix4" path="res://icon.svg" id="3_ac0he"]
-[ext_resource type="Script" uid="uid://is0ne85ri5yx" path="res://nivel3/mancha.gd" id="4_66ccp"]
+[ext_resource type="Script" uid="uid://bxbt178pgfxti" path="res://nivel1/juego_1.gd" id="1_xhe8e"]
+[ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="2_spb8h"]
+[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_4y7ya"]
+[ext_resource type="PackedScene" uid="uid://dp3j2hu0te8ni" path="res://nivel3/player_3.tscn" id="7_xhe8e"]
+[ext_resource type="PackedScene" uid="uid://c8rojj84k4rc3" path="res://Opening/suelo.tscn" id="8_nm5fg"]
+[ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="9_nxv5p"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="10_4mmac"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_vehe0"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_kg0uq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dgk0"]
-size = Vector2(82, 83.5)
+[node name="Juego3" type="Node2D" unique_id=1086814356]
+script = ExtResource("1_xhe8e")
 
-[node name="juego3" type="Node2D" unique_id=269672050]
-script = ExtResource("1_gj05j")
+[node name="item" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
+position = Vector2(405, 491)
+textura = ExtResource("3_4y7ya")
 
-[node name="compresor" type="CharacterBody2D" parent="." unique_id=640469808]
-script = ExtResource("2_pxmnl")
+[node name="item2" parent="." unique_id=1673854698 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
+position = Vector2(753, 246)
+textura = ExtResource("3_4y7ya")
 
-[node name="Sprite2D" type="Sprite2D" parent="compresor" unique_id=301184851]
-position = Vector2(55.000004, 192.00002)
-scale = Vector2(0.3984375, 0.40625)
-texture = ExtResource("3_ac0he")
+[node name="item3" parent="." unique_id=638198213 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
+position = Vector2(788, 541)
+textura = ExtResource("3_4y7ya")
 
-[node name="Marker2D" type="Marker2D" parent="compresor" unique_id=310852416]
-position = Vector2(52, 197)
+[node name="item4" parent="." unique_id=645868535 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
+position = Vector2(869, 426)
+textura = ExtResource("3_4y7ya")
 
-[node name="chorro de agua" type="RayCast2D" parent="compresor" unique_id=96285662]
-position = Vector2(57, 197)
-target_position = Vector2(148, 1)
+[node name="item5" parent="." unique_id=35432034 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
+position = Vector2(323, 248)
+textura = ExtResource("3_4y7ya")
 
-[node name="linea de agua" type="Line2D" parent="compresor" unique_id=1092483181]
+[node name="Player3" parent="." unique_id=873905687 groups=["cavernicola"] instance=ExtResource("7_xhe8e")]
+position = Vector2(30, 541)
 
-[node name="mancha" type="Area2D" parent="." unique_id=984837112 groups=["mancha"]]
-position = Vector2(1, 2)
-script = ExtResource("4_66ccp")
+[node name="suelo" parent="." unique_id=1334995842 instance=ExtResource("8_nm5fg")]
 
-[node name="Sprite2D" type="Sprite2D" parent="mancha" unique_id=1034979408]
-modulate = Color(0.05882353, 0.69803923, 0.05882353, 1)
-position = Vector2(521.5, 276.5)
-scale = Vector2(0.6640625, 0.6953125)
-texture = ExtResource("3_ac0he")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1221312791]
+script = ExtResource("9_nxv5p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mancha" unique_id=924262325]
-position = Vector2(521, 272.75)
-shape = SubResource("RectangleShape2D_7dgk0")
+[node name="items" type="Label" parent="CanvasLayer" unique_id=1419066591]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("10_4mmac")]
+
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_vehe0")]
+
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1394240221]
+visible = false
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1422301051]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("12_kg0uq")
+theme_override_font_sizes/font_size = 50
+text = " Reiniciar "
+
+[connection signal="recolectar_items" from="item" to="Player3" method="_on_item_recolectar_items"]
+[connection signal="recolectar_items" from="item2" to="Player3" method="_on_item_recolectar_items"]
+[connection signal="recolectar_items" from="item3" to="Player3" method="_on_item_recolectar_items"]
+[connection signal="recolectar_items" from="item4" to="Player3" method="_on_item_recolectar_items"]
+[connection signal="recolectar_items" from="item5" to="Player3" method="_on_item_recolectar_items"]
+[connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
