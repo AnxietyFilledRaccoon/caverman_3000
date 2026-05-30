@@ -1,3 +1,15 @@
 [gd_scene format=3 uid="uid://bs5i11cf0jnwr"]
 
+[ext_resource type="PackedScene" uid="uid://cyoo4eniqlnxs" path="res://nivel3/guadaña.tscn" id="1_cc71j"]
+[ext_resource type="PackedScene" uid="uid://c27y7dhuvaw4s" path="res://nivel3/pastolargo.tscn" id="2_dsfhx"]
+
 [node name="Juego3" type="Node2D" unique_id=2010090408]
+
+[node name="pastolargo2" parent="." unique_id=1159502487 instance=ExtResource("2_dsfhx")]
+position = Vector2(467, 279)
+
+[node name="pastolargo" parent="." unique_id=359465735 instance=ExtResource("2_dsfhx")]
+position = Vector2(162, 289)
+
+[node name="guadaña" parent="." unique_id=931658949 instance=ExtResource("1_cc71j")]
+position = Vector2(253, 145)
