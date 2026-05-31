@@ -18,6 +18,12 @@ position = Vector2(646, 556)
 [node name="pastolargo4" parent="." unique_id=1468155479 instance=ExtResource("2_dsfhx")]
 position = Vector2(226, 600)
 
+[node name="pastolargo5" parent="." unique_id=407211541 instance=ExtResource("2_dsfhx")]
+position = Vector2(892, 608)
+
+[node name="pastolargo6" parent="." unique_id=715781961 instance=ExtResource("2_dsfhx")]
+position = Vector2(1045, 437)
+
 [node name="guadaña" parent="." unique_id=931658949 instance=ExtResource("1_cc71j")]
 position = Vector2(253, 145)
 
