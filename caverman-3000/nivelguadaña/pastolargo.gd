@@ -1,6 +1,8 @@
 extends Area2D
 
+class_name pasto 
 var cut := false
+
 
 func _input_event(viewport, event, shape_idx):
 

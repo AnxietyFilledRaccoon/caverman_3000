@@ -35,7 +35,7 @@ position = Vector2(823, 441)
 textura = ExtResource("3_4y7ya")
 
 [node name="item5" parent="." unique_id=35432034 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
-position = Vector2(319, 263)
+position = Vector2(318, 238)
 textura = ExtResource("3_4y7ya")
 
 [node name="Player3" parent="." unique_id=873905687 groups=["cavernicola"] instance=ExtResource("7_xhe8e")]
