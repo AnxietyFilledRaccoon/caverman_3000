@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://bxbt178pgfxti" path="res://nivel1/juego_1.gd" id="1_dcelm"]
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
 [ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
+[ext_resource type="Texture2D" uid="uid://cfdy4e62lisyn" path="res://asets/plaza1.png" id="2_w6fdp"]
 [ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_utxh4"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="4_swt8o"]
 [ext_resource type="Texture2D" uid="uid://bxdxiy2b2corp" path="res://asets/manzana.png" id="4_w6fdp"]
 [ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/pescado.png" id="5_n2edi"]
-[ext_resource type="PackedScene" uid="uid://c8rojj84k4rc3" path="res://Opening/suelo.tscn" id="5_tcv7t"]
 [ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="6_rxpji"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_n2edi"]
@@ -15,6 +15,11 @@
 
 [node name="Juego1" type="Node2D" unique_id=1086814356]
 script = ExtResource("1_dcelm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1785001822]
+position = Vector2(575, 317.50003)
+scale = Vector2(0.31171495, 0.25092113)
+texture = ExtResource("2_w6fdp")
 
 [node name="item" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(302, 526)
@@ -34,9 +39,8 @@ textura = ExtResource("6_rxpji")
 
 [node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
 position = Vector2(26, 532)
+scale = Vector2(0.7, 0.7)
 move_speed = 200
-
-[node name="suelo" parent="." unique_id=1334995842 instance=ExtResource("5_tcv7t")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1221312791]
 script = ExtResource("4_swt8o")

@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var etiqueta_vidas = $Control/Label
+@onready var vida = [$Control/HBoxContainer/vida1, $Control/HBoxContainer/vida2, $Control/HBoxContainer/vida3]
 
 func _ready():
 	# Conectamos la señal del GameManager para actualizar la UI automáticamente
@@ -9,4 +9,9 @@ func _ready():
 	_on_vidas_actualizadas(GameManager.total_vidas)
 
 func _on_vidas_actualizadas(vidas: int):
-	etiqueta_vidas.text = "Vidas: " + str(vidas)
+	for i in range(vida.size()):
+
+		if i < vidas:
+			vida[i].visible = true
+		else:
+			vida[i].visible = false

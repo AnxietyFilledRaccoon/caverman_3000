@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dv41ddj7hvgu4" path="res://Opening/opening.gd" id="1_8d1tb"]
 [ext_resource type="Texture2D" uid="uid://bhn6pq4p7sm6f" path="res://Opening/OP2.png" id="2_fkws0"]
+[ext_resource type="Texture2D" uid="uid://15v6s1omrqra" path="res://Opening/OP1.png" id="2_q80aw"]
 [ext_resource type="Texture2D" uid="uid://m06qmlpo1aby" path="res://Opening/OP3.png" id="3_q80aw"]
 [ext_resource type="Texture2D" uid="uid://cxtfvgwb0fo6l" path="res://Opening/OP4.png" id="4_5fxe6"]
 [ext_resource type="Texture2D" uid="uid://byewhybwltt6n" path="res://Opening/OP5.png" id="5_i321l"]
@@ -11,11 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://04yu8orkmh5l" path="res://Opening/OP9.png" id="9_mphrc"]
 [ext_resource type="Texture2D" uid="uid://dpdeekt0g8grf" path="res://Opening/OP10.png" id="10_swhrp"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4qvrg"]
-load_path = "res://.godot/imported/OP1.png-4113619296eca61e4727cefb9d635911.ctex"
-
 [sub_resource type="Animation" id="Animation_tdt4t"]
-length = 0.001
+length = 47.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -23,14 +21,11 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 5, 10, 15, 20, 25, 30, 35, 40, 47),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [SubResource("CompressedTexture2D_4qvrg")]
+"values": [ExtResource("2_q80aw"), ExtResource("2_fkws0"), ExtResource("3_q80aw"), ExtResource("4_5fxe6"), ExtResource("5_i321l"), ExtResource("6_b1mnc"), ExtResource("7_ork2n"), ExtResource("8_ujxtu"), ExtResource("9_mphrc"), ExtResource("10_swhrp")]
 }
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n13d8"]
-load_path = "res://.godot/imported/OP1.png-4113619296eca61e4727cefb9d635911.ctex"
 
 [sub_resource type="Animation" id="Animation_74jx4"]
 resource_name = "introduccion"
@@ -45,7 +40,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 4.9666667, 10, 15.033334, 20.033333, 25.033333, 30.033333, 35.033333, 40, 45),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [SubResource("CompressedTexture2D_n13d8"), ExtResource("2_fkws0"), ExtResource("3_q80aw"), ExtResource("4_5fxe6"), ExtResource("5_i321l"), ExtResource("6_b1mnc"), ExtResource("7_ork2n"), ExtResource("8_ujxtu"), ExtResource("9_mphrc"), ExtResource("10_swhrp")]
+"values": [ExtResource("2_q80aw"), ExtResource("2_fkws0"), ExtResource("3_q80aw"), ExtResource("4_5fxe6"), ExtResource("5_i321l"), ExtResource("6_b1mnc"), ExtResource("7_ork2n"), ExtResource("8_ujxtu"), ExtResource("9_mphrc"), ExtResource("10_swhrp")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_blsoy"]
@@ -77,6 +72,6 @@ color = Color(0, 0, 0, 1)
 libraries/ = SubResource("AnimationLibrary_blsoy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1189355540]
-position = Vector2(577.996, 320.99994)
-scale = Vector2(3.3314679, 2.9145298)
-texture = SubResource("CompressedTexture2D_4qvrg")
+position = Vector2(569.3484, 327.99994)
+scale = Vector2(3.2875717, 2.8547006)
+texture = ExtResource("2_q80aw")

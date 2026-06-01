@@ -1,22 +1,47 @@
 [gd_scene format=3 uid="uid://c3awgd1drqfri"]
 
 [ext_resource type="Script" uid="uid://b7d8phrcokc6w" path="res://hudv.gd" id="1_tnee2"]
+[ext_resource type="Texture2D" uid="uid://dsawikvv5xjjs" path="res://asets/sube.png" id="2_3rjhu"]
 
 [node name="HUDV" type="CanvasLayer" unique_id=1486512705]
 script = ExtResource("1_tnee2")
 
 [node name="Control" type="Control" parent="." unique_id=1047263227]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_right = 100.0
+offset_bottom = 52.0
+grow_horizontal = 2
 
-[node name="Label" type="Label" parent="Control" unique_id=195903778]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=2095001465]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 536.0
-offset_right = 576.0
-offset_bottom = 23.0
+offset_left = -77.0
+offset_right = 122.0
+offset_bottom = 55.0
 grow_horizontal = 2
+
+[node name="vida1" type="TextureRect" parent="Control/HBoxContainer" unique_id=1350781244]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_3rjhu")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vida2" type="TextureRect" parent="Control/HBoxContainer" unique_id=1590385784]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_3rjhu")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vida3" type="TextureRect" parent="Control/HBoxContainer" unique_id=2035177920]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_3rjhu")
+expand_mode = 2
+stretch_mode = 4
