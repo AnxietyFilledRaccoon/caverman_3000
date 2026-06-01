@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c27y7dhuvaw4s"]
+
+[ext_resource type="Script" uid="uid://cktfyfe153s30" path="res://pastolargo.gd" id="1_v2460"]
+[ext_resource type="Texture2D" uid="uid://bmap3k4m3gtvk" path="res://asets/pasto largo.png" id="2_y6mvc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a02uf"]
+size = Vector2(90, 86.5)
+
+[node name="pastolargo" type="Area2D" unique_id=1159502487]
+position = Vector2(0, 1)
+script = ExtResource("1_v2460")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=292128179]
+position = Vector2(85, -31.000015)
+scale = Vector2(0.14872955, 0.16387327)
+texture = ExtResource("2_y6mvc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1107918118]
+position = Vector2(-7, -33.25)
+shape = SubResource("RectangleShape2D_a02uf")
