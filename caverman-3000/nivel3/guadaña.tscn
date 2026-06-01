@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cyoo4eniqlnxs"]
+
+[ext_resource type="Script" uid="uid://dmx3cakdlnmpu" path="res://guadaña.gd" id="1_r0gyw"]
+[ext_resource type="Texture2D" uid="uid://ccmmhr30gmxwh" path="res://asets/guadaña.png" id="2_6cypc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eimqb"]
+radius = 25.0
+height = 94.0
+
+[node name="guadaña" type="Area2D" unique_id=931658949]
+script = ExtResource("1_r0gyw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1009992325]
+position = Vector2(-1, 2)
+scale = Vector2(0.3675, 0.36749998)
+texture = ExtResource("2_6cypc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258432048]
+position = Vector2(-10, 1)
+shape = SubResource("CapsuleShape2D_eimqb")

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b2y6bl6npxuku"]
+
+[ext_resource type="Script" uid="uid://dx8dogpyd41eo" path="res://nivel3/juegoPasto.gd" id="1_8i8d0"]
+[ext_resource type="PackedScene" uid="uid://c27y7dhuvaw4s" path="res://nivel3/pastolargo.tscn" id="2_02hm8"]
+[ext_resource type="PackedScene" uid="uid://cyoo4eniqlnxs" path="res://nivel3/guadaña.tscn" id="3_be3dc"]
+[ext_resource type="Texture2D" uid="uid://ifjamvygwlmh" path="res://asets/jardinfondo.png" id="4_tsdgk"]
+
+[node name="juegoPasto" type="Node2D" unique_id=2010090408]
+script = ExtResource("1_8i8d0")
+
+[node name="pastolargo2" parent="." unique_id=1159502487 instance=ExtResource("2_02hm8")]
+position = Vector2(405, 437)
+
+[node name="pastolargo" parent="." unique_id=359465735 instance=ExtResource("2_02hm8")]
+position = Vector2(694, 429)
+
+[node name="pastolargo3" parent="." unique_id=1926501853 instance=ExtResource("2_02hm8")]
+position = Vector2(646, 556)
+
+[node name="pastolargo4" parent="." unique_id=1468155479 instance=ExtResource("2_02hm8")]
+position = Vector2(226, 600)
+
+[node name="pastolargo5" parent="." unique_id=407211541 instance=ExtResource("2_02hm8")]
+position = Vector2(892, 608)
+
+[node name="pastolargo6" parent="." unique_id=715781961 instance=ExtResource("2_02hm8")]
+position = Vector2(1045, 437)
+
+[node name="guadaña" parent="." unique_id=931658949 instance=ExtResource("3_be3dc")]
+position = Vector2(253, 145)
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=1583603015]
+z_index = -10
+position = Vector2(574.3125, 337)
+scale = Vector2(0.7534994, 0.66308594)
+texture = ExtResource("4_tsdgk")
