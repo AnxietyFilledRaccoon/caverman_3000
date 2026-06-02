@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://kt3mk0xcjg48"]
+
+[ext_resource type="Texture2D" uid="uid://cpsodm0n71ns6" path="res://asets/spritesheet caver.png" id="1_m3gsj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se0u2"]
+size = Vector2(118, 238)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yvdd"]
+atlas = ExtResource("1_m3gsj")
+region = Rect2(239, 548, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnenh"]
+atlas = ExtResource("1_m3gsj")
+region = Rect2(478, 548, 239, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljmn2"]
+atlas = ExtResource("1_m3gsj")
+region = Rect2(717, 548, 239, 274)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_so5ex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yvdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnenh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljmn2")
+}],
+"loop": true,
+"name": &"caminarX",
+"speed": 10.0
+}]
+
+[node name="Playerlvl7" type="CharacterBody2D" unique_id=658744256]
+
+[node name="AreaPlayer" type="Area2D" parent="." unique_id=971984717]
+
+[node name="ColisionAreaPlayer" type="CollisionShape2D" parent="AreaPlayer" unique_id=695508673]
+position = Vector2(-7, 0)
+shape = SubResource("RectangleShape2D_se0u2")
+
+[node name="AnimationPlayer" type="AnimatedSprite2D" parent="." unique_id=795290511]
+sprite_frames = SubResource("SpriteFrames_so5ex")
+animation = &"caminarX"
+
+[node name="ColisionPlayer" type="CollisionShape2D" parent="." unique_id=2058001202]
+position = Vector2(-7, 0)
+shape = SubResource("RectangleShape2D_se0u2")
