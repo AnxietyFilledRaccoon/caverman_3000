@@ -42,9 +42,10 @@ texture = ExtResource("4_tsdgk")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1029985461]
 script = ExtResource("5_nmjug")
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=737905944]
+[node name="contador" type="Label" parent="CanvasLayer" unique_id=737905944]
 offset_right = 40.0
 offset_bottom = 23.0
+text = "0"
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_k181b")]
 
