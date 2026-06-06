@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cputut12v2yb0"]
+
+[node name="caja" type="Area2D" unique_id=977531881]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2071758459]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860403104]

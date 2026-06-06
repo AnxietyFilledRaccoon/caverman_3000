@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://33w2odlpjisv"]
+
+[ext_resource type="Texture2D" uid="uid://b8gfw0sil7hvn" path="res://asets/fondinivelcarton.png" id="1_2dkal"]
+
+[node name="juegocarton" type="Node2D" unique_id=2003002446]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=30642567]
+position = Vector2(585, 322.00003)
+scale = Vector2(0.29771215, 0.23204021)
+texture = ExtResource("1_2dkal")
