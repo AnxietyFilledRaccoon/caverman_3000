@@ -17,10 +17,6 @@ script = ExtResource("1_buvu7")
 [node name="player8" parent="." unique_id=1947866889 instance=ExtResource("1_woyc6")]
 position = Vector2(582, 534)
 
-[node name="semaforo" type="Sprite2D" parent="." unique_id=265902208]
-position = Vector2(846, 76)
-texture = ExtResource("3_upafv")
-
 [node name="auto1" type="Area2D" parent="." unique_id=994284609]
 position = Vector2(67, 415)
 collision_layer = 2
@@ -61,6 +57,9 @@ offset_bottom = 40.0
 [node name="LabelResultado" type="Label" parent="UI/VBoxContainer" unique_id=1979230885]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="LabelTiempo" type="Label" parent="UI/VBoxContainer" unique_id=404009555]
+layout_mode = 2
 
 [node name="Veredainicial" type="Sprite2D" parent="." unique_id=1374005008]
 z_index = -2
