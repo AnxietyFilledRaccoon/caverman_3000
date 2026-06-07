@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b8gfw0sil7hvn" path="res://asets/fondinivelcarton.png" id="1_2dkal"]
 [ext_resource type="Script" uid="uid://xj8hid3kbw8u" path="res://nivelcarton/juegocarton.gd" id="1_18edf"]
 [ext_resource type="PackedScene" uid="uid://cputut12v2yb0" path="res://nivelcarton/cajadecarton.tscn" id="3_8hxpb"]
+[ext_resource type="PackedScene" uid="uid://dejk8bwlf4ge0" path="res://nivelcarton/manita.tscn" id="4_8hxpb"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="4_541e2"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="5_m42vw"]
 
@@ -15,7 +16,10 @@ scale = Vector2(0.29771215, 0.23204021)
 texture = ExtResource("1_2dkal")
 
 [node name="caja" parent="." unique_id=977531881 instance=ExtResource("3_8hxpb")]
-position = Vector2(540, 551)
+position = Vector2(147, 539)
+
+[node name="manita" parent="." unique_id=1692993757 instance=ExtResource("4_8hxpb")]
+position = Vector2(551, 409)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=196555102]
 
