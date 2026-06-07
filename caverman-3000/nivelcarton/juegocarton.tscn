@@ -1,10 +1,39 @@
 [gd_scene format=3 uid="uid://33w2odlpjisv"]
 
 [ext_resource type="Texture2D" uid="uid://b8gfw0sil7hvn" path="res://asets/fondinivelcarton.png" id="1_2dkal"]
+[ext_resource type="Script" uid="uid://xj8hid3kbw8u" path="res://nivelcarton/juegocarton.gd" id="1_18edf"]
+[ext_resource type="PackedScene" uid="uid://cputut12v2yb0" path="res://nivelcarton/cajadecarton.tscn" id="3_8hxpb"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="4_541e2"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="5_m42vw"]
 
 [node name="juegocarton" type="Node2D" unique_id=2003002446]
+script = ExtResource("1_18edf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=30642567]
-position = Vector2(585, 322.00003)
+position = Vector2(582.00006, 327)
 scale = Vector2(0.29771215, 0.23204021)
 texture = ExtResource("1_2dkal")
+
+[node name="caja" parent="." unique_id=977531881 instance=ExtResource("3_8hxpb")]
+position = Vector2(540, 551)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=196555102]
+
+[node name="contador" type="Label" parent="CanvasLayer" unique_id=1624921046]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("4_541e2")]
+
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("5_m42vw")]
+
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=2007174973]
+visible = false
+
+[node name="reiniciar" type="Button" parent="botonreinicio" unique_id=262966795]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+text = "reiniciar"
+
+[connection signal="pressed" from="botonreinicio/reiniciar" to="." method="_on_reiniciar_pressed"]
