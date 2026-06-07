@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cqal1mrw5iuxh" path="res://nivel7/juego_7.gd" id="1_3fou4"]
 [ext_resource type="PackedScene" uid="uid://kt3mk0xcjg48" path="res://nivel7/playerlvl_7.tscn" id="2_px4uh"]
+[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/nivel1/basuraN.png" id="4_so5ex"]
+[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/gaseosaN.png" id="6_i56ol"]
 
 [node name="Juego7" type="Node2D" unique_id=1767808173]
 script = ExtResource("1_3fou4")
@@ -9,15 +11,47 @@ script = ExtResource("1_3fou4")
 [node name="Playerlvl7" parent="." unique_id=658744256 instance=ExtResource("2_px4uh")]
 position = Vector2(439, 453)
 
-[node name="Productos" type="Node2D" parent="." unique_id=1944213664]
-position = Vector2(68, 416)
-
-[node name="SpriteProductos" type="Sprite2D" parent="Productos" unique_id=1545149059]
+[node name="Productos" type="Sprite2D" parent="Playerlvl7" unique_id=1515082729]
+position = Vector2(48, 32)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
 
 [node name="Camion" type="Node2D" parent="." unique_id=708783186]
 position = Vector2(1085, 410)
 
 [node name="SpriteCamion" type="Sprite2D" parent="Camion" unique_id=546110142]
+
+[node name="ProductosEntregados" type="Node2D" parent="Camion" unique_id=10314921]
+
+[node name="SpriteProductos" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=1469511034]
+visible = false
+position = Vector2(20.550049, 26.849998)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto2" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=823601747]
+visible = false
+position = Vector2(28.550049, 26.850006)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto3" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=899936748]
+visible = false
+position = Vector2(36.55005, 27.850006)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto4" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=1402946234]
+visible = false
+position = Vector2(45.55005, 27.850006)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto5" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=1701835031]
+visible = false
+position = Vector2(54.55005, 27.850006)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
 
 [node name="Ui" type="CanvasLayer" parent="." unique_id=547638500]
 
@@ -55,3 +89,38 @@ offset_bottom = 23.0
 [node name="TimerJuego" type="Timer" parent="." unique_id=95303636]
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1693823715]
+
+[node name="Estanteria" type="Node2D" parent="." unique_id=1780336303]
+position = Vector2(68, 416)
+
+[node name="Productos" type="Node2D" parent="Estanteria" unique_id=1944213664]
+
+[node name="SpriteProductos" type="Sprite2D" parent="Estanteria/Productos" unique_id=1545149059]
+position = Vector2(-25, -43.305)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto2" type="Sprite2D" parent="Estanteria/Productos" unique_id=997480549]
+position = Vector2(12, -39)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto3" type="Sprite2D" parent="Estanteria/Productos" unique_id=9953441]
+position = Vector2(-25, 27)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto4" type="Sprite2D" parent="Estanteria/Productos" unique_id=1286046411]
+position = Vector2(12, 32)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto5" type="Sprite2D" parent="Estanteria/Productos" unique_id=1577927995]
+position = Vector2(-4, 71)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteEstanteria" type="Sprite2D" parent="Estanteria" unique_id=1609539693]
+z_index = -1
+scale = Vector2(3, 3)
+texture = ExtResource("4_so5ex")
