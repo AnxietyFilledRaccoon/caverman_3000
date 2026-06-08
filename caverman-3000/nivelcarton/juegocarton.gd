@@ -1,20 +1,21 @@
 extends Node2D
+var cajas_recolectadas = 0
+var cajas_totales = 4
 
+func _ready():
+	$CanvasLayer/contador.text = "0/4"
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func recolectar_caja():
 
+	cajas_recolectadas += 1
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	$CanvasLayer/contador.text = str(cajas_recolectadas) + "/" + str(cajas_totales)
 
-
-
+	if cajas_recolectadas >= cajas_totales:
+		get_tree().change_scene_to_file("res://nivelguadaña/juego_pasto.tscn")
 
 func _on_reiniciar_pressed() -> void:
-	# Quita la pausa por si el juego estaba pausado al perder
+		# Quita la pausa por si el juego estaba pausado al perder
 	get_tree().paused = false 
 	# Recarga el nivel actual
 	get_tree().reload_current_scene()

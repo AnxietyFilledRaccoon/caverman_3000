@@ -1,18 +1,10 @@
 extends Area2D
+func _input_event(_viewport, event, _shape_idx):
 
-class_name caja
-var cut= false
+	if event is InputEventMouseButton:
 
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			print("caja agarrada")
-			queue_free()
-	if cut:
-		return
-	if event is InputEventMouseButton:
-		
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			
-			cut= true
+
+			get_parent().recolectar_caja()
+
 			queue_free()
