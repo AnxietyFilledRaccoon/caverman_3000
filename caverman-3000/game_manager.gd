@@ -12,6 +12,8 @@ func perder_vida():
 	if total_vidas <= 0:
 		game_over()
 	else:
+		await (get_tree().create_timer(0.5).timeout)
+		get_tree().paused = true
 		siguiente_minijuego()
 
 func game_over():
