@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bpcob3bu0m6f4"]
+
+[ext_resource type="Script" uid="uid://bc681ra2n13ph" path="res://nivelcarton/cajadecarton.gd" id="1_8qxo0"]
+[ext_resource type="Texture2D" uid="uid://c36d5lwu6v5bw" path="res://asets/caja alta.png" id="2_8qxo0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4v5ab"]
+size = Vector2(42, 120.5)
+
+[node name="caja" type="Area2D" unique_id=977531881]
+script = ExtResource("1_8qxo0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2071758459]
+position = Vector2(23.929693, 53.390625)
+scale = Vector2(0.05284303, 0.06437455)
+texture = ExtResource("2_8qxo0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860403104]
+position = Vector2(26, 53.75)
+shape = SubResource("RectangleShape2D_4v5ab")

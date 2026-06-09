@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dejk8bwlf4ge0"]
+
+[ext_resource type="Texture2D" uid="uid://dhtr52ik6daaa" path="res://asets/mano puntero_20260426203559.png" id="1_itird"]
+[ext_resource type="Script" uid="uid://cdcapos53gtnk" path="res://nivelcarton/manita.gd" id="1_rv24y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv24y"]
+size = Vector2(39, 41)
+
+[node name="manita" type="Area2D" unique_id=1692993757]
+script = ExtResource("1_rv24y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1180310094]
+position = Vector2(-2.999998, -3)
+scale = Vector2(0.26875, 0.25125)
+texture = ExtResource("1_itird")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1890816029]
+position = Vector2(-1.5, -10.5)
+shape = SubResource("RectangleShape2D_rv24y")
