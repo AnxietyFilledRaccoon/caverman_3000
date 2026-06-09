@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cg2yodxxvv0ko"]
+
+[ext_resource type="Script" uid="uid://xj8hid3kbw8u" path="res://nivelcarton/juegocarton.gd" id="1_18edf"]
+[ext_resource type="Texture2D" uid="uid://b8gfw0sil7hvn" path="res://asets/fondinivelcarton.png" id="2_541e2"]
+[ext_resource type="PackedScene" uid="uid://cputut12v2yb0" path="res://nivelcarton/cajadecarton.tscn" id="3_m42vw"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="4_541e2"]
+[ext_resource type="PackedScene" uid="uid://dejk8bwlf4ge0" path="res://nivelcarton/manita.tscn" id="4_m42vw"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="5_m42vw"]
+[ext_resource type="PackedScene" uid="uid://b466knc61t5n3" path="res://nivelcarton/reiniciar.tscn" id="6_m42vw"]
+
+[node name="juegocarton" type="Node2D" unique_id=2010090408]
+script = ExtResource("1_18edf")
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=1583603015]
+z_index = -10
+position = Vector2(575.50006, 325.00003)
+scale = Vector2(0.2935145, 0.23347703)
+texture = ExtResource("2_541e2")
+
+[node name="caja" parent="." unique_id=977531881 instance=ExtResource("3_m42vw")]
+position = Vector2(634, 542)
+
+[node name="caja3" parent="." unique_id=1265326015 instance=ExtResource("3_m42vw")]
+position = Vector2(167, 521)
+
+[node name="caja4" parent="." unique_id=2100978105 instance=ExtResource("3_m42vw")]
+position = Vector2(994, 567)
+
+[node name="caja2" parent="." unique_id=387635746 instance=ExtResource("3_m42vw")]
+position = Vector2(785, 326)
+
+[node name="manita" parent="." unique_id=1692993757 instance=ExtResource("4_m42vw")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1029985461]
+
+[node name="contador" type="Label" parent="CanvasLayer" unique_id=737905944]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("4_541e2")]
+
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("5_m42vw")]
+
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=697240801]
+visible = false
+
+[node name="Reiniciar" parent="botonreinicio" unique_id=2112567535 instance=ExtResource("6_m42vw")]
+
+[connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
