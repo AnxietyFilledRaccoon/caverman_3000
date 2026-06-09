@@ -75,3 +75,5 @@ libraries/ = SubResource("AnimationLibrary_blsoy")
 position = Vector2(569.3484, 327.99994)
 scale = Vector2(3.2875717, 2.8547006)
 texture = ExtResource("2_q80aw")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

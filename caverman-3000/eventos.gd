@@ -23,9 +23,11 @@ func _process(_delta):
 
 
 func _on_tiempo_juego_timeout() -> void:
+	
 	print("se acabo el tiempo")
 # Esta función se ejecuta cuando el tiempo llega a cero
 # aca puedo cambiar de escena o activar Game Over
 	GameManager.perder_vida()
+	
 	restart_menu.visible = true # aparece el boton cuando se pierde
 	#get_tree().change_scene_to_file("res://game_over.tscn")

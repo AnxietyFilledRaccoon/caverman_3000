@@ -13,11 +13,16 @@ func _input(event):
 	if event is InputEventKey or event is InputEventMouseButton:
 		finalizar_intro()
 
-func _on_animation_finished():
-	finalizar_intro()
 
 func finalizar_intro():
 	
 	print(" fin")
 	get_tree().change_scene_to_file("res://menú_principal.tscn")
 	#aca colocar que se dirija al menu de juego
+
+
+
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	finalizar_intro()

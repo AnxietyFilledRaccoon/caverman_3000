@@ -24,9 +24,9 @@ color = Color(0.67058825, 1, 1, 0.5137255)
 
 [node name="imagen menu" type="TextureRect" parent="." unique_id=860483626]
 layout_mode = 0
-offset_left = 3.0
-offset_right = 1151.0
-offset_bottom = 645.0
+offset_top = -1.0
+offset_right = 1154.0
+offset_bottom = 648.0
 texture = ExtResource("2_v0lul")
 expand_mode = 1
 
