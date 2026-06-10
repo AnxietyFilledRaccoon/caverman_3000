@@ -1,11 +1,42 @@
 [gd_scene format=3 uid="uid://t8dgrtswrqs"]
 
 [ext_resource type="Script" uid="uid://cqcbs8ylvyqyb" path="res://nivelfolleto/escena_folleto.gd" id="1_wx3f3"]
+[ext_resource type="Texture2D" uid="uid://dsnlh1lgat3iu" path="res://nivelfolleto/Mesa.png" id="2_fa0fl"]
+[ext_resource type="Texture2D" uid="uid://dmgx2jgt4b7sw" path="res://nivelfolleto/trans1.png" id="3_wkaqj"]
+[ext_resource type="Texture2D" uid="uid://6y044eywr7ss" path="res://nivelfolleto/trans2.png" id="4_0rjy7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tq1oo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wkaqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0rjy7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=2114334181]
 script = ExtResource("1_wx3f3")
 
 [node name="personaje" type="Sprite2D" parent="." unique_id=1945550299]
+z_index = 1
+position = Vector2(504, 267)
+scale = Vector2(0.9935797, 0.91123945)
+
+[node name="mesa" type="Sprite2D" parent="." unique_id=1544581439]
+position = Vector2(215.00002, 302)
+scale = Vector2(1.1804619, 1.1804621)
+texture = ExtResource("2_fa0fl")
+
+[node name="transeunte" type="AnimatedSprite2D" parent="." unique_id=907524985]
+position = Vector2(918, 290)
+sprite_frames = SubResource("SpriteFrames_tq1oo")
+animation = &"idle"
+frame_progress = 0.96838534
 
 [node name="etiqueta_puntaje" type="Label" parent="." unique_id=1941023411]
 offset_right = 40.0
