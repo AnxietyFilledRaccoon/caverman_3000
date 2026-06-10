@@ -1,7 +1,19 @@
 [gd_scene format=3 uid="uid://d2gouxt4lyh4b"]
 
+[ext_resource type="Script" uid="uid://b50duw7rvbvkt" path="res://nivelelbicho/bicho.gd" id="1_4m4n1"]
+[ext_resource type="Texture2D" uid="uid://bqro672nic1e5" path="res://nivelelbicho/cucaracha.png" id="2_wchj4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgdpc"]
+radius = 61.68468
+
 [node name="bicho" type="Area2D" unique_id=63647976]
+script = ExtResource("1_4m4n1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1521611261]
+position = Vector2(2, -25)
+scale = Vector2(0.12418623, 0.10856123)
+texture = ExtResource("2_wchj4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1545102178]
+position = Vector2(2, 16)
+shape = SubResource("CircleShape2D_qgdpc")
