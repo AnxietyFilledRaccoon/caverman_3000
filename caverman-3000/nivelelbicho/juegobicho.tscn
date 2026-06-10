@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://hgv01mcdfp37"]
+
+[ext_resource type="Script" uid="uid://q1va56sncu6w" path="res://nivelelbicho/juegobicho.gd" id="1_8v6cp"]
+[ext_resource type="PackedScene" uid="uid://d2gouxt4lyh4b" path="res://nivelelbicho/bicho.tscn" id="2_8v6cp"]
+[ext_resource type="PackedScene" uid="uid://b7caagclwkipq" path="res://zapato.tscn" id="3_ojceh"]
+[ext_resource type="Texture2D" uid="uid://cfoh1dpf6bbwc" path="res://nivelelbicho/piso cocina.png" id="4_2b86a"]
+[ext_resource type="Script" uid="uid://e5sk81kvh0rs" path="res://nivelguadaña/canvas_layer.gd" id="5_unrmw"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_bn5ly"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_jwb3l"]
+[ext_resource type="PackedScene" uid="uid://b466knc61t5n3" path="res://nivelcarton/reiniciar.tscn" id="8_cfr3o"]
+
+[node name="juegobicho" type="Node2D" unique_id=2010090408]
+script = ExtResource("1_8v6cp")
+
+[node name="bicho" parent="." unique_id=63647976 groups=["bicho"] instance=ExtResource("2_8v6cp")]
+position = Vector2(781, 469)
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=1583603015]
+z_index = -10
+position = Vector2(575.49994, 320.87503)
+scale = Vector2(0.37272134, 0.21166994)
+texture = ExtResource("4_2b86a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1029985461]
+script = ExtResource("5_unrmw")
+
+[node name="contador" type="Label" parent="CanvasLayer" unique_id=737905944]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_bn5ly")]
+
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_jwb3l")]
+
+[node name="zapato" parent="." unique_id=1918863226 instance=ExtResource("3_ojceh")]
+position = Vector2(67, 243)
+
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=697240801]
+visible = false
+
+[node name="Reiniciar" parent="botonreinicio" unique_id=2112567535 instance=ExtResource("8_cfr3o")]
+
+[connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]

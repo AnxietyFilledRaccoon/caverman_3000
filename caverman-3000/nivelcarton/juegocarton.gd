@@ -4,6 +4,16 @@ var cajas_totales = 4
 
 func _ready():
 	$CanvasLayer/contador.text = "0/4"
+	
+	var spawns = [
+		$Spawn1,
+		$Spawn2,
+		$Spawn3,
+		$spawn4,
+	]
+
+	spawns.shuffle()
+	
 
 func recolectar_caja():
 
