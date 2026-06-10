@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_7caxa"]
 [ext_resource type="PackedScene" uid="uid://b466knc61t5n3" path="res://nivelcarton/reiniciar.tscn" id="8_7caxa"]
 
-[node name="juegopasto" type="Node2D" unique_id=2010090408]
+[node name="juegoPasto" type="Node2D" unique_id=2010090408]
 script = ExtResource("1_8i8d0")
 
 [node name="pastolargo2" parent="." unique_id=1159502487 instance=ExtResource("2_02hm8")]
