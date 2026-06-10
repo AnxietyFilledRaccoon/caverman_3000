@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://t8dgrtswrqs"]
+
+[node name="Node2D" type="Node2D" unique_id=2114334181]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1945550299]
+
+[node name="Label" type="Label" parent="." unique_id=1941023411]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1131265644]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1855052364]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
