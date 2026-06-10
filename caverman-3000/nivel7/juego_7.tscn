@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cqal1mrw5iuxh" path="res://nivel7/juego_7.gd" id="1_3fou4"]
 [ext_resource type="PackedScene" uid="uid://kt3mk0xcjg48" path="res://nivel7/playerlvl_7.tscn" id="2_px4uh"]
-[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/nivel1/basuraN.png" id="4_so5ex"]
+[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="4_so5ex"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="5_exl78"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="6_3p4mw"]
 [ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/gaseosaN.png" id="6_i56ol"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_qvuab"]
 
 [node name="Juego7" type="Node2D" unique_id=1767808173]
 script = ExtResource("1_3fou4")
@@ -73,20 +76,13 @@ size_flags_horizontal = 0
 size_flags_vertical = 1
 
 [node name="LabelPRestantes" type="Label" parent="Ui/Control" unique_id=547260389]
-layout_mode = 0
-offset_left = 575.0
-offset_right = 576.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-
-[node name="LabelTiempo" type="Label" parent="Ui/Control" unique_id=422744335]
-layout_mode = 0
-offset_left = 575.0
-offset_right = 576.0
-offset_bottom = 23.0
-
-[node name="TimerJuego" type="Timer" parent="." unique_id=95303636]
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1693823715]
 
@@ -124,3 +120,30 @@ texture = ExtResource("6_i56ol")
 z_index = -1
 scale = Vector2(3, 3)
 texture = ExtResource("4_so5ex")
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_exl78")]
+
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1814548766]
+visible = false
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1029499362]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("6_3p4mw")
+theme_override_font_sizes/font_size = 50
+text = " Reiniciar "
+
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_qvuab")]
+
+[connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]

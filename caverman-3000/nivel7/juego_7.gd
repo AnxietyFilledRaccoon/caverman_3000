@@ -3,8 +3,6 @@ extends Node2D
 @onready var player7 = $Playerlvl7
 @onready var productos = $Estanteria/Productos
 @onready var camion = $Camion
-@onready var timer_juego = $TimerJuego
-@onready var label_tiempo = $Ui/Control/LabelTiempo
 @onready var label_p_restantes = $Ui/Control/LabelPRestantes
 @onready var label_resultados = $Ui/Control/LabelResultado
 
@@ -24,13 +22,7 @@ func _ready():
 
 	player7.position.x = (productos.position.x + camion.position.x) / 2.0
 
-	timer_juego.wait_time = tiempo_total
-	timer_juego.start()
-
 	label_resultados.visible = false
-
-	if !timer_juego.timeout.is_connected(_tiempo_agotado):
-		timer_juego.timeout.connect(_tiempo_agotado)
 	
 	productos_total.visible = false
 
@@ -43,9 +35,6 @@ func _ready():
 func _process(_delta: float) -> void:
 	if !juego_activo:
 		return
-		
-	var tiempo_restante = int (timer_juego.time_left) + 1
-	label_tiempo.text = "Tiempo: %02d" % tiempo_restante
 	
 
 func _input(event: InputEvent) -> void:
@@ -55,12 +44,12 @@ func _input(event: InputEvent) -> void:
 	if en_movimiento:
 		return
 	
-	if event.is_action_pressed("move_left"):
+	if event.is_action_pressed("Izquierda"):
 
 		if !tiene_producto:
 			_mover_player(productos.position.x, _al_llegar_productos, true)
 	
-	if event.is_action_pressed("move_right"):
+	if event.is_action_pressed("Derecha"):
 		if tiene_producto:
 			_mover_player(camion.position.x, _al_llegar_camion, false)
 
@@ -114,11 +103,17 @@ func _actualizar_productos_visuales() -> void:
 func _tiempo_agotado() -> void:
 	_fin_juego(false)
 
+func _on_reiniciar_pressed() -> void:
+	# Quita la pausa por si el juego estaba pausado al perder
+	get_tree().paused = false 
+	# Recarga el nivel actual
+	get_tree().reload_current_scene()
+
 func _fin_juego(gano: bool) -> void:
 	juego_activo = false
-	timer_juego.stop()
 	label_resultados.visible = true
 	if gano:
+		$eventos.nivel_ganado()
 		await get_tree().create_timer(2.0).timeout
 		label_resultados.text = "¡Entregaste todos los productos!"
 		get_tree().change_scene_to_file("res://nivel8/juego_8.tscn")
