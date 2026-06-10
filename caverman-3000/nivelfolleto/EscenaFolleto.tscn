@@ -5,15 +5,15 @@
 [node name="Node2D" type="Node2D" unique_id=2114334181]
 script = ExtResource("1_wx3f3")
 
-[node name="Player" type="Sprite2D" parent="." unique_id=1945550299]
+[node name="personaje" type="Sprite2D" parent="." unique_id=1945550299]
 
-[node name="ScoreLabbel" type="Label" parent="." unique_id=1941023411]
+[node name="etiqueta_puntaje" type="Label" parent="." unique_id=1941023411]
 offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1131265644]
 
-[node name="VictoryScreen" type="Control" parent="CanvasLayer" unique_id=1855052364]
+[node name="pantalla_victoria" type="Control" parent="CanvasLayer" unique_id=1855052364]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

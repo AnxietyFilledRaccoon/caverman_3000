@@ -50,10 +50,8 @@ func _input(event):
 		if puntaje >= puntaje_objetivo:
 			mostrar_victoria()
 
-
 func actualizar_puntaje():
 	etiqueta_puntaje.text = "Folletos repartidos: " + str(puntaje) + "/" + str(puntaje_objetivo)
-
 
 func mostrar_victoria():
 	pantalla_victoria.visible = true
