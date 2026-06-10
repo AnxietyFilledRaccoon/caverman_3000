@@ -63,13 +63,16 @@ func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
 	#aca hay que sumar plata al score
 	##pasar a otra escena, menu o pantalla
-	
+	call_deferred("_cambiar_escena")
+	#get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
+
+
+func _cambiar_escena():
+	# eventos para registrar la platita
+	var eventos = get_node_or_null("../eventos")
+	if eventos:
+		eventos.nivel_ganado()
 	get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
-		
-	
-
-
-
 
 
 func _on_item_recolectar_items() -> void:
