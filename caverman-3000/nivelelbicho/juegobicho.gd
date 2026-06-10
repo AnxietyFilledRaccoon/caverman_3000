@@ -26,7 +26,7 @@ func actualizar_contador():
 func sumar_bicho():
 	bicho_aplastado += 1
 	
-	$CanvasLayer/contador.text =str(bicho_aplastado) +"/7"
+	$CanvasLayer/contador.text =str(bicho_aplastado) +"/8"
 	if bicho_aplastado >= bicho_total:
 			get_tree().change_scene_to_file("res://nivelcarton/juegocarton.tscn")
 	print("aplastado:",bicho_aplastado)
