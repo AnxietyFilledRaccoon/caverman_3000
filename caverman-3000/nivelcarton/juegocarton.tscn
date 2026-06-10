@@ -18,18 +18,33 @@ scale = Vector2(0.2935145, 0.23347703)
 texture = ExtResource("2_541e2")
 
 [node name="caja" parent="." unique_id=977531881 instance=ExtResource("3_m42vw")]
-position = Vector2(634, 542)
+position = Vector2(663, 527)
+
+[node name="spawn 1" type="Marker2D" parent="caja" unique_id=501148766]
+position = Vector2(11, 30)
+scale = Vector2(0.99999994, 1)
 
 [node name="caja3" parent="." unique_id=1265326015 instance=ExtResource("3_m42vw")]
 position = Vector2(167, 521)
 
+[node name="spawn 3" type="Marker2D" parent="caja3" unique_id=868383602]
+position = Vector2(9, 32)
+
 [node name="caja4" parent="." unique_id=2100978105 instance=ExtResource("3_m42vw")]
 position = Vector2(994, 567)
+
+[node name="spawn 4" type="Marker2D" parent="caja4" unique_id=709216429]
+position = Vector2(9, 37)
 
 [node name="caja2" parent="." unique_id=387635746 instance=ExtResource("3_m42vw")]
 position = Vector2(785, 326)
 
+[node name="spawn 2" type="Marker2D" parent="caja2" unique_id=526603788]
+position = Vector2(5, 30)
+scale = Vector2(0.99999994, 1)
+
 [node name="manita" parent="." unique_id=1692993757 instance=ExtResource("4_m42vw")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1029985461]
 
