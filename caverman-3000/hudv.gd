@@ -10,6 +10,7 @@ func _ready():
 	label_platita.text = "$%d" % GameManager.platita_total
 	# Mostramos las vidas iniciales al cargar
 	_on_vidas_actualizadas(GameManager.total_vidas)
+
 func _on_vidas_actualizadas(vidas: int):
 	for i in range(vida.size()):
 		if i < vidas:

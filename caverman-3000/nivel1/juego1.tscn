@@ -4,17 +4,101 @@
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
 [ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
 [ext_resource type="Texture2D" uid="uid://cfdy4e62lisyn" path="res://asets/plaza1.png" id="2_w6fdp"]
-[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_utxh4"]
+[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/nivel1/metal.png" id="3_utxh4"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="4_swt8o"]
-[ext_resource type="Texture2D" uid="uid://bxdxiy2b2corp" path="res://asets/manzana.png" id="4_w6fdp"]
-[ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/pescado.png" id="5_n2edi"]
-[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="6_rxpji"]
+[ext_resource type="Texture2D" uid="uid://bxdxiy2b2corp" path="res://asets/nivel1/manzana.png" id="4_w6fdp"]
+[ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/nivel1/pescado.png" id="5_n2edi"]
+[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/nivel1/basuraN.png" id="6_rxpji"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_n2edi"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="12_w6fdp"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2edi"]
+size = Vector2(205.00002, 145.62505)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6fdp"]
+size = Vector2(222.00008, 146.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxpji"]
+size = Vector2(615.9476, 573.88556)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4yku"]
+size = Vector2(738.04156, 577.889)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3b3g1"]
+size = Vector2(789.3703, 601.7826)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_16gsq"]
+radius = 251.07483
+height = 596.699
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tatt"]
+size = Vector2(319.38995, 195.31702)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16gsq"]
+size = Vector2(1148.0002, 39.90625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3qkk"]
+size = Vector2(195, 144)
+
 [node name="Juego1" type="Node2D" unique_id=1086814356]
 script = ExtResource("1_dcelm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1902003995]
+position = Vector2(359.50012, 560.8125)
+scale = Vector2(0.9999998, 1)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1111504156]
+shape = SubResource("RectangleShape2D_n2edi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1961819740]
+position = Vector2(-14.500061, -459.0626)
+shape = SubResource("RectangleShape2D_w6fdp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2052957274]
+position = Vector2(-139.50005, -384.8125)
+scale = Vector2(0.31171498, 0.25092113)
+shape = SubResource("RectangleShape2D_rxpji")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=641718729]
+position = Vector2(449.4999, 0.18743896)
+scale = Vector2(0.31171498, 0.25092113)
+shape = SubResource("RectangleShape2D_rxpji")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=558674555]
+position = Vector2(474.47067, -458.31482)
+scale = Vector2(0.31171498, 0.25092113)
+shape = SubResource("RectangleShape2D_h4yku")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1014399930]
+position = Vector2(-132.50009, -75.8125)
+scale = Vector2(0.31171498, 0.25092113)
+shape = SubResource("RectangleShape2D_h4yku")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=106563872]
+position = Vector2(595.4707, -74.31256)
+scale = Vector2(0.31171498, 0.25092113)
+shape = SubResource("RectangleShape2D_3b3g1")
+
+[node name="fuente" type="CollisionShape2D" parent="StaticBody2D" unique_id=22468463]
+position = Vector2(234.01535, -235.78766)
+rotation = 1.5707964
+scale = Vector2(0.25092113, 0.311715)
+shape = SubResource("CapsuleShape2D_16gsq")
+
+[node name="banco" type="CollisionShape2D" parent="StaticBody2D" unique_id=276225309]
+position = Vector2(238.72061, -149.81256)
+scale = Vector2(0.31171498, 0.25092113)
+shape = SubResource("RectangleShape2D_6tatt")
+
+[node name="arriba" type="CollisionShape2D" parent="StaticBody2D" unique_id=1036077697]
+position = Vector2(218.49991, -542.7656)
+shape = SubResource("RectangleShape2D_16gsq")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=583841015]
+position = Vector2(602, -384.8125)
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_w3qkk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1785001822]
 position = Vector2(575, 317.50003)
@@ -22,23 +106,23 @@ scale = Vector2(0.31171495, 0.25092113)
 texture = ExtResource("2_w6fdp")
 
 [node name="item" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
-position = Vector2(302, 526)
+position = Vector2(1036, 390)
 textura = ExtResource("3_utxh4")
 
 [node name="item2" parent="." unique_id=1749684002 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
-position = Vector2(349, 264)
+position = Vector2(100, 122)
 textura = ExtResource("4_w6fdp")
 
 [node name="item3" parent="." unique_id=393883410 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
-position = Vector2(574, 403)
+position = Vector2(365, 470)
 textura = ExtResource("5_n2edi")
 
 [node name="item4" parent="." unique_id=245466926 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
-position = Vector2(760, 261)
+position = Vector2(704, 104)
 textura = ExtResource("6_rxpji")
 
 [node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
-position = Vector2(26, 532)
+position = Vector2(588.99994, 523)
 scale = Vector2(0.7, 0.7)
 move_speed = 200
 
@@ -50,8 +134,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_swt8o")]
-
-[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("12_w6fdp")]
+tiempo_personalizar = 10
 
 [node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1394240221]
 visible = false
@@ -73,6 +156,8 @@ theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("12_n2edi")
 theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
+
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("12_w6fdp")]
 
 [connection signal="recolectar_items" from="item" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="item2" to="Player" method="_on_moneda_recolectar_items"]

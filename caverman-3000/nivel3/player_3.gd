@@ -61,18 +61,16 @@ func recoger_items():
 		
 func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
+	$"../eventos".nivel_ganado()
+
 	#aca hay que sumar plata al score
 	##pasar a otra escena, menu o pantalla
-	call_deferred("_cambiar_escena")
-	#get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
-
-
-func _cambiar_escena():
-	# eventos para registrar la platita
-	var eventos = get_node_or_null("../eventos")
-	if eventos:
-		eventos.nivel_ganado()
-	get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
+	TransicionManager.cambiar_nivel(
+	"NIVEL 4",
+	"Usa Mouse","")# puedo agregar en el espacio libre la siguiente pantalla
+	#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://nivelcarton/juegocarton.tscn")
 
 
 func _on_item_recolectar_items() -> void:

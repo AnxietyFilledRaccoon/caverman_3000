@@ -59,8 +59,14 @@ func recoger_items():
 			ganar_juego() # aca puedo emitir una señal que llame al ganar juego dew gestor de eventos
 		
 func ganar_juego(): #esto deberia estar en un gestor de eventos
-	print("ganaste")
-	#pasar a otra escena, menu o pantalla
+
+	#aca hay que sumar plata al score
+	##pasar a otra escena, menu o pantalla
+	TransicionManager.cambiar_nivel(
+	"NIVEL 2",
+	"Usa W.A.S.D","")# puedo agregar en el espacio libre la siguiente pantalla
+	#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
+	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file("res://nivel1/juego1.tscn")
 	
 	

@@ -20,6 +20,7 @@ func _process(_delta):
 	# Actualizar el texto del label cada frame con el tiempo restante
 	# ceil() redondea hacia arriba para mostrar el segundo actual correcto
 	tiempo_label.text = str(ceil($tiempoJuego.time_left))
+	
 func nivel_ganado():
 	var tiempo_restante = game_timer.time_left
 	game_timer.stop()
@@ -29,9 +30,13 @@ func nivel_ganado():
 func _on_tiempo_juego_timeout() -> void:
 	
 	print("se acabo el tiempo")
+	get_tree().paused = true
+	
+	await get_tree().create_timer(2.0).timeout
 # Esta función se ejecuta cuando el tiempo llega a cero
 # aca puedo cambiar de escena o activar Game Over
 	GameManager.perder_vida()
+	
 	if restart_menu:
 		restart_menu.visible = true # aparece el boton cuando se pierde
 	#get_tree().change_scene_to_file("res://game_over.tscn")
