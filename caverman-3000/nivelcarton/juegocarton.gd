@@ -2,22 +2,6 @@ extends Node2D
 var cajas_recolectadas = 0
 var cajas_totales = 4
 
-
-func _ready():
-	var spawns = [
-		$"spawn 1",
-		$"spawn 2",
-		$"spawn 3",
-		$"spawn 4"
-	]
-	spawns.shuffle()
-	$caja.position = spawns[0].position
-	$caja2.position =spawns[1].position
-	$caja3.position =spawns[2].position
-	$caja4.position =spawns[3].position
-	$CanvasLayer/contador.text = "0/4"
-	
-
 func recolectar_caja():
 
 	cajas_recolectadas += 1
