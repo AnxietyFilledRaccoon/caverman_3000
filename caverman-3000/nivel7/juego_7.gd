@@ -116,6 +116,10 @@ func _fin_juego(gano: bool) -> void:
 		$eventos.nivel_ganado()
 		await get_tree().create_timer(2.0).timeout
 		label_resultados.text = "¡Entregaste todos los productos!"
+		
+		TransicionManager.cambiar_nivel(
+		"Pisar", "Usa Cruceta","")
+		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://nivel8/juego_8.tscn")
 	else:
 		await get_tree().create_timer(1.0).timeout

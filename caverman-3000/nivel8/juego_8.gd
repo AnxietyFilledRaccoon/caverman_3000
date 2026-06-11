@@ -5,6 +5,8 @@ extends Node2D
 @onready var player1 = $player8
 @onready var area_player = $player8/Areaplayer
 @onready var label_resultado = $UI/VBoxContainer/LabelResultado
+var pantalla_final_scene = preload("res://plata_vida_total.tscn")
+
 
 var paso: float = 40.0
 var meta_x: float = 520.0
@@ -110,6 +112,10 @@ func _fin_juego(gano: bool):
 		$HUDV.visible = false
 		#.visible = false
 		await get_tree().create_timer(1.5).timeout
+		TransicionManager.cambiar_nivel(
+	"Pisar", "Mouse y Espacio","")
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://nivelelbicho/juegobicho.tscn")
 		#get_tree().change_scene_to_file("res://menú_principal.tscn")
 	else:
 		label_resultado.text = "¡Te atropellaron, no se logró!"
@@ -119,6 +125,7 @@ func _fin_juego(gano: bool):
 	# Esta función se ejecuta cuando el tiempo llega a cero
 	# aca puedo cambiar de escena o activar Game Over
 		$eventos._on_tiempo_juego_timeout()
+		
 	#esto faltaba para que reinicie el nivel y funcione bien
 	#get_tree().change_scene_to_file("res://game_over.tscn")
 	#await get_tree().create_timer(2.0).timeout
