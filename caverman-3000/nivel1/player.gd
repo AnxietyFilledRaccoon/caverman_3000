@@ -65,9 +65,9 @@ func ganar_juego(): #esto deberia estar en un gestor de eventos
 
 	#aca hay que sumar plata al score
 	##pasar a otra escena, menu o pantalla
-	TransicionManager.cambiar_nivel(
-	"usa mouse",
-	"Nivel2","")# puedo agregar en el espacio libre la siguiente pantalla
+	TransicionManager.cambiar_nivel("Nivel2",
+	"Usa mouse",
+	"")# puedo agregar en el espacio libre la siguiente pantalla
 	#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
 	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file("res://nivel2/juego_2.tscn")
