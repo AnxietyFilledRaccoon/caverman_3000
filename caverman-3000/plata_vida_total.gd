@@ -14,3 +14,7 @@ func _ready():
 	label_platita.text = "PLATITA GANADA: $%d" % GameManager.platita_total
 	for i in range(tarjetas.size()):
 		tarjetas[i].visible = i < GameManager.total_vidas
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://menú_principal.tscn")

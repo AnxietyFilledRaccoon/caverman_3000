@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cq21umjs71wm3" path="res://asets/nivel2.png" id="2_6vlrg"]
 [ext_resource type="PackedScene" uid="uid://cte1cfdshjlci" path="res://nivel2/producto.tscn" id="2_llckx"]
 [ext_resource type="PackedScene" uid="uid://chdtdhsfw7jap" path="res://nivel2/mano.tscn" id="3_ahtto"]
-[ext_resource type="Texture2D" uid="uid://xxikjj5drt8y" path="res://asets/gaseosaA.png" id="3_vhe2x"]
+[ext_resource type="Texture2D" uid="uid://xxikjj5drt8y" path="res://asets/nivel2/gaseosaA.png" id="3_vhe2x"]
 [ext_resource type="Script" uid="uid://b7ejbbwv0uo7a" path="res://canvas_layer.gd" id="4_13cvf"]
-[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/gaseosaN.png" id="4_sxwe6"]
+[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/nivel2/gaseosaN.png" id="4_sxwe6"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="5_4cfnp"]
 [ext_resource type="Texture2D" uid="uid://da3usks6p2gpq" path="res://asets/detergente.png" id="6_ss3wp"]
 [ext_resource type="Texture2D" uid="uid://00odnn8v75ho" path="res://asets/yerba.png" id="7_6vlrg"]
@@ -60,7 +60,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_4cfnp")]
-tiempo_personalizar = 10
+tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_sxwe6")]
 

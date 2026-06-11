@@ -122,7 +122,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("4_so5ex")
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_exl78")]
-tiempo_personalizar = 7
+tiempo_personalizar = 20
 
 [node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1814548766]
 visible = false

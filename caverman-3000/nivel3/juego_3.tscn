@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://byq2qyr78876x" path="res://asets/juego_3.tscn - Caverman 3000 - Godot Engine 7_6_2026 23_42_40.png" id="2_8ctm1"]
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="2_spb8h"]
 [ext_resource type="Texture2D" uid="uid://dca2m3k682c8v" path="res://asets/nivel3.png" id="2_trfa5"]
-[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_4y7ya"]
+[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/nivel1/metal.png" id="3_4y7ya"]
 [ext_resource type="PackedScene" uid="uid://dp3j2hu0te8ni" path="res://nivel3/player_3.tscn" id="7_xhe8e"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="9_nxv5p"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="10_4mmac"]
@@ -149,7 +149,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("10_4mmac")]
-tiempo_personalizar = 10
+tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_vehe0")]
 
