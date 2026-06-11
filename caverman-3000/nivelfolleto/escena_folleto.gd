@@ -38,7 +38,7 @@ func _input(event):
 		esta_a_la_derecha = !esta_a_la_derecha
 
 		var animacion = create_tween()
-		animacion.tween_property(personaje, "position", destino, 0.2)
+		animacion.tween_property(personaje, "position", destino, 0.15)
 
 		await animacion.finished
 		moviendose = false

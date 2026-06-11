@@ -40,7 +40,7 @@ position = Vector2(984, 244)
 scale = Vector2(1.0147058, 1.0147059)
 sprite_frames = SubResource("SpriteFrames_tq1oo")
 animation = &"idle"
-frame_progress = 0.5712154
+frame_progress = 0.44690254
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=1530277036]
 z_index = -1
