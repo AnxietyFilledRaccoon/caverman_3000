@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/pescado.png" id="5_n2edi"]
 [ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="6_rxpji"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="11_n2edi"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_n2edi"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="12_w6fdp"]
 
@@ -136,8 +137,17 @@ offset_bottom = 23.0
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_swt8o")]
 tiempo_personalizar = 10
 
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("12_w6fdp")]
+
 [node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1394240221]
 visible = false
+
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=1337869362]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("11_n2edi")
 
 [node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1422301051]
 process_mode = 3
@@ -156,8 +166,6 @@ theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("12_n2edi")
 theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
-
-[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("12_w6fdp")]
 
 [connection signal="recolectar_items" from="item" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="item2" to="Player" method="_on_moneda_recolectar_items"]

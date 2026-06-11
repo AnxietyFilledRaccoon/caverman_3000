@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bupkagbjtumq6"]
 
 [ext_resource type="Script" uid="uid://bf7jthpd5kqyj" path="res://game_over.gd" id="1_y26ei"]
-[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="2_ccer4"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="2_yxx3c"]
 
 [node name="Game_over" type="Control" unique_id=545366684]
@@ -13,14 +12,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y26ei")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1461348386]
+[node name="TextureRect" type="ColorRect" parent="." unique_id=51992459]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ccer4")
+color = Color(0, 0, 0, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1540700247]
 layout_mode = 1
