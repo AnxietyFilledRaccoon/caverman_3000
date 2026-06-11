@@ -51,3 +51,6 @@ func _input(event):
 
 func mostrar_victoria():
 	pantalla_victoria.visible = true
+	$eventos.nivel_ganado()
+	await get_tree().create_timer(2.0).timeout
+	get_tree().change_scene_to_file("")
