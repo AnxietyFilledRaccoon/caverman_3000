@@ -5,7 +5,7 @@ extends CharacterBody2D
 var mirando_derecha = true
 var screen_size
 var items_recolectados = 0
-var meta_items = 4
+var meta_items = 5
 var gravity = 1000
 
 
