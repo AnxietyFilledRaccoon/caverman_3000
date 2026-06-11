@@ -103,9 +103,14 @@ func _fin_juego(gano: bool):
 	# colocaria una funcion de victoria de ser posible
 	if gano:
 		$eventos.nivel_ganado()
+		
 		label_resultado.text = "¡Llegaste por suerte y ganaste!"
+		label_resultado.visible = false
+		$UI.visible = false
+		$HUDV.visible = false
+		#.visible = false
 		await get_tree().create_timer(1.5).timeout
-		get_tree().change_scene_to_file("res://menú_principal.tscn")
+		#get_tree().change_scene_to_file("res://menú_principal.tscn")
 	else:
 		label_resultado.text = "¡Te atropellaron, no se logró!"
 		#await get_tree().create_timer(1.5).timeout
@@ -113,7 +118,8 @@ func _fin_juego(gano: bool):
 		await get_tree().create_timer(2.0).timeout
 	# Esta función se ejecuta cuando el tiempo llega a cero
 	# aca puedo cambiar de escena o activar Game Over
-		$eventos._on_tiempo_juego_timeout()#esto altaba para que reinicie el nivel y funcione bien
+		$eventos._on_tiempo_juego_timeout()
+	#esto faltaba para que reinicie el nivel y funcione bien
 	#get_tree().change_scene_to_file("res://game_over.tscn")
 	#await get_tree().create_timer(2.0).timeout
 	#get_tree().change_scene_to_file("res://game_over.tscn")
