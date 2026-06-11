@@ -149,7 +149,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("10_4mmac")]
-tiempo_personalizar = 20
+tiempo_personalizar = 10
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_vehe0")]
 

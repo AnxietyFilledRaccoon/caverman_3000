@@ -11,10 +11,10 @@ func _ready():
 		$"spawn 4"
 	]
 	spawns.shuffle()
-	$caja.position = spawns[0].position
-	$caja2.position =spawns[1].position
-	$caja3.position =spawns[2].position
-	$caja4.position =spawns[3].position
+	#$caja.position = spawns[0].position
+	#$caja2.position =spawns[1].position
+	#$caja3.position =spawns[2].position
+	#$caja4.position =spawns[3].position
 	$CanvasLayer/contador.text = "0/4"
 	
 
@@ -27,8 +27,8 @@ func recolectar_caja():
 	if cajas_recolectadas >= cajas_totales:
 		$eventos.nivel_ganado()
 		TransicionManager.cambiar_nivel(
-		"NIVEL 5",
-		"Usa Mouse","")# puedo agregar en el espacio libre la siguiente pantalla
+		"Cortar",
+		"Click Mouse","")# puedo agregar en el espacio libre la siguiente pantalla
 		#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://nivelguadaña/juego_pasto.tscn")

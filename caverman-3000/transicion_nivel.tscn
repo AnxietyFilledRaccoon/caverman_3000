@@ -2,45 +2,46 @@
 
 [ext_resource type="Script" uid="uid://clc513wh4hwcp" path="res://transicion_nivel.gd" id="1_h0lcw"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="2_c6xq1"]
+[ext_resource type="Texture2D" uid="uid://c52ypncwbotuw" path="res://asets/Fondos y otras escenas/Cargando.png" id="2_l2e25"]
 
 [node name="TransicionNivel" type="CanvasLayer" unique_id=617358032]
 script = ExtResource("1_h0lcw")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=690748778]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1631183528]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.03839716, 0.038397174, 0.038397126, 1)
+texture = ExtResource("2_l2e25")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1471143305]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=1471143305]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -20.0
-offset_top = -43.0
+offset_top = -86.0
 offset_right = 20.0
-offset_bottom = 43.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
-[node name="Labelmecanica" type="Label" parent="ColorRect/VBoxContainer" unique_id=567970109]
+[node name="Labelmecanica" type="Label" parent="TextureRect/VBoxContainer" unique_id=567970109]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_c6xq1")
 theme_override_font_sizes/font_size = 40
 
-[node name="Labelmecanica2" type="Label" parent="ColorRect/VBoxContainer" unique_id=1188228473]
+[node name="Labelmecanica2" type="Label" parent="TextureRect/VBoxContainer" unique_id=1188228473]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_c6xq1")
 theme_override_font_sizes/font_size = 40
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2046812120]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

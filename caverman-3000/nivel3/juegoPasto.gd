@@ -18,8 +18,8 @@ func sumar_corte():
 	if pasto_cortado >= pasto_total:
 		$eventos.nivel_ganado()
 		TransicionManager.cambiar_nivel(
-		"Nivel 6",
-		"Usa W.A.S.D","")# puedo agregar en el espacio libre la siguiente pantalla
+		"Repone",
+		"Usa Cruceta","")# puedo agregar en el espacio libre la siguiente pantalla
 		#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://nivel7/juego_7.tscn")
