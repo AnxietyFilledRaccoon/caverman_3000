@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="7_fvqy6"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="8_op7ai"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="9_tmawc"]
+[ext_resource type="Texture2D" uid="uid://coq8hvq0exbd2" path="res://nivelketchup/Fondo.png" id="10_dsnay"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vqsdr"]
 animations = [{
@@ -63,14 +64,16 @@ script = ExtResource("1_vocq5")
 [node name="Ketchup" type="Area2D" parent="." unique_id=1408456901]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ketchup" unique_id=2079251074]
-position = Vector2(448, 309)
+position = Vector2(562, 256.00003)
+rotation = 0.41411456
 sprite_frames = SubResource("SpriteFrames_vqsdr")
 animation = &"explode"
 
 [node name="Hand" type="Node2D" parent="." unique_id=1273856634]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hand" unique_id=353861519]
-position = Vector2(491, 300)
+position = Vector2(791, 270)
+scale = Vector2(1.1302521, 1.1302521)
 sprite_frames = SubResource("SpriteFrames_fvqy6")
 animation = &"shake"
 
@@ -98,5 +101,11 @@ theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("9_tmawc")
 theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736542379]
+z_index = -2
+position = Vector2(564, 310.00003)
+scale = Vector2(1.5404408, 1.1268908)
+texture = ExtResource("10_dsnay")
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
