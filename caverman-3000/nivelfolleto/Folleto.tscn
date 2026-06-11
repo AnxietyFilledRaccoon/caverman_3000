@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://crtc7lqmfbie8"]
+
+[ext_resource type="Texture2D" uid="uid://bxagmls0d0sse" path="res://nivelfolleto/Folleto.png" id="1_580gq"]
+
+[node name="Node2D" type="Node2D" unique_id=909308069]
+
+[node name="Folleto" type="Sprite2D" parent="." unique_id=875757001]
+position = Vector2(-5.000004, -3)
+scale = Vector2(0.31801468, 0.3180147)
+texture = ExtResource("1_580gq")

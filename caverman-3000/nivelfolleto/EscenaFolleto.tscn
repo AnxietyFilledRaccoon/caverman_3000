@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://t8dgrtswrqs"]
+
+[ext_resource type="Script" uid="uid://cqcbs8ylvyqyb" path="res://nivelfolleto/escena_folleto.gd" id="1_wx3f3"]
+[ext_resource type="Texture2D" uid="uid://dsnlh1lgat3iu" path="res://nivelfolleto/Mesa.png" id="2_fa0fl"]
+[ext_resource type="Texture2D" uid="uid://cdtmd06ttl7g7" path="res://nivelfolleto/Personaje.png" id="2_wkaqj"]
+[ext_resource type="Texture2D" uid="uid://dmgx2jgt4b7sw" path="res://nivelfolleto/trans1.png" id="3_wkaqj"]
+[ext_resource type="Texture2D" uid="uid://6y044eywr7ss" path="res://nivelfolleto/trans2.png" id="4_0rjy7"]
+[ext_resource type="Texture2D" uid="uid://c0xb3x4wsagid" path="res://nivelfolleto/fondo_folleto.png" id="6_0rjy7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tq1oo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wkaqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0rjy7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=2114334181]
+script = ExtResource("1_wx3f3")
+
+[node name="personaje" type="Sprite2D" parent="." unique_id=1945550299]
+z_index = 1
+position = Vector2(563, 246)
+scale = Vector2(1.0337237, 0.94805676)
+texture = ExtResource("2_wkaqj")
+
+[node name="mesa" type="Sprite2D" parent="." unique_id=1544581439]
+position = Vector2(204.00003, 339)
+scale = Vector2(1.296113, 1.2961134)
+texture = ExtResource("2_fa0fl")
+
+[node name="transeunte" type="AnimatedSprite2D" parent="." unique_id=907524985]
+position = Vector2(984, 244)
+scale = Vector2(1.0147058, 1.0147059)
+sprite_frames = SubResource("SpriteFrames_tq1oo")
+animation = &"idle"
+frame_progress = 0.5712154
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=1530277036]
+z_index = -1
+position = Vector2(582.00006, -147)
+scale = Vector2(1.3788599, 1.3788601)
+texture = ExtResource("6_0rjy7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1131265644]
+
+[node name="pantalla_victoria" type="Control" parent="CanvasLayer" unique_id=1855052364]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
