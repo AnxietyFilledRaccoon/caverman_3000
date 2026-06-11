@@ -2,9 +2,9 @@ extends Node2D
 
 # Variables base
 var personaje
-var pantalla_victoria
 var puntaje = 0
 var puntaje_objetivo = 30
+#var pantalla_victoria
 
 # Rango del PJ
 var posicion_izquierda = Vector2(550, 300)
@@ -16,11 +16,12 @@ var moviendose = false
 
 func _ready():
 	personaje = $personaje
-	pantalla_victoria = $CanvasLayer/pantalla_victoria
 	$transeunte.play("idle")
+#	pantalla_victoria = $CanvasLayer/pantalla_victoria
+
 
 	personaje.position = posicion_izquierda
-	pantalla_victoria.visible = false
+#	pantalla_victoria.visible = false
 
 func _input(event):
 	if event.is_action_pressed("hit") and !moviendose and puntaje < puntaje_objetivo:
@@ -44,10 +45,14 @@ func _input(event):
 		moviendose = false
 
 		if puntaje >= puntaje_objetivo:
-			mostrar_victoria()
+			go_to_victory()
+
+func go_to_victory():
+	get_tree().change_scene_to_file("res://nivelfolleto/folleto_victoria.tscn")
 
 #func actualizar_puntaje():
 #	etiqueta_puntaje.text = "Folletos repartidos: " + str(puntaje) + "/" + str(puntaje_objetivo)
 
-func mostrar_victoria():
-	pantalla_victoria.visible = true
+
+#func mostrar_victoria():
+#	pantalla_victoria.visible = true

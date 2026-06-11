@@ -47,11 +47,3 @@ z_index = -1
 position = Vector2(582.00006, -147)
 scale = Vector2(1.3788599, 1.3788601)
 texture = ExtResource("6_0rjy7")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1131265644]
-
-[node name="pantalla_victoria" type="Control" parent="CanvasLayer" unique_id=1855052364]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
