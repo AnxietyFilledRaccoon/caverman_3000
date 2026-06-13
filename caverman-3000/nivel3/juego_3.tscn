@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dp3j2hu0te8ni" path="res://nivel3/player_3.tscn" id="7_xhe8e"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="9_nxv5p"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="10_4mmac"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="10_rttfo"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_vehe0"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_kg0uq"]
 
@@ -153,10 +154,17 @@ tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_vehe0")]
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1394240221]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=446491766]
 visible = false
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1422301051]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=1108369499]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("10_rttfo")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=934441702]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

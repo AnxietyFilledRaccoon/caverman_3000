@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dt72afp2bo53n" path="res://asets/pulverizador.png" id="8_6vlrg"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_sxwe6"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_x3sni"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="13_ss3wp"]
 
 [node name="juego2" type="Node2D" unique_id=2041482656]
 script = ExtResource("1_4cfnp")
@@ -64,10 +65,17 @@ tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_sxwe6")]
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1359174143]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1130424517]
 visible = false
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=244914278]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=1817402320]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("13_ss3wp")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=710167917]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
