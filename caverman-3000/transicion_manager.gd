@@ -3,7 +3,7 @@ extends Node
 var escena_transicion = preload("res://transicion_nivel.tscn")
 
 func cambiar_nivel(nombre_nivel:String,
-	controles:String,
+	controles:Texture2D,
 	ruta_escena:String):
 
 	var transicion = escena_transicion.instantiate()

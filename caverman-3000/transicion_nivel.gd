@@ -9,10 +9,10 @@ var siguiente_escena = ""
 
 	
 
-func iniciar(nombre_nivel:String, controles:String, ruta_escena:String):
+func iniciar(nombre_nivel:String, controles:Texture2D, ruta_escena:String):
 
 	label_nivel.text = nombre_nivel
-	mecanica_actual.text = controles
+	$TextureRect/VBoxContainer/Texturemecanica.texture = controles
 	siguiente_escena = ruta_escena
 
 	mostrar_transicion()

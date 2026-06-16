@@ -28,36 +28,12 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Labelmecanica" type="Label" parent="TextureRect/VBoxContainer" unique_id=567970109]
+[node name="Texturemecanica" type="TextureRect" parent="TextureRect/VBoxContainer" unique_id=519512847]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_c6xq1")
-theme_override_font_sizes/font_size = 40
 
 [node name="Labelmecanica2" type="Label" parent="TextureRect/VBoxContainer" unique_id=1188228473]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_c6xq1")
 theme_override_font_sizes/font_size = 40
-
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2046812120]
-visible = false
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -576.0
-offset_top = -100.0
-offset_right = 576.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer" unique_id=230440231]
-custom_minimum_size = Vector2(1152, 100)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0.64144266, 0.2810174, 1)
-theme_override_fonts/normal_font = ExtResource("2_c6xq1")
-theme_override_font_sizes/normal_font_size = 80
-bbcode_enabled = true
-text = "[center][wave]cargando...[/wave][/center]"

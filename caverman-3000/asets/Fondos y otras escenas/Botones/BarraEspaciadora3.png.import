@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq3ahnuwu3nkk"
-path="res://.godot/imported/BarraEspaciadora2.png-aff243b8cdeb15f13aea827396011f20.ctex"
+uid="uid://bolbfis4h6hno"
+path="res://.godot/imported/BarraEspaciadora3.png-72bf435416493c5b3b53ea571c8c9c08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/Fondos y otras escenas/Botones/BarraEspaciadora2.png"
-dest_files=["res://.godot/imported/BarraEspaciadora2.png-aff243b8cdeb15f13aea827396011f20.ctex"]
+source_file="res://asets/Fondos y otras escenas/Botones/BarraEspaciadora3.png"
+dest_files=["res://.godot/imported/BarraEspaciadora3.png-72bf435416493c5b3b53ea571c8c9c08.ctex"]
 
 [params]
 
