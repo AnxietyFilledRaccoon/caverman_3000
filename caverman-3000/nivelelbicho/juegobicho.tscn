@@ -7,13 +7,18 @@
 [ext_resource type="Script" uid="uid://e5sk81kvh0rs" path="res://nivelguadaña/canvas_layer.gd" id="5_unrmw"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_bn5ly"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_jwb3l"]
-[ext_resource type="PackedScene" uid="uid://b466knc61t5n3" path="res://nivelcarton/reiniciar.tscn" id="8_cfr3o"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="8_ojceh"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="9_2b86a"]
 
 [node name="juegobicho" type="Node2D" unique_id=2010090408]
 script = ExtResource("1_8v6cp")
 
 [node name="bicho" parent="." unique_id=63647976 groups=["bicho"] instance=ExtResource("2_8v6cp")]
 position = Vector2(781, 469)
+
+[node name="zapato" parent="." unique_id=1918863226 instance=ExtResource("3_ojceh")]
+z_index = 10
+position = Vector2(67, 243)
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=1583603015]
 z_index = -10
@@ -32,12 +37,32 @@ offset_bottom = 23.0
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_jwb3l")]
 
-[node name="zapato" parent="." unique_id=1918863226 instance=ExtResource("3_ojceh")]
-position = Vector2(67, 243)
-
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=697240801]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1441542238]
 visible = false
 
-[node name="Reiniciar" parent="botonreinicio" unique_id=2112567535 instance=ExtResource("8_cfr3o")]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=1789191463]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("8_ojceh")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1054682948]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("9_2b86a")
+theme_override_font_sizes/font_size = 50
+text = " Reiniciar "
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
