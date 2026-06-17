@@ -16,6 +16,10 @@ script = ExtResource("1_8v6cp")
 [node name="bicho" parent="." unique_id=63647976 groups=["bicho"] instance=ExtResource("2_8v6cp")]
 position = Vector2(781, 469)
 
+[node name="zapato" parent="." unique_id=1918863226 instance=ExtResource("3_ojceh")]
+z_index = 10
+position = Vector2(67, 243)
+
 [node name="fondo" type="Sprite2D" parent="." unique_id=1583603015]
 z_index = -10
 position = Vector2(575.49994, 320.87503)

@@ -21,14 +21,17 @@ func _process(delta):
 	if global_position.distance_to(objetivo) < 10:
 		elegir_objetivo()
 
-	position += direccion * velocidad * delta
+	
 
 var objetivo := Vector2.ZERO
+
 func elegir_objetivo():
 
+	var margen := 32
+
 	objetivo = Vector2(
-		randf_range(100, 1100),
-		randf_range(150, 600)
+		randf_range(margen, 1152 - margen),
+		randf_range(margen, 648 - margen)
 	)
 
 func morir():
