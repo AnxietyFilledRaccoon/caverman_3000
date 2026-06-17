@@ -1,12 +1,12 @@
 extends Node2D
 #puse onreadys, para que sea facil modificar y testear
-@onready var timer_juego = $timerjuego
 @onready var auto1 = $auto1
 @onready var auto2 = $auto2
 @onready var player1 = $player8
 @onready var area_player = $player8/Areaplayer
 @onready var label_resultado = $UI/VBoxContainer/LabelResultado
-@onready var label_tiempo = $UI/VBoxContainer/LabelTiempo
+var pantalla_final_scene = preload("res://plata_vida_total.tscn")
+
 
 var paso: float = 40.0
 var meta_x: float = 520.0
@@ -33,12 +33,7 @@ func _ready() -> void:
 	auto1.position.x = -100.0
 	auto2.position.x = 1252.0
 	
-	timer_juego.wait_time = 4.0
-	timer_juego.start()
 	label_resultado.visible = false
-	
-	if not timer_juego.timeout.is_connected(_tiempo_agotado):
-		timer_juego.timeout.connect(_tiempo_agotado)
 	
 	auto1.area_entered.connect(_en_colision)
 	auto2.area_entered.connect(_en_colision)
@@ -59,8 +54,6 @@ func _process(delta: float) -> void:
 		auto1.position.x = -10
 	if auto2.position.x < -100:
 		auto2.position.x = 1152
-	var tiempo_restante = int(timer_juego.time_left) + 1
-	label_tiempo.text = "Tiempo: %d" % tiempo_restante
 
 func _input(event: InputEvent) -> void:
 	if !juego_activo:
@@ -98,19 +91,42 @@ func _mover_player(destino_y: float, es_victoria: bool):
 		if es_victoria:
 			_fin_juego(true)
 )
+
+func _on_reiniciar_pressed() -> void:
+	# Quita la pausa por si el juego estaba pausado al perder
+	get_tree().paused = false 
+	# Recarga el nivel actual
+	get_tree().reload_current_scene()
+
 func _fin_juego(gano: bool):
 	juego_activo = false
-	timer_juego.stop()
 	
 	label_resultado.visible = true
 	# colocaria una funcion de victoria de ser posible
 	if gano:
-		label_resultado.text = "¡Llegaste por suerte!"
+		$eventos.nivel_ganado()
+		
+		label_resultado.text = "¡Llegaste por suerte y ganaste!"
+		label_resultado.visible = false
+		$UI.visible = false
+		$HUDV.visible = false
+		#.visible = false
 		await get_tree().create_timer(1.5).timeout
-		get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
+		TransicionManager.cambiar_nivel(
+	"Pisar", "Mouse y Espacio","")
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://nivelelbicho/juegobicho.tscn")
+		#get_tree().change_scene_to_file("res://menú_principal.tscn")
 	else:
 		label_resultado.text = "¡Te atropellaron, no se logró!"
-		await get_tree().create_timer(1.5).timeout
-		get_tree().change_scene_to_file("res://game_over.tscn")
+		#await get_tree().create_timer(1.5).timeout
+		get_tree().paused = true
+		await get_tree().create_timer(2.0).timeout
+	# Esta función se ejecuta cuando el tiempo llega a cero
+	# aca puedo cambiar de escena o activar Game Over
+		$eventos._on_tiempo_juego_timeout()
+		
+	#esto faltaba para que reinicie el nivel y funcione bien
+	#get_tree().change_scene_to_file("res://game_over.tscn")
 	#await get_tree().create_timer(2.0).timeout
 	#get_tree().change_scene_to_file("res://game_over.tscn")

@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="4_541e2"]
 [ext_resource type="PackedScene" uid="uid://dejk8bwlf4ge0" path="res://nivelcarton/manita.tscn" id="4_m42vw"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="5_m42vw"]
-[ext_resource type="PackedScene" uid="uid://b466knc61t5n3" path="res://nivelcarton/reiniciar.tscn" id="6_m42vw"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="7_m42vw"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="8_dhujx"]
 
 [node name="juegocarton" type="Node2D" unique_id=2010090408]
 script = ExtResource("1_18edf")
@@ -18,16 +19,30 @@ scale = Vector2(0.2935145, 0.23347703)
 texture = ExtResource("2_541e2")
 
 [node name="caja" parent="." unique_id=977531881 instance=ExtResource("3_m42vw")]
-position = Vector2(634, 542)
+position = Vector2(663, 527)
+
+[node name="spawn 1" type="Marker2D" parent="caja" unique_id=501148766]
+position = Vector2(11, 30)
+scale = Vector2(0.99999994, 1)
 
 [node name="caja3" parent="." unique_id=1265326015 instance=ExtResource("3_m42vw")]
 position = Vector2(167, 521)
 
+[node name="spawn 3" type="Marker2D" parent="caja3" unique_id=868383602]
+position = Vector2(9, 32)
+
 [node name="caja4" parent="." unique_id=2100978105 instance=ExtResource("3_m42vw")]
 position = Vector2(994, 567)
 
+[node name="spawn 4" type="Marker2D" parent="caja4" unique_id=709216429]
+position = Vector2(9, 37)
+
 [node name="caja2" parent="." unique_id=387635746 instance=ExtResource("3_m42vw")]
 position = Vector2(785, 326)
+
+[node name="spawn 2" type="Marker2D" parent="caja2" unique_id=526603788]
+position = Vector2(5, 30)
+scale = Vector2(0.99999994, 1)
 
 [node name="manita" parent="." unique_id=1692993757 instance=ExtResource("4_m42vw")]
 
@@ -38,12 +53,36 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("4_541e2")]
+tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("5_m42vw")]
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=697240801]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1240239224]
 visible = false
 
-[node name="Reiniciar" parent="botonreinicio" unique_id=2112567535 instance=ExtResource("6_m42vw")]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=1099073484]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("7_m42vw")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1861725344]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("8_dhujx")
+theme_override_font_sizes/font_size = 50
+text = " Reiniciar "
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]

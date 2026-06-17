@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7d8phrcokc6w" path="res://hudv.gd" id="1_tnee2"]
 [ext_resource type="Texture2D" uid="uid://dsawikvv5xjjs" path="res://asets/sube.png" id="2_3rjhu"]
+[ext_resource type="Texture2D" uid="uid://dyyqhcwk6v4f0" path="res://asets/moneda.png" id="3_2d0m2"]
 
 [node name="HUDV" type="CanvasLayer" unique_id=1486512705]
 script = ExtResource("1_tnee2")
@@ -45,3 +46,18 @@ size_flags_horizontal = 4
 texture = ExtResource("2_3rjhu")
 expand_mode = 2
 stretch_mode = 4
+
+[node name="Platita" type="TextureRect" parent="Control" unique_id=1063063882]
+layout_mode = 0
+offset_left = 309.0
+offset_top = -3.0
+offset_right = 374.0
+offset_bottom = 32.0
+texture = ExtResource("3_2d0m2")
+
+[node name="LabelPlaitita" type="Label" parent="Control" unique_id=1546287113]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 2.0
+offset_right = 463.0
+offset_bottom = 26.0

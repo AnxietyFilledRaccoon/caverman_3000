@@ -4,15 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://cq21umjs71wm3" path="res://asets/nivel2.png" id="2_6vlrg"]
 [ext_resource type="PackedScene" uid="uid://cte1cfdshjlci" path="res://nivel2/producto.tscn" id="2_llckx"]
 [ext_resource type="PackedScene" uid="uid://chdtdhsfw7jap" path="res://nivel2/mano.tscn" id="3_ahtto"]
-[ext_resource type="Texture2D" uid="uid://xxikjj5drt8y" path="res://asets/gaseosaA.png" id="3_vhe2x"]
+[ext_resource type="Texture2D" uid="uid://xxikjj5drt8y" path="res://asets/nivel2/gaseosaA.png" id="3_vhe2x"]
 [ext_resource type="Script" uid="uid://b7ejbbwv0uo7a" path="res://canvas_layer.gd" id="4_13cvf"]
-[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/gaseosaN.png" id="4_sxwe6"]
+[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/nivel2/gaseosaN.png" id="4_sxwe6"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="5_4cfnp"]
 [ext_resource type="Texture2D" uid="uid://da3usks6p2gpq" path="res://asets/detergente.png" id="6_ss3wp"]
 [ext_resource type="Texture2D" uid="uid://00odnn8v75ho" path="res://asets/yerba.png" id="7_6vlrg"]
 [ext_resource type="Texture2D" uid="uid://dt72afp2bo53n" path="res://asets/pulverizador.png" id="8_6vlrg"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_sxwe6"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_x3sni"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="13_ss3wp"]
 
 [node name="juego2" type="Node2D" unique_id=2041482656]
 script = ExtResource("1_4cfnp")
@@ -60,14 +61,21 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_4cfnp")]
-tiempo_personalizar = 12
+tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_sxwe6")]
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1359174143]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1130424517]
 visible = false
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=244914278]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=1817402320]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("13_ss3wp")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=710167917]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

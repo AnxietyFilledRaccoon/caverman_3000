@@ -1,19 +1,22 @@
 extends CanvasLayer
 
-@onready var texto = $ColorRect/Label
+#@onready var texto = $ColorRect/Label
 
 var siguiente_escena = ""
-var mecanica = ""
-var nombre_nivel = ""
+@onready var mecanica_actual = $TextureRect/VBoxContainer/Labelmecanica
+@onready var label_nivel = $TextureRect/VBoxContainer/Labelmecanica2
 
-func iniciar(nombre, mecanica, escena):
 
-	nombre_nivel = nombre
-	mecanica = mecanica
-	siguiente_escena = escena
+	
 
-	texto.text = nombre_nivel
-	texto.text = mecanica
+func iniciar(nombre_nivel:String, controles:Texture2D, ruta_escena:String):
+
+	label_nivel.text = nombre_nivel
+	$TextureRect/VBoxContainer/Texturemecanica.texture = controles
+	siguiente_escena = ruta_escena
+
+	mostrar_transicion()
+
 
 	mostrar_transicion()
 

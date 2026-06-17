@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dt0utw5l5yxc2"]
+
+[ext_resource type="Script" uid="uid://cp33t12jvdhab" path="res://plata_vida_total.gd" id="1_fq2i3"]
+[ext_resource type="Texture2D" uid="uid://dyyqhcwk6v4f0" path="res://asets/moneda.png" id="2_y6r0k"]
+[ext_resource type="Texture2D" uid="uid://dsawikvv5xjjs" path="res://asets/sube.png" id="3_24ghs"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="4_24ghs"]
+
+[node name="PlataVidaTotal" type="Control" unique_id=1246733452]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_fq2i3")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=239957014]
+visible = false
+z_index = 8
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.096333645, 0.0007709238, 0.07021127, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=585941817]
+z_index = 9
+layout_mode = 0
+offset_left = 345.0
+offset_top = 245.0
+offset_right = 786.0
+offset_bottom = 269.0
+scale = Vector2(1.0292224, 7.2361517)
+color = Color(0.5931338, 0.5931335, 0.5931336, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1120804295]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -53.0
+offset_right = 196.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="VBoxContainer" unique_id=879694112]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TexturaMoneda" type="TextureRect" parent="VBoxContainer/HBoxContainer1" unique_id=1398159271]
+z_index = 9
+layout_mode = 2
+texture = ExtResource("2_y6r0k")
+
+[node name="LabelPlatita" type="Label" parent="VBoxContainer/HBoxContainer1" unique_id=86626706]
+z_index = 9
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=442800264]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Tarjeta1" type="TextureRect" parent="VBoxContainer/HBoxContainer2" unique_id=1850121407]
+z_index = 9
+custom_minimum_size = Vector2(128, 67)
+layout_mode = 2
+texture = ExtResource("3_24ghs")
+expand_mode = 1
+
+[node name="Tarjeta2" type="TextureRect" parent="VBoxContainer/HBoxContainer2" unique_id=1703662815]
+z_index = 9
+custom_minimum_size = Vector2(128, 67)
+layout_mode = 2
+texture = ExtResource("3_24ghs")
+expand_mode = 1
+
+[node name="Tarjeta3" type="TextureRect" parent="VBoxContainer/HBoxContainer2" unique_id=1418904485]
+z_index = 9
+custom_minimum_size = Vector2(128, 67)
+layout_mode = 2
+texture = ExtResource("3_24ghs")
+expand_mode = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=849851392]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -40.0
+offset_right = 32.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="VBoxContainer2" unique_id=290055695]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_24ghs")
+theme_override_font_sizes/font_size = 40
+text = "menu"
+
+[connection signal="pressed" from="VBoxContainer2/Button" to="." method="_on_button_pressed"]

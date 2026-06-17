@@ -3,43 +3,138 @@
 [ext_resource type="Script" uid="uid://bxbt178pgfxti" path="res://nivel1/juego_1.gd" id="1_xhe8e"]
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="2_spb8h"]
 [ext_resource type="Texture2D" uid="uid://dca2m3k682c8v" path="res://asets/nivel3.png" id="2_trfa5"]
-[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_4y7ya"]
+[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/nivel1/metal.png" id="3_4y7ya"]
 [ext_resource type="PackedScene" uid="uid://dp3j2hu0te8ni" path="res://nivel3/player_3.tscn" id="7_xhe8e"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="9_nxv5p"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="10_4mmac"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="10_rttfo"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_vehe0"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_kg0uq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ctm1"]
+radius = 144.9765
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rttfo"]
+size = Vector2(1718.021, 301.25397)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_je5y0"]
+size = Vector2(548.6511, 277.8804)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hulwn"]
+size = Vector2(555.6251, 207.76125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1q6s"]
+size = Vector2(574.2235, 888.17914)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pbiy"]
+size = Vector2(5323.7725, 121.86551)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6r3d"]
+size = Vector2(81.367325, 2965.791)
 
 [node name="Juego3" type="Node2D" unique_id=1086814356]
 script = ExtResource("1_xhe8e")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=535926833]
-position = Vector2(565, 318.00003)
-scale = Vector2(0.30351192, 0.23060349)
+position = Vector2(577, 313.49997)
+scale = Vector2(0.2958216, 0.22952585)
 texture = ExtResource("2_trfa5")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1692155685]
+position = Vector2(562.5, 365)
+scale = Vector2(0.21507306, 0.19252874)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1388902749]
+position = Vector2(-1057.7798, 353.19385)
+shape = SubResource("CircleShape2D_8ctm1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=976488962]
+position = Vector2(112.75244, 46.746216)
+shape = SubResource("RectangleShape2D_rttfo")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D" unique_id=1981816957]
+position = Vector2(106.94043, 675.22363)
+shape = SubResource("RectangleShape2D_rttfo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1230094506]
+position = Vector2(-485.88138, -571.3434)
+shape = SubResource("RectangleShape2D_je5y0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=198833554]
+position = Vector2(671.86475, -560.9553)
+shape = SubResource("RectangleShape2D_je5y0")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1856914309]
+position = Vector2(676.51434, -1163.4626)
+shape = SubResource("RectangleShape2D_je5y0")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1880995105]
+position = Vector2(-481.23187, -1168.6567)
+shape = SubResource("RectangleShape2D_je5y0")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1178218408]
+position = Vector2(-1657.5767, 42.850708)
+shape = SubResource("RectangleShape2D_je5y0")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=729095585]
+position = Vector2(-1648.2773, 659.64185)
+shape = SubResource("RectangleShape2D_je5y0")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=1478519447]
+position = Vector2(1823.7991, 667.43274)
+shape = SubResource("RectangleShape2D_je5y0")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=604369781]
+position = Vector2(1816.824, 77.9104)
+shape = SubResource("RectangleShape2D_hulwn")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=1415855142]
+position = Vector2(-1634.3282, -862.20905)
+shape = SubResource("RectangleShape2D_d1q6s")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=2061833546]
+position = Vector2(1821.4739, -854.41797)
+shape = SubResource("RectangleShape2D_d1q6s")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=2017211693]
+position = Vector2(65.09424, -1684.2612)
+shape = SubResource("RectangleShape2D_0pbiy")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=1971890844]
+position = Vector2(86.01721, 1189.4331)
+shape = SubResource("RectangleShape2D_0pbiy")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" unique_id=1365347533]
+position = Vector2(2707.2188, -189.58215)
+shape = SubResource("RectangleShape2D_i6r3d")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=936540766]
+position = Vector2(-2561.9207, -244.11938)
+shape = SubResource("RectangleShape2D_i6r3d")
+
 [node name="item" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
-position = Vector2(318, 507)
+position = Vector2(333, 360)
 textura = ExtResource("3_4y7ya")
 
 [node name="item2" parent="." unique_id=1673854698 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
-position = Vector2(1062, 92)
+position = Vector2(952, 89)
 textura = ExtResource("3_4y7ya")
 
 [node name="item3" parent="." unique_id=638198213 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
-position = Vector2(438, 439)
+position = Vector2(204, 439)
 textura = ExtResource("3_4y7ya")
 
 [node name="item4" parent="." unique_id=645868535 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
-position = Vector2(823, 441)
+position = Vector2(959, 543)
 textura = ExtResource("3_4y7ya")
 
 [node name="item5" parent="." unique_id=35432034 groups=["cavernicola"] instance=ExtResource("2_spb8h")]
-position = Vector2(318, 238)
+position = Vector2(202, 88)
 textura = ExtResource("3_4y7ya")
 
 [node name="Player3" parent="." unique_id=873905687 groups=["cavernicola"] instance=ExtResource("7_xhe8e")]
-position = Vector2(30, 541)
+position = Vector2(63.000015, 540)
+scale = Vector2(0.75, 0.75)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1221312791]
 script = ExtResource("9_nxv5p")
@@ -53,10 +148,17 @@ tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_vehe0")]
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1394240221]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=446491766]
 visible = false
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1422301051]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=1108369499]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("10_rttfo")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=934441702]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

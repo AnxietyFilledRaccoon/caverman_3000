@@ -7,7 +7,8 @@
 [ext_resource type="Script" uid="uid://e5sk81kvh0rs" path="res://nivelguadaña/canvas_layer.gd" id="5_nmjug"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_k181b"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_7caxa"]
-[ext_resource type="PackedScene" uid="uid://b466knc61t5n3" path="res://nivelcarton/reiniciar.tscn" id="8_7caxa"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="8_q7d3x"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="9_nwn57"]
 
 [node name="juegopasto" type="Node2D" unique_id=2010090408]
 script = ExtResource("1_8i8d0")
@@ -47,12 +48,36 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_k181b")]
+tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_7caxa")]
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=697240801]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1447995234]
 visible = false
 
-[node name="Reiniciar" parent="botonreinicio" unique_id=2112567535 instance=ExtResource("8_7caxa")]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=462623933]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("8_q7d3x")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1582459101]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("9_nwn57")
+theme_override_font_sizes/font_size = 50
+text = " Reiniciar "
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
