@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbt178pgfxti" path="res://nivel1/juego_1.gd" id="1_xhe8e"]
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="2_spb8h"]
 [ext_resource type="Texture2D" uid="uid://dca2m3k682c8v" path="res://asets/nivel3.png" id="2_trfa5"]
-[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/nivel1/metal.png" id="3_4y7ya"]
+[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_4y7ya"]
 [ext_resource type="PackedScene" uid="uid://dp3j2hu0te8ni" path="res://nivel3/player_3.tscn" id="7_xhe8e"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="9_nxv5p"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="10_4mmac"]
@@ -144,7 +144,11 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("10_4mmac")]
-tiempo_personalizar = 20
+offset_left = 903.0
+offset_top = 3.0
+offset_right = 1152.0
+offset_bottom = 81.0
+tiempo_personalizar = 15
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_vehe0")]
 
