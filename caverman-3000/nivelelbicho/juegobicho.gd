@@ -1,6 +1,6 @@
 extends Node2D
 var bicho_aplastado := 0
-var bicho_total := 9
+var bicho_total := 10
 var bicho = preload("res://nivelelbicho/bicho.tscn")
 @onready var contador_label = $CanvasLayer/contador
 var pantalla_final_scene = preload("res://plata_vida_total.tscn")
