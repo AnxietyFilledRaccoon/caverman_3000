@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt72afp2bo53n"
-path="res://.godot/imported/pulverizador.png-2739717a6de91aedd6700b843947a5b2.ctex"
+uid="uid://dsnkjmc2dgdl"
+path="res://.godot/imported/timer1.png-6eeceb86b12b24771211adf6dd982146.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/pulverizador.png"
-dest_files=["res://.godot/imported/pulverizador.png-2739717a6de91aedd6700b843947a5b2.ctex"]
+source_file="res://asets/timer1.png"
+dest_files=["res://.godot/imported/timer1.png-6eeceb86b12b24771211adf6dd982146.ctex"]
 
 [params]
 
