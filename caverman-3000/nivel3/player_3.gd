@@ -5,7 +5,7 @@ extends CharacterBody2D
 var mirando_derecha = true
 var screen_size
 var items_recolectados = 0
-var meta_items = 4
+var meta_items = 5
 var gravity = 1000
 
 
@@ -61,15 +61,16 @@ func recoger_items():
 		
 func ganar_juego(): #esto deberia estar en un gestor de eventos
 	print("ganaste")
+	$"../eventos".nivel_ganado()
+
 	#aca hay que sumar plata al score
 	##pasar a otra escena, menu o pantalla
-	
-	get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
-		
-	
-
-
-
+	TransicionManager.cambiar_nivel(
+	"Reponer",
+	preload("res://asets/Fondos y otras escenas/Botones/Cruceta2.png"),"")# puedo agregar en el espacio libre la siguiente pantalla
+	#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://nivel7/juego_7.tscn")
 
 
 func _on_item_recolectar_items() -> void:

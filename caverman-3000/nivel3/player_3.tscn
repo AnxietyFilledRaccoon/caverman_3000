@@ -89,18 +89,20 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0e4s8"]
-radius = 26.0
-height = 80.0
+radius = 24.0
+height = 64.0
 
 [node name="Player3" type="CharacterBody2D" unique_id=873905687]
 script = ExtResource("1_jfnxq")
-metadata/_edit_group_ = true
 
 [node name="jugador" type="AnimatedSprite2D" parent="." unique_id=50501026]
-scale = Vector2(0.1, 0.1)
+position = Vector2(-2.875, 5.3250017)
+scale = Vector2(0.08925234, 0.08317535)
 sprite_frames = SubResource("SpriteFrames_wtyuj")
 animation = &"pedalearx"
 frame_progress = 0.9485029
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=829301601]
+position = Vector2(-2, 8)
 shape = SubResource("CapsuleShape2D_0e4s8")
+metadata/_edit_group_ = true

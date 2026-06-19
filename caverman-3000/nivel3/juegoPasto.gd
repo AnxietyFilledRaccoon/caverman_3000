@@ -7,21 +7,27 @@ var pasto_cortado := 0
 
 
 func _ready():
-	pasto_total = get_tree().get_nodes_in_group("pasto").size()
+	$CanvasLayer/contador.text = "0/4"
+	#pasto_total = get_tree().get_nodes_in_group("pasto").size()
 	actualizar_contador()
+	
 func sumar_corte():
 	pasto_cortado += 1
 	
-	$CanvasLayer/contador.text =str(pasto_cortado) +"/6"
-	if pasto_cortado ==6:
-		get_tree().change_scene_to_file("res://nivel1/juego1.tscn")
-	print("cortados:", pasto_cortado)
-	actualizar_contador() 
+	$CanvasLayer/contador.text =str(pasto_cortado) + "/" + str(pasto_total)
 	if pasto_cortado >= pasto_total:
+		$eventos.nivel_ganado()
+		TransicionManager.cambiar_nivel("Reponer",
+	preload("res://asets/Fondos y otras escenas/Botones/Mouse2.png"),
+	"")# puedo agregar en el espacio libre la siguiente pantalla
+		#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://nivelelbicho/juegobicho.tscn")
 		finalizar()
 		
 		
 func finalizar():
+	
 	print("Nivel completado")
 
 

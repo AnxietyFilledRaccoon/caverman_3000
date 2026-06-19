@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da3usks6p2gpq"
-path="res://.godot/imported/detergente.png-5c26175fe9f3aff96b999d39d5abf166.ctex"
+uid="uid://iptqc6ali82l"
+path="res://.godot/imported/mate_54x71.png-7d6276cb2b27271eb684855dfab5ddd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/detergente.png"
-dest_files=["res://.godot/imported/detergente.png-5c26175fe9f3aff96b999d39d5abf166.ctex"]
+source_file="res://asets/mate_54x71.png"
+dest_files=["res://.godot/imported/mate_54x71.png-7d6276cb2b27271eb684855dfab5ddd6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt72afp2bo53n"
-path="res://.godot/imported/pulverizador.png-2739717a6de91aedd6700b843947a5b2.ctex"
+uid="uid://bfyvuf1l1fkom"
+path="res://.godot/imported/pollo_54x71.png-a22abe8be60ffc285802e1f26afef2a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/pulverizador.png"
-dest_files=["res://.godot/imported/pulverizador.png-2739717a6de91aedd6700b843947a5b2.ctex"]
+source_file="res://asets/pollo_54x71.png"
+dest_files=["res://.godot/imported/pollo_54x71.png-a22abe8be60ffc285802e1f26afef2a8.ctex"]
 
 [params]
 

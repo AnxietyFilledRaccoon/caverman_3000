@@ -53,6 +53,3 @@ func go_to_victory():
 #func actualizar_puntaje():
 #	etiqueta_puntaje.text = "Folletos repartidos: " + str(puntaje) + "/" + str(puntaje_objetivo)
 
-
-#func mostrar_victoria():
-#	pantalla_victoria.visible = true

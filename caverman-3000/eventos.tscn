@@ -1,29 +1,34 @@
 [gd_scene format=3 uid="uid://rayxtj3essvp"]
 
 [ext_resource type="Script" uid="uid://bu4accrbt8xi2" path="res://eventos.gd" id="1_0kxka"]
+[ext_resource type="Texture2D" uid="uid://cm5l42akxdgqi" path="res://asets/timer2.png" id="2_ddd5x"]
+[ext_resource type="Texture2D" uid="uid://dsnkjmc2dgdl" path="res://asets/timer1.png" id="3_erg34"]
 
 [node name="eventos" type="Control" unique_id=743028521]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 78.0
 grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_0kxka")
 
 [node name="tiempoJuego" type="Timer" parent="." unique_id=1079924284]
 wait_time = 5.0
 one_shot = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2112013925]
-
-[node name="tiempo" type="Label" parent="CanvasLayer" unique_id=1831939644]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=954310665]
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 55.0
+offset_left = -220.00006
+offset_top = 0.99999994
+offset_right = 862.0
+offset_bottom = 233.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 40
+scale = Vector2(0.2, 0.2)
+size_flags_horizontal = 8
+texture_under = ExtResource("2_ddd5x")
+texture_progress = ExtResource("3_erg34")
 
 [connection signal="timeout" from="tiempoJuego" to="." method="_on_tiempo_juego_timeout"]

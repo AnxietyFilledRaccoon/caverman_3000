@@ -32,11 +32,12 @@ func _on_mano_area_entered(area: Area2D) -> void:
 		
 		
 func finalizar():
-	TransicionManager.cambiar_nivel(
-	"NIVEL 3", "Usa W.S.A.D",
+	$eventos.nivel_ganado()
+	TransicionManager.cambiar_nivel("Cortar",
+	preload("res://asets/Fondos y otras escenas/Botones/Mouse2.png"),
 	"")
 	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://nivel3/juego_3.tscn")
+	get_tree().change_scene_to_file("res://nivelcarton/juegocarton.tscn")
 
 
 func _on_reiniciar_pressed() -> void:

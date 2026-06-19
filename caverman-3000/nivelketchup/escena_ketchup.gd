@@ -32,11 +32,13 @@ func register_hit():
 func explode():
 	exploded = true
 	$Ketchup/AnimatedSprite2D.play("explode")
-	
-	go_to_victory()
 
 
 func go_to_victory():
+	var eventos = get_node_or_null("eventos")
+	if eventos:
+		eventos.nivel_ganado()
+		await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_file("res://nivelketchup/VictoryScreen.tscn")
 
 

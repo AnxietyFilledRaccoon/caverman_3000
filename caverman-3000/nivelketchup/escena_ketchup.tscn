@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="7_fvqy6"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="8_op7ai"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="9_tmawc"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="10_8pptt"]
 [ext_resource type="Texture2D" uid="uid://coq8hvq0exbd2" path="res://nivelketchup/Fondo.png" id="10_dsnay"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vqsdr"]
@@ -20,7 +21,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_3n60b")
 }],
-"loop": true,
+"loop": false,
 "name": &"explode",
 "speed": 5.0
 }, {
@@ -78,13 +79,31 @@ sprite_frames = SubResource("SpriteFrames_fvqy6")
 animation = &"shake"
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("7_fvqy6")]
+offset_left = 1147.0
+offset_top = 2.0
+offset_right = 1147.0
+offset_bottom = 80.0
+tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("8_op7ai")]
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1993820548]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736542379]
+z_index = -2
+position = Vector2(564, 310.00003)
+scale = Vector2(1.5404408, 1.1268908)
+texture = ExtResource("10_dsnay")
+
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=810693404]
 visible = false
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=519324357]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=501655178]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("10_8pptt")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1204055640]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -101,11 +120,5 @@ theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("9_tmawc")
 theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736542379]
-z_index = -2
-position = Vector2(564, 310.00003)
-scale = Vector2(1.5404408, 1.1268908)
-texture = ExtResource("10_dsnay")
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]

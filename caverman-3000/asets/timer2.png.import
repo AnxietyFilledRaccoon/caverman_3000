@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://00odnn8v75ho"
-path="res://.godot/imported/yerba.png-86d9eb7b2eda121dad7d80ce09f28ed6.ctex"
+uid="uid://cm5l42akxdgqi"
+path="res://.godot/imported/timer2.png-aa30ef65f1188b6099b8a22c5644ad76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/yerba.png"
-dest_files=["res://.godot/imported/yerba.png-86d9eb7b2eda121dad7d80ce09f28ed6.ctex"]
+source_file="res://asets/timer2.png"
+dest_files=["res://.godot/imported/timer2.png-aa30ef65f1188b6099b8a22c5644ad76.ctex"]
 
 [params]
 

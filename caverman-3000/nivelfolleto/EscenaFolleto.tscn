@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dmgx2jgt4b7sw" path="res://nivelfolleto/trans1.png" id="3_wkaqj"]
 [ext_resource type="Texture2D" uid="uid://6y044eywr7ss" path="res://nivelfolleto/trans2.png" id="4_0rjy7"]
 [ext_resource type="Texture2D" uid="uid://c0xb3x4wsagid" path="res://nivelfolleto/fondo_folleto.png" id="6_0rjy7"]
+[ext_resource type="Texture2D" uid="uid://b8f2fxnncpuxr" path="res://nivelfolleto/VictoriaNivelFolleto.png" id="6_tr2u8"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="7_tq1oo"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="8_mb5f7"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="9_rgi2c"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="9_tr2u8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tq1oo"]
 animations = [{
@@ -18,6 +23,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_tr2u8")
+}],
+"loop": true,
+"name": &"victoria",
 "speed": 5.0
 }]
 
@@ -39,11 +52,11 @@ texture = ExtResource("2_fa0fl")
 position = Vector2(984, 244)
 scale = Vector2(1.0147058, 1.0147059)
 sprite_frames = SubResource("SpriteFrames_tq1oo")
-animation = &"idle"
-frame_progress = 0.44690254
+animation = &"victoria"
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=1530277036]
 z_index = -1
 position = Vector2(582.00006, -147)
 scale = Vector2(1.3788599, 1.3788601)
 texture = ExtResource("6_0rjy7")
+

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq3ahnuwu3nkk"
-path="res://.godot/imported/BarraEspaciadora2.png-aff243b8cdeb15f13aea827396011f20.ctex"
+uid="uid://byq2qyr78876x"
+path="res://.godot/imported/juego_3.tscn - Caverman 3000 - Godot Engine 7_6_2026 23_42_40.png-0ebc455f7f8aea91bea09d06093da9eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/Fondos y otras escenas/Botones/BarraEspaciadora2.png"
-dest_files=["res://.godot/imported/BarraEspaciadora2.png-aff243b8cdeb15f13aea827396011f20.ctex"]
+source_file="res://asets/juego_3.tscn - Caverman 3000 - Godot Engine 7_6_2026 23_42_40.png"
+dest_files=["res://.godot/imported/juego_3.tscn - Caverman 3000 - Godot Engine 7_6_2026 23_42_40.png-0ebc455f7f8aea91bea09d06093da9eb.ctex"]
 
 [params]
 
