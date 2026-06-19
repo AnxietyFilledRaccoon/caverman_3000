@@ -26,9 +26,9 @@ func recolectar_caja():
 
 	if cajas_recolectadas >= cajas_totales:
 		$eventos.nivel_ganado()
-		TransicionManager.cambiar_nivel(
-		"Cortar",
-		"Click Mouse","")# puedo agregar en el espacio libre la siguiente pantalla
+		TransicionManager.cambiar_nivel("Reponer",
+	preload("res://asets/Fondos y otras escenas/Botones/Mouse2.png"),
+	"")# puedo agregar en el espacio libre la siguiente pantalla
 		#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://nivelguadaña/juego_pasto.tscn")

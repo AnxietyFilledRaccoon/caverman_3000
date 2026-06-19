@@ -29,6 +29,7 @@ func _process(_delta):
 func nivel_ganado():
 	var tiempo_restante = game_timer.time_left
 	game_timer.stop()
+	
 	GameManager.ganar_nivel(tiempo_restante)
 
 

@@ -69,8 +69,9 @@ position = Vector2(134, 70)
 texture = ExtResource("4_vnrs0")
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("4_wb18d")]
-offset_top = 27.0
-offset_bottom = 27.0
+offset_left = 1148.0
+offset_right = 1148.0
+offset_bottom = 0.0
 tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_psfck")]

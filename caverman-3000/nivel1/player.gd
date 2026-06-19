@@ -5,7 +5,7 @@ extends CharacterBody2D
 var mirando_derecha = true
 var screen_size
 var items_recolectados = 0
-var meta_items = 4
+var meta_items = 5
 var gravity = 1000
 
 
@@ -65,12 +65,12 @@ func ganar_juego(): #esto deberia estar en un gestor de eventos
 
 	#aca hay que sumar plata al score
 	##pasar a otra escena, menu o pantalla
-	TransicionManager.cambiar_nivel("Eliminar",
-	preload("res://asets/Fondos y otras escenas/Botones/BarraEspaciadora3.png"),
+	TransicionManager.cambiar_nivel("Paquetes",
+	preload("res://asets/Fondos y otras escenas/Botones/Cruceta1.png"),
 	"")# puedo agregar en el espacio libre la siguiente pantalla
 	#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
 	await get_tree().create_timer(1.5).timeout
-	get_tree().change_scene_to_file("res://nivel2/juego_2.tscn")
+	get_tree().change_scene_to_file("res://nivel3/juego_3.tscn")
 		
 	
 

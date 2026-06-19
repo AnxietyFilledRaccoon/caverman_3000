@@ -112,10 +112,9 @@ func _fin_juego(gano: bool):
 		$HUDV.visible = false
 		#.visible = false
 		await get_tree().create_timer(1.5).timeout
-		TransicionManager.cambiar_nivel(
-	"Pisar", "Mouse y Espacio","")
-		await get_tree().create_timer(1.0).timeout
-		get_tree().change_scene_to_file("res://nivelelbicho/juegobicho.tscn")
+		
+		
+		get_tree().change_scene_to_file("res://menú_principal.tscn")
 		#get_tree().change_scene_to_file("res://menú_principal.tscn")
 	else:
 		label_resultado.text = "¡Te atropellaron, no se logró!"

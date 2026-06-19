@@ -79,6 +79,10 @@ sprite_frames = SubResource("SpriteFrames_fvqy6")
 animation = &"shake"
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("7_fvqy6")]
+offset_left = 1147.0
+offset_top = 2.0
+offset_right = 1147.0
+offset_bottom = 80.0
 tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("8_op7ai")]
