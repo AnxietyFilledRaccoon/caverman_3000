@@ -48,8 +48,18 @@ func _input(event):
 			go_to_victory()
 
 func go_to_victory():
+	$transeunte.play("victoria")#cree un estado victoria para el personaje que es llamado al ganar
+	$eventos.nivel_ganado()
+	await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_file("res://nivelfolleto/folleto_victoria.tscn")
 
 #func actualizar_puntaje():
 #	etiqueta_puntaje.text = "Folletos repartidos: " + str(puntaje) + "/" + str(puntaje_objetivo)
 
+
+
+func _on_reiniciar_pressed() -> void:
+		# Quita la pausa por si el juego estaba pausado al perder
+	get_tree().paused = false 
+	# Recarga el nivel actual
+	get_tree().reload_current_scene()
