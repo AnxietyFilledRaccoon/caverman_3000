@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://hgv01mcdfp37"]
 
 [ext_resource type="Script" uid="uid://q1va56sncu6w" path="res://nivelelbicho/juegobicho.gd" id="1_8v6cp"]
-[ext_resource type="PackedScene" uid="uid://d2gouxt4lyh4b" path="res://nivelelbicho/bicho.tscn" id="2_8v6cp"]
 [ext_resource type="PackedScene" uid="uid://b7caagclwkipq" path="res://zapato.tscn" id="3_ojceh"]
 [ext_resource type="Texture2D" uid="uid://cfoh1dpf6bbwc" path="res://nivelelbicho/piso cocina.png" id="4_2b86a"]
 [ext_resource type="Script" uid="uid://e5sk81kvh0rs" path="res://nivelguadaña/canvas_layer.gd" id="5_unrmw"]
@@ -12,9 +11,6 @@
 
 [node name="juegobicho" type="Node2D" unique_id=2010090408]
 script = ExtResource("1_8v6cp")
-
-[node name="bicho" parent="." unique_id=63647976 groups=["bicho"] instance=ExtResource("2_8v6cp")]
-position = Vector2(781, 469)
 
 [node name="zapato" parent="." unique_id=1918863226 instance=ExtResource("3_ojceh")]
 z_index = 10

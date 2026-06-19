@@ -1,6 +1,6 @@
 extends Node2D
 var bicho_aplastado := 0
-var bicho_total := 9
+var bicho_total := 10
 var bicho = preload("res://nivelelbicho/bicho.tscn")
 @onready var contador_label = $CanvasLayer/contador
 var pantalla_final_scene = preload("res://plata_vida_total.tscn")
@@ -20,14 +20,10 @@ func _ready():
 
 	actualizar_contador()
 
-
-func actualizar_contador():
-	contador_label.text =str(bicho_aplastado) +"/"+ str(bicho_total)
-
 func sumar_bicho():
 	bicho_aplastado += 1
 	
-	$CanvasLayer/contador.text =str(bicho_aplastado) +"/8"
+	$CanvasLayer/contador.text =str(bicho_aplastado) +"/9"
 	if bicho_aplastado >= bicho_total:
 			get_tree().change_scene_to_file("")
 	print("aplastado:",bicho_aplastado)
@@ -35,7 +31,8 @@ func sumar_bicho():
 	if bicho_aplastado >= bicho_total:
 		finalizar()
 
-
+func actualizar_contador():
+	contador_label.text =str(bicho_aplastado) +"/"+ str(bicho_total)
 
 func _on_reiniciar_pressed() -> void:
 	# Quita la pausa por si el juego estaba pausado al perder
@@ -62,7 +59,6 @@ func finalizar():
 		eventos.nivel_ganado()
 		
 	#Pantalla final con resultados de plata y vida restante
-	
 	var pantalla_final = pantalla_final_scene.instantiate()
 	add_child(pantalla_final)
 	pantalla_final.position = Vector2.ZERO
