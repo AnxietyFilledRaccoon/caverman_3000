@@ -33,6 +33,9 @@ offset_bottom = 23.0
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_jwb3l")]
 
+[node name="zapato2" parent="." unique_id=1376928701 instance=ExtResource("3_ojceh")]
+position = Vector2(67, 243)
+
 [node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1441542238]
 visible = false
 
