@@ -26,7 +26,7 @@ func recolectar_caja():
 
 	if cajas_recolectadas >= cajas_totales:
 		$eventos.nivel_ganado()
-		TransicionManager.cambiar_nivel("Reponer",
+		TransicionManager.cambiar_nivel("Cortar",
 	preload("res://asets/Fondos y otras escenas/Botones/Mouse2.png"),
 	"")# puedo agregar en el espacio libre la siguiente pantalla
 		#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi

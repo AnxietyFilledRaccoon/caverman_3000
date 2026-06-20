@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://313fsy4kuesh"]
+
+[ext_resource type="Script" uid="uid://dovxo71xtc2yu" path="res://mapa.gd" id="1_o68h1"]
+[ext_resource type="Texture2D" uid="uid://bfwcg6pwk6uju" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/MapaBlanco.png" id="1_q8ihy"]
+[ext_resource type="Texture2D" uid="uid://b42r0fa8fjej0" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/DepartamentoBloqueado.png" id="2_lrjei"]
+[ext_resource type="Texture2D" uid="uid://b2batb87h8v67" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/DepartamentoDesbloqueado.png" id="3_5d3jg"]
+[ext_resource type="Texture2D" uid="uid://blji1vb40fq43" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/FuerzaBloqueado.png" id="4_5d3jg"]
+[ext_resource type="Texture2D" uid="uid://cj1ohvsvwjht7" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/FuerzaDesbloqueado.png" id="5_wan0n"]
+[ext_resource type="Texture2D" uid="uid://cea7m2h0r1s5m" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/AtencionBloqueado.png" id="6_auc41"]
+[ext_resource type="Texture2D" uid="uid://cgt4e4top2ivq" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/AtencionDesbloqueado.png" id="7_ltv3l"]
+[ext_resource type="Texture2D" uid="uid://boo4cqtk1004b" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/TecnoBloqueado.png" id="8_w30at"]
+[ext_resource type="Texture2D" uid="uid://du5ikn16plho4" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/TecnoDesbloqueado.png" id="9_2eut3"]
+[ext_resource type="Texture2D" uid="uid://cchjrbx30f6as" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/SateliteBloqueado.png" id="10_rugew"]
+[ext_resource type="Texture2D" uid="uid://dvodksyr1b41a" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/SateliteDesbloqueado.png" id="11_o68h1"]
+
+[node name="Mapa" type="Control" unique_id=1888434024]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o68h1")
+
+[node name="fondomapa" type="TextureRect" parent="." unique_id=956436446]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 1156.0
+offset_bottom = 652.0
+texture = ExtResource("1_q8ihy")
+
+[node name="departamento" type="TextureButton" parent="." unique_id=2023226744]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 280.0
+offset_right = 316.0
+offset_bottom = 562.0
+texture_normal = ExtResource("2_lrjei")
+texture_hover = ExtResource("3_5d3jg")
+
+[node name="fuerza" type="TextureButton" parent="." unique_id=808277448]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 301.0
+offset_right = 741.0
+offset_bottom = 511.0
+texture_normal = ExtResource("4_5d3jg")
+texture_hover = ExtResource("5_wan0n")
+
+[node name="cliente" type="TextureButton" parent="." unique_id=975908127]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 44.0
+offset_right = 603.0
+offset_bottom = 298.0
+texture_normal = ExtResource("6_auc41")
+texture_hover = ExtResource("7_ltv3l")
+
+[node name="tecno" type="TextureButton" parent="." unique_id=601109653]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 254.0
+offset_right = 1076.0
+offset_bottom = 390.0
+texture_normal = ExtResource("8_w30at")
+texture_hover = ExtResource("9_2eut3")
+
+[node name="satelite" type="TextureButton" parent="." unique_id=1265582130]
+layout_mode = 0
+offset_left = 853.0
+offset_top = 10.0
+offset_right = 1051.0
+offset_bottom = 205.0
+texture_normal = ExtResource("10_rugew")
+texture_hover = ExtResource("11_o68h1")
+
+[connection signal="pressed" from="fuerza" to="." method="_on_fuerza_pressed"]
+[connection signal="pressed" from="cliente" to="." method="_on_cliente_pressed"]
+[connection signal="pressed" from="tecno" to="." method="_on_tecno_pressed"]

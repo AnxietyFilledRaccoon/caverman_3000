@@ -17,7 +17,7 @@ func sumar_corte():
 	$CanvasLayer/contador.text =str(pasto_cortado) + "/" + str(pasto_total)
 	if pasto_cortado >= pasto_total:
 		$eventos.nivel_ganado()
-		TransicionManager.cambiar_nivel("Reponer",
+		TransicionManager.cambiar_nivel("Pisar",
 	preload("res://asets/Fondos y otras escenas/Botones/Mouse2.png"),
 	"")# puedo agregar en el espacio libre la siguiente pantalla
 		#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi

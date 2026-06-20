@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bfyvuf1l1fkom" path="res://asets/pollo_54x71.png" id="4_x3sni"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="5_4cfnp"]
 [ext_resource type="Texture2D" uid="uid://iptqc6ali82l" path="res://asets/mate_54x71.png" id="6_6vlrg"]
-[ext_resource type="Texture2D" uid="uid://dif55tjbdkme3" path="res://asets/latita.png" id="7_6vlrg"]
-[ext_resource type="Texture2D" uid="uid://bxdxiy2b2corp" path="res://asets/manzana.png" id="8_ss3wp"]
+[ext_resource type="Texture2D" uid="uid://r3peb1uopfhi" path="res://asets/lechuga.png" id="7_ss3wp"]
+[ext_resource type="Texture2D" uid="uid://2eow54lfljii" path="res://asets/pelota.png" id="8_ss3wp"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_sxwe6"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_x3sni"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="13_ss3wp"]
@@ -24,24 +24,26 @@ scale = Vector2(0.29735965, 0.25502872)
 texture = ExtResource("2_6vlrg")
 
 [node name="producto" parent="." unique_id=185042010 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(669, 533)
-rotation = 1.5707964
+position = Vector2(657, 536)
+rotation = 1.118756
 textura = ExtResource("4_x3sni")
 
 [node name="producto2" parent="." unique_id=961272150 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(1111, 311)
+position = Vector2(1064, 316)
 textura = ExtResource("4_vhe2x")
 
 [node name="producto3" parent="." unique_id=493472878 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(155, 390)
+position = Vector2(165, 391)
 textura = ExtResource("6_6vlrg")
+"tamaño" = 0.8
 
 [node name="producto4" parent="." unique_id=1371650510 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(916, 604)
-textura = ExtResource("7_6vlrg")
+position = Vector2(916, 608)
+textura = ExtResource("7_ss3wp")
+"tamaño" = 0.7
 
 [node name="producto5" parent="." unique_id=599523667 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(726, 304)
+position = Vector2(726, 308)
 textura = ExtResource("8_ss3wp")
 
 [node name="mano" parent="." unique_id=758346715 instance=ExtResource("3_ahtto")]

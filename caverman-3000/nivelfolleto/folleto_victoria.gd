@@ -1,5 +1,5 @@
 extends Control
-
+var pantalla_final_scene = preload("res://plata_vida_total.tscn")
 func _ready():
 	scale = Vector2(0.1, 0.1)
 	modulate.a = 0.0
@@ -13,8 +13,9 @@ func _ready():
 	tween.parallel().tween_property(self, "modulate:a", 1.0, 0.2)
 	#colocar un timer para pasar a otra escena
 	await get_tree().create_timer(2.0).timeout
-	TransicionManager.cambiar_nivel("Folletos",
-	preload("res://asets/Fondos y otras escenas/Botones/BarraEspaciadora.png"),
-	"")
-	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://menú_principal.tscn")
+
+	var pantalla_final = pantalla_final_scene.instantiate()
+	add_child(pantalla_final)
+	pantalla_final.position = Vector2.ZERO
+	pantalla_final.size = get_viewport().get_visible_rect().size
+	

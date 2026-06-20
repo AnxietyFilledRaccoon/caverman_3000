@@ -33,7 +33,7 @@ func _on_mano_area_entered(area: Area2D) -> void:
 		
 func finalizar():
 	$eventos.nivel_ganado()
-	TransicionManager.cambiar_nivel("Cortar",
+	TransicionManager.cambiar_nivel("Carton",
 	preload("res://asets/Fondos y otras escenas/Botones/Mouse2.png"),
 	"")
 	await get_tree().create_timer(1.0).timeout

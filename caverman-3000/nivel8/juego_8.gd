@@ -112,9 +112,12 @@ func _fin_juego(gano: bool):
 		$HUDV.visible = false
 		#.visible = false
 		await get_tree().create_timer(1.5).timeout
+		var pantalla_final = pantalla_final_scene.instantiate()
+		add_child(pantalla_final)
+		pantalla_final.position = Vector2.ZERO
+		pantalla_final.size = get_viewport().get_visible_rect().size
 		
-		
-		get_tree().change_scene_to_file("res://menú_principal.tscn")
+		#get_tree().change_scene_to_file("res://mapa.tscn")
 		#get_tree().change_scene_to_file("res://menú_principal.tscn")
 	else:
 		label_resultado.text = "¡Te atropellaron, no se logró!"
