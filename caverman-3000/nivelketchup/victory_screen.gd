@@ -12,7 +12,7 @@ func _ready():
 		
 	tween.parallel().tween_property(self, "modulate:a", 1.0, 0.2)
 	#colocar un timer para pasar a otra escena
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	TransicionManager.cambiar_nivel("Folletos",
 	preload("res://asets/Fondos y otras escenas/Botones/BarraEspaciadora.png"),
 	"")
