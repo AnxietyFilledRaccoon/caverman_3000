@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://8ytmymrcx43f"]
 
+[ext_resource type="Script" uid="uid://0t6ke08vgo86" path="res://nivelsepulturero/nivel_sepulturero.gd" id="1_l5yec"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="1_xi0yj"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="2_l5yec"]
 
 [node name="NivelSepulturero" type="Node2D" unique_id=1320039598]
+script = ExtResource("1_l5yec")
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=627702099]
 
