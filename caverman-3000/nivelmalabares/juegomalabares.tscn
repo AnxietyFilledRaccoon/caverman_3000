@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnnr6lqiy6jwd"]
 
-[ext_resource type="Script" uid="uid://q1va56sncu6w" path="res://nivelelbicho/juegobicho.gd" id="1_ruy3l"]
+[ext_resource type="Script" uid="uid://c6hidbngbujph" path="res://nivelmalabares/juegomalabares.gd" id="1_ejni1"]
 [ext_resource type="Script" uid="uid://e5sk81kvh0rs" path="res://nivelguadaña/canvas_layer.gd" id="2_ejni1"]
 [ext_resource type="PackedScene" uid="uid://dgaovawgltimy" path="res://nivelmalabares/personaje.tscn" id="2_hviw3"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="3_hviw3"]
@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="6_n2wja"]
 
 [node name="juegomalabares" type="Node2D" unique_id=2010090408]
-script = ExtResource("1_ruy3l")
+script = ExtResource("1_ejni1")
 
 [node name="personaje" parent="." unique_id=2145008328 instance=ExtResource("2_hviw3")]
 
