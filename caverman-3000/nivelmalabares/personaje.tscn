@@ -41,3 +41,4 @@ sprite_frames = SubResource("SpriteFrames_odwrd")
 animation = &"malabares"
 frame = 2
 frame_progress = 0.25961402
+speed_scale = 2.0

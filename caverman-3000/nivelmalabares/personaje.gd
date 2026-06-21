@@ -12,3 +12,9 @@ func hacer_malabar():
 	anim.frame = 0
 
 	anim.play("malabares")
+
+func terminar():
+
+	anim.stop()
+
+	anim.play("idle")
