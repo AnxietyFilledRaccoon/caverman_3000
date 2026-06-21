@@ -1,38 +1,29 @@
 extends Node2D
-var bicho_aplastado := 0
-var bicho_total := 10
-var bicho = preload("res://nivelelbicho/bicho.tscn")
 @onready var contador_label = $CanvasLayer/contador
 var pantalla_final_scene = preload("res://plata_vida_total.tscn")
+var pulsaciones := 0
+var objetivo := 30
+@onready var personaje = $personaje
+
 
 func _ready():
-	randomize()
-
-	for i in range(bicho_total):
-		var nuevo_bicho = bicho.instantiate()
-
-		nuevo_bicho.position = Vector2(
-			randi_range(100, 700),
-			randi_range(100, 500)
-		)
-
-		add_child(nuevo_bicho)
-
 	actualizar_contador()
 
-func sumar_bicho():
-	bicho_aplastado += 1
-	
-	$CanvasLayer/contador.text =str(bicho_aplastado) +"/9"
-	if bicho_aplastado >= bicho_total:
-			get_tree().change_scene_to_file("")
-	print("aplastado:",bicho_aplastado)
-	actualizar_contador() 
-	if bicho_aplastado >= bicho_total:
-		finalizar()
+func _input(event):
+
+	if event.is_action_pressed("ui_accept"):
+
+		pulsaciones += 1
+
+		personaje.hacer_malabar()
+
+		actualizar_contador()
+
+		if pulsaciones >= objetivo:
+			finalizar()
 
 func actualizar_contador():
-	contador_label.text =str(bicho_aplastado) +"/"+ str(bicho_total)
+	contador_label.text = str(pulsaciones) + "/" + str(objetivo)
 
 func _on_reiniciar_pressed() -> void:
 	# Quita la pausa por si el juego estaba pausado al perder

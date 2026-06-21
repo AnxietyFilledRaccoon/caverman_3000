@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://hgv01mcdfp37"]
+[gd_scene format=3 uid="uid://cqa4x27aj7658"]
 
 [ext_resource type="Script" uid="uid://q1va56sncu6w" path="res://nivelelbicho/juegobicho.gd" id="1_8v6cp"]
 [ext_resource type="PackedScene" uid="uid://b7caagclwkipq" path="res://zapato.tscn" id="3_ojceh"]
@@ -32,9 +32,6 @@ offset_bottom = 23.0
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_bn5ly")]
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_jwb3l")]
-
-[node name="zapato2" parent="." unique_id=1376928701 instance=ExtResource("3_ojceh")]
-position = Vector2(67, 243)
 
 [node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1441542238]
 visible = false
