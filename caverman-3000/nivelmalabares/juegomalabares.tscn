@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="4_jfybd"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="5_7uy8e"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="6_n2wja"]
+[ext_resource type="Texture2D" uid="uid://b1j73d78mj6qy" path="res://nivelmalabares/fondomalabares.png" id="8_hviw3"]
 
 [node name="juegomalabares" type="Node2D" unique_id=2010090408]
 script = ExtResource("1_ejni1")
@@ -51,5 +52,11 @@ theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("6_n2wja")
 theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=852490331]
+z_index = -1
+position = Vector2(577, 323.25)
+scale = Vector2(0.29633427, 0.23042384)
+texture = ExtResource("8_hviw3")
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
