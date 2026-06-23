@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://4vudxwxjvciq"]
+
+[ext_resource type="Script" uid="uid://18p1y60aw804" path="res://nivelprogramacion/nivel_programacion.gd" id="1_vxe1w"]
+
+[node name="escena_Programacion" type="Node2D" unique_id=1464254939]
+script = ExtResource("1_vxe1w")
+
+[node name="personaje" type="AnimatedSprite2D" parent="." unique_id=395811006]
+
+[node name="computadora" type="AnimatedSprite2D" parent="." unique_id=448345100]
+
+[node name="fondo" type="CharacterBody2D" parent="." unique_id=331392286]
