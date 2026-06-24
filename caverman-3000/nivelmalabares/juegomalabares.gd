@@ -3,6 +3,7 @@ extends Node2D
 var pantalla_final_scene = preload("res://plata_vida_total.tscn")
 var pulsaciones := 0
 var objetivo := 30
+var nivel_terminado = false
 @onready var personaje = $personaje
 
 
@@ -10,6 +11,9 @@ func _ready():
 	actualizar_contador()
 
 func _input(event):
+
+	if nivel_terminado:
+		return
 
 	if event.is_action_pressed("ui_accept"):
 
@@ -46,6 +50,7 @@ func final_score():
 	pantalla_final.size = get_viewport().get_visible_rect().size
 	
 func finalizar():
+	nivel_terminado = true
 	print("Nivel completado")
 	var eventos = get_node_or_null("eventos")
 	if eventos:
