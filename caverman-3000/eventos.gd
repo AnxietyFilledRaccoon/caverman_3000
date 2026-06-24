@@ -45,4 +45,4 @@ func _on_tiempo_juego_timeout() -> void:
 	
 	if restart_menu:
 		restart_menu.visible = true # aparece el boton cuando se pierde
-	#get_tree().change_scene_to_file("res://game_over.tscn")
+	

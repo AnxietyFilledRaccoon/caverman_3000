@@ -129,6 +129,8 @@ func _fin_juego(gano: bool) -> void:
 					ruta_siguiente_nivel
 				)
 			else:
+				await get_tree().create_timer(2.0).timeout
+				get_tree().change_scene_to_file("res://game_over.tscn")
 				get_tree().change_scene_to_file(ruta_siguiente_nivel)
 
 func _on_reiniciar_pressed() -> void:

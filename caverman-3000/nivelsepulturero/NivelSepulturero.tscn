@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://b0hr6ncu8acnx" path="res://asets/palada2.png" id="5_qufwq"]
 [ext_resource type="Texture2D" uid="uid://dapcjxij8kl6g" path="res://asets/Palada1.png" id="6_18gl3"]
 [ext_resource type="Texture2D" uid="uid://ciu7w76d1kemd" path="res://asets/Cavernicolapala.png" id="6_42fyg"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="11_42fyg"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_oqlgh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u103l"]
 atlas = ExtResource("6_42fyg")
@@ -21,7 +23,7 @@ animations = [{
 "duration": 0.3,
 "texture": SubResource("AtlasTexture_u103l")
 }],
-"loop": 0,
+"loop": false,
 "name": &"idle",
 "speed": 10.0
 }, {
@@ -32,7 +34,7 @@ animations = [{
 "duration": 0.5,
 "texture": ExtResource("5_qufwq")
 }],
-"loop": 0,
+"loop": false,
 "name": &"palada",
 "speed": 8.0
 }]
@@ -43,7 +45,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_eqpxp")
 }],
-"loop": 0,
+"loop": false,
 "name": &"lleno",
 "speed": 1.0
 }, {
@@ -51,7 +53,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_qufwq")
 }],
-"loop": 0,
+"loop": false,
 "name": &"medio",
 "speed": 1.0
 }, {
@@ -59,7 +61,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_18gl3")
 }],
-"loop": 0,
+"loop": false,
 "name": &"poco",
 "speed": 1.0
 }, {
@@ -67,7 +69,7 @@ animations = [{
 "duration": 1.0,
 "texture": null
 }],
-"loop": 0,
+"loop": false,
 "name": &"vacio",
 "speed": 1.0
 }]
@@ -97,6 +99,10 @@ sprite_frames = SubResource("SpriteFrames_8nmfx")
 animation = &"vacio"
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("1_xi0yj")]
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 576.0
+offset_bottom = 3.0
 tiempo_personalizar = 8
 metadata/_edit_use_anchors_ = true
 
@@ -110,14 +116,32 @@ rotation = 1.5707964
 scale = Vector2(0.17373928, 0.96602803)
 texture = ExtResource("3_18gl3")
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=402341032]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=422696779]
+visible = false
 
-[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=3448012]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=2040773783]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("11_42fyg")
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=878653614]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1633922040]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("12_oqlgh")
+theme_override_font_sizes/font_size = 50
+text = " Reiniciar "
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
