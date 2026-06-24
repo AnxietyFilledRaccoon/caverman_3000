@@ -18,8 +18,7 @@ script = ExtResource("1_3fou4")
 position = Vector2(626, 471)
 
 [node name="Productos" type="Sprite2D" parent="Playerlvl7" unique_id=1515082729]
-position = Vector2(36, 30)
-rotation = 0.34906584
+position = Vector2(48, 32)
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("6_i56ol")
 
@@ -136,7 +135,7 @@ scale = Vector2(0.17, 0.17)
 texture = ExtResource("6_i56ol")
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_exl78")]
-tiempo_personalizar = 10
+tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_qvuab")]
 
