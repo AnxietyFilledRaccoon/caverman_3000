@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b8f74nwp1bqwv" path="res://nivelprogramacion/personajeprogramacion2.png" id="3_6rtga"]
 [ext_resource type="Texture2D" uid="uid://scug5f5rpt8e" path="res://nivelprogramacion/compu_Programada1.jpg" id="4_gm7ry"]
 [ext_resource type="Texture2D" uid="uid://bbxbcdjjpoj6n" path="res://nivelprogramacion/compu_Programada2.jpg" id="5_f88x6"]
-[ext_resource type="Texture2D" uid="uid://kbw58d7gkvq" path="res://nivelprogramacion/fondo_Nivel_Programacion.jpg" id="6_bbsyc"]
+[ext_resource type="Texture2D" uid="uid://ckmc1qo0ud6tb" path="res://nivelprogramacion/fondoprogramación.png" id="6_36twn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ia7he"]
 animations = [{
@@ -16,7 +16,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_6rtga")
 }],
-"loop": 1,
+"loop": true,
 "name": &"hit",
 "speed": 10.0
 }]
@@ -30,12 +30,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_f88x6")
 }],
-"loop": 1,
+"loop": true,
 "name": &"programanding",
 "speed": 10.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": true,
 "name": &"win",
 "speed": 5.0
 }]
@@ -45,20 +45,21 @@ script = ExtResource("1_vxe1w")
 
 [node name="personaje" type="AnimatedSprite2D" parent="." unique_id=395811006]
 z_index = 1
-position = Vector2(593.00006, 332)
+position = Vector2(599.00006, 439)
 scale = Vector2(0.7334964, 0.7374728)
 sprite_frames = SubResource("SpriteFrames_ia7he")
 animation = &"hit"
 frame_progress = 0.08465039
 
 [node name="computadora" type="AnimatedSprite2D" parent="." unique_id=448345100]
-position = Vector2(430.00003, 327)
-scale = Vector2(0.24202125, 0.35454538)
+position = Vector2(397.5, 326.5)
+rotation = -0.008394953
+scale = Vector2(0.4582336, 0.41123655)
 sprite_frames = SubResource("SpriteFrames_hve5i")
 animation = &"programanding"
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=295703498]
 z_index = -1
-position = Vector2(579.5, 325.5)
-scale = Vector2(1.7370821, 1.7648649)
-texture = ExtResource("6_bbsyc")
+position = Vector2(576.49994, 324)
+scale = Vector2(0.42624772, 0.29892576)
+texture = ExtResource("6_36twn")
