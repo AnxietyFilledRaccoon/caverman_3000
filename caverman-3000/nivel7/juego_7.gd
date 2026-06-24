@@ -146,7 +146,7 @@ func _fin_juego(gano: bool) -> void:
 		
 		TransicionManager.cambiar_nivel(
 		"Cruzar Paquete",
-		preload("res://asets/Fondos y otras escenas/Botones/Cruceta2.png"),"")
+		preload("res://asets/Fondos y otras escenas/Botones/Cruceta1.png"),"")
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://nivel8/juego_8.tscn")
 	else:
