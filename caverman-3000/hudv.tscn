@@ -18,13 +18,10 @@ grow_horizontal = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=2095001465]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -87.15625
-offset_right = 87.15625
-offset_bottom = 55.0
-grow_horizontal = 2
+offset_left = -570.0
+offset_top = 6.0
+offset_right = -392.0
+offset_bottom = 61.0
 
 [node name="vida1" type="TextureRect" parent="Control/HBoxContainer" unique_id=1350781244]
 layout_mode = 2
@@ -49,15 +46,15 @@ stretch_mode = 4
 
 [node name="Platita" type="TextureRect" parent="Control" unique_id=1063063882]
 layout_mode = 0
-offset_left = 309.0
-offset_top = -3.0
-offset_right = 374.0
-offset_bottom = 32.0
+offset_left = 419.0
+offset_top = 1.0
+offset_right = 484.0
+offset_bottom = 36.0
 texture = ExtResource("3_2d0m2")
 
 [node name="LabelPlaitita" type="Label" parent="Control" unique_id=1546287113]
 layout_mode = 0
-offset_left = 375.0
-offset_top = 2.0
-offset_right = 463.0
-offset_bottom = 26.0
+offset_left = 479.0
+offset_top = 4.0
+offset_right = 567.0
+offset_bottom = 28.0

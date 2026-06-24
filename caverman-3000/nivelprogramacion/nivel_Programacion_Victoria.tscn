@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c4gvv0jq2l2we"]
+
+[ext_resource type="Texture2D" uid="uid://45um5ob8fyur" path="res://nivelprogramacion/escena_Programacion_Victoria.jpg" id="1_tv6kk"]
+
+[node name="Control" type="Control" unique_id=14421691]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1043328312]
+layout_mode = 0
+offset_right = 1300.0
+offset_bottom = 867.0
+scale = Vector2(0.88658184, 0.7403606)
+texture = ExtResource("1_tv6kk")

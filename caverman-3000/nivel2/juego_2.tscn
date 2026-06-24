@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cq21umjs71wm3" path="res://asets/nivel2.png" id="2_6vlrg"]
 [ext_resource type="PackedScene" uid="uid://cte1cfdshjlci" path="res://nivel2/producto.tscn" id="2_llckx"]
 [ext_resource type="PackedScene" uid="uid://chdtdhsfw7jap" path="res://nivel2/mano.tscn" id="3_ahtto"]
-[ext_resource type="Texture2D" uid="uid://xxikjj5drt8y" path="res://asets/nivel2/gaseosaA.png" id="3_vhe2x"]
 [ext_resource type="Script" uid="uid://b7ejbbwv0uo7a" path="res://canvas_layer.gd" id="4_13cvf"]
-[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/nivel2/gaseosaN.png" id="4_sxwe6"]
+[ext_resource type="Texture2D" uid="uid://drkm76w4ifeh7" path="res://asets/muneca_54x71.png" id="4_vhe2x"]
+[ext_resource type="Texture2D" uid="uid://bfyvuf1l1fkom" path="res://asets/pollo_54x71.png" id="4_x3sni"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="5_4cfnp"]
-[ext_resource type="Texture2D" uid="uid://da3usks6p2gpq" path="res://asets/detergente.png" id="6_ss3wp"]
-[ext_resource type="Texture2D" uid="uid://00odnn8v75ho" path="res://asets/yerba.png" id="7_6vlrg"]
-[ext_resource type="Texture2D" uid="uid://dt72afp2bo53n" path="res://asets/pulverizador.png" id="8_6vlrg"]
+[ext_resource type="Texture2D" uid="uid://iptqc6ali82l" path="res://asets/mate_54x71.png" id="6_6vlrg"]
+[ext_resource type="Texture2D" uid="uid://r3peb1uopfhi" path="res://asets/lechuga.png" id="7_ss3wp"]
+[ext_resource type="Texture2D" uid="uid://2eow54lfljii" path="res://asets/pelota.png" id="8_ss3wp"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="11_sxwe6"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_x3sni"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="13_ss3wp"]
@@ -24,34 +24,30 @@ scale = Vector2(0.29735965, 0.25502872)
 texture = ExtResource("2_6vlrg")
 
 [node name="producto" parent="." unique_id=185042010 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(658, 543)
-rotation = 1.5707964
-textura = ExtResource("3_vhe2x")
-"tamaño" = 0.2
+position = Vector2(657, 536)
+rotation = 1.118756
+textura = ExtResource("4_x3sni")
 
 [node name="producto2" parent="." unique_id=961272150 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(1111, 311)
-textura = ExtResource("4_sxwe6")
-"tamaño" = 0.2
+position = Vector2(1064, 316)
+textura = ExtResource("4_vhe2x")
 
 [node name="producto3" parent="." unique_id=493472878 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(155, 390)
-textura = ExtResource("6_ss3wp")
-"tamaño" = 0.2
+position = Vector2(165, 391)
+textura = ExtResource("6_6vlrg")
+"tamaño" = 0.8
 
 [node name="producto4" parent="." unique_id=1371650510 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(916, 604)
-textura = ExtResource("7_6vlrg")
-"tamaño" = 0.2
+position = Vector2(916, 608)
+textura = ExtResource("7_ss3wp")
+"tamaño" = 0.7
 
 [node name="producto5" parent="." unique_id=599523667 groups=["productos"] instance=ExtResource("2_llckx")]
-position = Vector2(726, 304)
-textura = ExtResource("8_6vlrg")
-"tamaño" = 0.2
+position = Vector2(726, 308)
+textura = ExtResource("8_ss3wp")
 
 [node name="mano" parent="." unique_id=758346715 instance=ExtResource("3_ahtto")]
 position = Vector2(479, 313)
-"tamaño" = 0.4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2000213866]
 script = ExtResource("4_13cvf")
@@ -61,6 +57,10 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_4cfnp")]
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 576.0
+offset_bottom = 81.0
 tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("11_sxwe6")]

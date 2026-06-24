@@ -17,8 +17,6 @@ size_flags_vertical = 3
 script = ExtResource("1_fq2i3")
 
 [node name="Fondo" type="ColorRect" parent="." unique_id=239957014]
-visible = false
-z_index = 8
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,16 +24,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.096333645, 0.0007709238, 0.07021127, 1)
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=585941817]
-z_index = 9
-layout_mode = 0
-offset_left = 345.0
-offset_top = 245.0
-offset_right = 786.0
-offset_bottom = 269.0
-scale = Vector2(1.0292224, 7.2361517)
-color = Color(0.5931338, 0.5931335, 0.5931336, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1120804295]
 layout_mode = 1
@@ -110,6 +98,7 @@ grow_vertical = 0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_24ghs")
 theme_override_font_sizes/font_size = 40
-text = "menu"
+text = "mapa
+"
 
 [connection signal="pressed" from="VBoxContainer2/Button" to="." method="_on_button_pressed"]

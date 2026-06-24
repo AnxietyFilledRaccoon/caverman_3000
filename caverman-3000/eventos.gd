@@ -3,10 +3,11 @@ extends Control
 
 
 # Referencia al Label que muestra el tiempo
-@onready var tiempo_label = $CanvasLayer/tiempo
+#@onready var tiempo_label = $CanvasLayer/tiempo
 @onready var game_timer = $tiempoJuego
 @export var tiempo_personalizar = 0
 @onready var restart_menu = null
+@onready var progress_bar = $TextureProgressBar
 
 func _ready():
 	restart_menu = get_node_or_null("../botonreinicio")
@@ -15,15 +16,20 @@ func _ready():
 	await get_tree().create_timer(1.0).timeout #desactivo el "AUTOSTART" en el inspector
 											   #con este await le doy un tiempo de retraso al timer
 	game_timer.start()#inicia el timer
+	progress_bar.min_value = 0
+	progress_bar.max_value = tiempo_personalizar
+	progress_bar.value = tiempo_personalizar
+	
 	
 func _process(_delta):
 	# Actualizar el texto del label cada frame con el tiempo restante
 	# ceil() redondea hacia arriba para mostrar el segundo actual correcto
-	tiempo_label.text = str(ceil($tiempoJuego.time_left))
-	
+	#tiempo_label.text = str(ceil($tiempoJuego.time_left))#borrar cuando este lista la barra
+	progress_bar.value = game_timer.time_left # tiempo restante
 func nivel_ganado():
 	var tiempo_restante = game_timer.time_left
 	game_timer.stop()
+	
 	GameManager.ganar_nivel(tiempo_restante)
 
 

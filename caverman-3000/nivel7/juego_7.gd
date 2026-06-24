@@ -144,8 +144,9 @@ func _fin_juego(gano: bool) -> void:
 		await get_tree().create_timer(2.0).timeout
 		label_resultados.text = "¡Entregaste todos los productos!"
 		
-		#TransicionManager.cambiar_nivel(
-		#"Pisar", "Usa Cruceta","")
+		TransicionManager.cambiar_nivel(
+		"Cruzar Paquete",
+		preload("res://asets/Fondos y otras escenas/Botones/Cruceta2.png"),"")
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://nivel8/juego_8.tscn")
 	else:

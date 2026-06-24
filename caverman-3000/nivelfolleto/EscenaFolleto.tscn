@@ -21,7 +21,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_0rjy7")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -29,7 +29,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_tr2u8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"victoria",
 "speed": 5.0
 }]
@@ -60,32 +60,26 @@ position = Vector2(582.00006, -147)
 scale = Vector2(1.3788599, 1.3788601)
 texture = ExtResource("6_0rjy7")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1131265644]
-
-[node name="pantalla_victoria" type="Control" parent="CanvasLayer" unique_id=1855052364]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("7_tq1oo")]
-tiempo_personalizar = 20
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 576.0
+offset_bottom = 3.0
+tiempo_personalizar = 15
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("8_mb5f7")]
 
-[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=90864628]
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=1945279329]
 visible = false
 
-[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=968910261]
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=294196537]
 offset_left = -6.0
 offset_top = -4.0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("9_tr2u8")
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=246742022]
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=422033550]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

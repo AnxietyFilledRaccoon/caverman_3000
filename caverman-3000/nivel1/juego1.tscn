@@ -4,12 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
 [ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
 [ext_resource type="Texture2D" uid="uid://cfdy4e62lisyn" path="res://asets/plaza1.png" id="2_w6fdp"]
-[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/nivel1/metal.png" id="3_utxh4"]
+[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_utxh4"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="4_swt8o"]
-[ext_resource type="Texture2D" uid="uid://bxdxiy2b2corp" path="res://asets/nivel1/manzana.png" id="4_w6fdp"]
-[ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/nivel1/pescado.png" id="5_n2edi"]
-[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/nivel1/basuraN.png" id="6_rxpji"]
+[ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/pescado.png" id="5_n2edi"]
+[ext_resource type="Texture2D" uid="uid://dsu7oggfjsr3o" path="res://asets/botella.png" id="5_rxpji"]
+[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="6_rxpji"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
+[ext_resource type="Texture2D" uid="uid://do8hp7km6hxpm" path="res://asets/basura.png" id="8_h4yku"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="11_n2edi"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_n2edi"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="12_w6fdp"]
@@ -112,7 +113,7 @@ textura = ExtResource("3_utxh4")
 
 [node name="item2" parent="." unique_id=1749684002 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(100, 122)
-textura = ExtResource("4_w6fdp")
+textura = ExtResource("5_rxpji")
 
 [node name="item3" parent="." unique_id=393883410 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(365, 470)
@@ -121,6 +122,10 @@ textura = ExtResource("5_n2edi")
 [node name="item4" parent="." unique_id=245466926 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
 position = Vector2(704, 104)
 textura = ExtResource("6_rxpji")
+
+[node name="item5" parent="." unique_id=348397636 groups=["cavernicola"] instance=ExtResource("1_m75pg")]
+position = Vector2(48, 592)
+textura = ExtResource("8_h4yku")
 
 [node name="Player" parent="." unique_id=377288202 groups=["cavernicola"] instance=ExtResource("2_epaet")]
 position = Vector2(588.99994, 523)
@@ -135,6 +140,10 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_swt8o")]
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 576.0
+offset_bottom = 81.0
 tiempo_personalizar = 15
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("12_w6fdp")]
@@ -171,4 +180,5 @@ text = " Reiniciar "
 [connection signal="recolectar_items" from="item2" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="item3" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="item4" to="Player" method="_on_moneda_recolectar_items"]
+[connection signal="recolectar_items" from="item5" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
