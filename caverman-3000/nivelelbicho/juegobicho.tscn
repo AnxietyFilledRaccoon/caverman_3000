@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://hgv01mcdfp37"]
+[gd_scene format=3 uid="uid://cqa4x27aj7658"]
 
 [ext_resource type="Script" uid="uid://q1va56sncu6w" path="res://nivelelbicho/juegobicho.gd" id="1_8v6cp"]
 [ext_resource type="PackedScene" uid="uid://b7caagclwkipq" path="res://zapato.tscn" id="3_ojceh"]
