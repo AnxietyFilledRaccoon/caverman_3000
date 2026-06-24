@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://cog0gm8pc6yy8"]
+
+[ext_resource type="Script" uid="uid://cqal1mrw5iuxh" path="res://nivel7/juego_7.gd" id="1_3fou4"]
+[ext_resource type="PackedScene" uid="uid://kt3mk0xcjg48" path="res://nivel7/playerlvl_7.tscn" id="2_px4uh"]
+[ext_resource type="Texture2D" uid="uid://cxg4jys8hlhac" path="res://asets/Fondo Repositor.png" id="4_5xdlx"]
+[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="4_so5ex"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="5_exl78"]
+[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="6_3p4mw"]
+[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/gaseosaN.png" id="6_i56ol"]
+[ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="7_0kr47"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_qvuab"]
+
+[node name="Juego7" type="Node2D" unique_id=1767808173]
+script = ExtResource("1_3fou4")
+
+[node name="Playerlvl7" parent="." unique_id=658744256 instance=ExtResource("2_px4uh")]
+position = Vector2(439, 453)
+
+[node name="Productos" type="Sprite2D" parent="Playerlvl7" unique_id=1515082729]
+position = Vector2(48, 32)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="Camion" type="Node2D" parent="." unique_id=708783186]
+position = Vector2(1085, 410)
+
+[node name="SpriteCamion" type="Sprite2D" parent="Camion" unique_id=546110142]
+
+[node name="ProductosEntregados" type="Node2D" parent="Camion" unique_id=10314921]
+
+[node name="SpriteProductos" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=1469511034]
+visible = false
+position = Vector2(20.550049, 26.849998)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto2" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=823601747]
+visible = false
+position = Vector2(28.550049, 26.850006)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto3" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=899936748]
+visible = false
+position = Vector2(36.55005, 27.850006)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto4" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=1402946234]
+visible = false
+position = Vector2(45.55005, 27.850006)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto5" type="Sprite2D" parent="Camion/ProductosEntregados" unique_id=1701835031]
+visible = false
+position = Vector2(54.55005, 27.850006)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=547638500]
+
+[node name="Control" type="Control" parent="Ui" unique_id=1267616134]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelResultado" type="Label" parent="Ui/Control" unique_id=1357982695]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 312.0
+offset_right = 576.0
+offset_bottom = 335.0
+size_flags_horizontal = 0
+size_flags_vertical = 1
+
+[node name="LabelPRestantes" type="Label" parent="Ui/Control" unique_id=547260389]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1693823715]
+z_index = -5
+position = Vector2(573.00006, 304.99997)
+scale = Vector2(0.30187517, 0.3018752)
+texture = ExtResource("4_5xdlx")
+
+[node name="Estanteria" type="Node2D" parent="." unique_id=1780336303]
+position = Vector2(68, 416)
+
+[node name="Productos" type="Node2D" parent="Estanteria" unique_id=1944213664]
+
+[node name="SpriteProductos" type="Sprite2D" parent="Estanteria/Productos" unique_id=1545149059]
+position = Vector2(-25, -43.305)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto2" type="Sprite2D" parent="Estanteria/Productos" unique_id=997480549]
+position = Vector2(12, -39)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto3" type="Sprite2D" parent="Estanteria/Productos" unique_id=9953441]
+position = Vector2(-25, 27)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto4" type="Sprite2D" parent="Estanteria/Productos" unique_id=1286046411]
+position = Vector2(12, 32)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteProducto5" type="Sprite2D" parent="Estanteria/Productos" unique_id=1577927995]
+position = Vector2(-4, 71)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_i56ol")
+
+[node name="SpriteEstanteria" type="Sprite2D" parent="Estanteria" unique_id=1609539693]
+z_index = -1
+scale = Vector2(3, 3)
+texture = ExtResource("4_so5ex")
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_exl78")]
+tiempo_personalizar = 20
+
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_qvuab")]
+
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=261166933]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=608107022]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("7_0kr47")
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1381456787]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
+theme_override_fonts/font = ExtResource("6_3p4mw")
+theme_override_font_sizes/font_size = 50
+text = " Reiniciar "
+
+[connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]

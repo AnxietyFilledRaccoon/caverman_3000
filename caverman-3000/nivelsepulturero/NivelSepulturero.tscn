@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://8ytmymrcx43f"]
+
+[ext_resource type="Script" uid="uid://0t6ke08vgo86" path="res://nivelsepulturero/nivel_sepulturero.gd" id="1_l5yec"]
+[ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="1_xi0yj"]
+[ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="2_l5yec"]
+[ext_resource type="Texture2D" uid="uid://cjvwvt7yv7m7" path="res://asets/FondoSepulturero.png" id="2_u103l"]
+[ext_resource type="Texture2D" uid="uid://dw0jl0bjp8gq5" path="res://asets/Montoncito1.png" id="3_18gl3"]
+[ext_resource type="Texture2D" uid="uid://dukp8j3k4pndt" path="res://asets/Montocito2.png" id="4_qufwq"]
+[ext_resource type="Texture2D" uid="uid://digxnc4xxajvo" path="res://asets/Montoncito3.png" id="5_eqpxp"]
+[ext_resource type="Texture2D" uid="uid://b0hr6ncu8acnx" path="res://asets/palada2.png" id="5_qufwq"]
+[ext_resource type="Texture2D" uid="uid://dapcjxij8kl6g" path="res://asets/Palada1.png" id="6_18gl3"]
+[ext_resource type="Texture2D" uid="uid://ciu7w76d1kemd" path="res://asets/Cavernicolapala.png" id="6_42fyg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u103l"]
+atlas = ExtResource("6_42fyg")
+region = Rect2(0, 0, 1890, 1560)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yaubd"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_u103l")
+}],
+"loop": 0,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("6_18gl3")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_qufwq")
+}],
+"loop": 0,
+"name": &"palada",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8nmfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eqpxp")
+}],
+"loop": 0,
+"name": &"lleno",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qufwq")
+}],
+"loop": 0,
+"name": &"medio",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_18gl3")
+}],
+"loop": 0,
+"name": &"poco",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"vacio",
+"speed": 1.0
+}]
+
+[node name="NivelSepulturero" type="Node2D" unique_id=1320039598]
+script = ExtResource("1_l5yec")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=627702099]
+z_index = -4
+position = Vector2(578, 249)
+scale = Vector2(0.29659083, 0.29659086)
+texture = ExtResource("2_u103l")
+
+[node name="Personaje" type="Node2D" parent="." unique_id=64465794]
+z_index = 2
+
+[node name="Animacion" type="AnimatedSprite2D" parent="Personaje" unique_id=542347244]
+position = Vector2(454, 355)
+scale = Vector2(0.22867838, 0.22867838)
+sprite_frames = SubResource("SpriteFrames_yaubd")
+animation = &"palada"
+
+[node name="Montoncito" type="AnimatedSprite2D" parent="." unique_id=639822694]
+position = Vector2(770, 327.00003)
+scale = Vector2(0.27929688, 0.19173177)
+sprite_frames = SubResource("SpriteFrames_8nmfx")
+animation = &"vacio"
+
+[node name="eventos" parent="." unique_id=743028521 instance=ExtResource("1_xi0yj")]
+tiempo_personalizar = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("2_l5yec")]
+
+[node name="Tierra" type="Sprite2D" parent="." unique_id=1887428241]
+modulate = Color(1.4369954, 1.4369954, 1.4369954, 1)
+z_index = 1
+position = Vector2(1295, 425)
+rotation = 1.5707964
+scale = Vector2(0.17373928, 0.96602803)
+texture = ExtResource("3_18gl3")
+
+[node name="botonreinicio" type="CanvasLayer" parent="." unique_id=402341032]
+
+[node name="TextureRect" type="TextureRect" parent="botonreinicio" unique_id=3448012]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=878653614]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]

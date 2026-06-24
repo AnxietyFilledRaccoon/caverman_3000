@@ -20,21 +20,30 @@ region = Rect2(717, 548, 239, 274)
 [sub_resource type="SpriteFrames" id="SpriteFrames_so5ex"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_0yvdd")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_fnenh")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_ljmn2")
 }],
-"loop": true,
-"name": &"caminarX",
+"loop": 1,
+"name": &"caminar",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_0yvdd")
+}],
+"loop": 0,
+"name": &"idle",
+"speed": 3.0
 }]
 
 [node name="Playerlvl7" type="CharacterBody2D" unique_id=658744256]
+z_index = 3
 
 [node name="AreaPlayer" type="Area2D" parent="." unique_id=971984717]
 
@@ -44,7 +53,7 @@ shape = SubResource("RectangleShape2D_se0u2")
 
 [node name="AnimationPlayer" type="AnimatedSprite2D" parent="." unique_id=795290511]
 sprite_frames = SubResource("SpriteFrames_so5ex")
-animation = &"caminarX"
+animation = &"caminar"
 
 [node name="ColisionPlayer" type="CollisionShape2D" parent="." unique_id=2058001202]
 position = Vector2(-7, 0)
