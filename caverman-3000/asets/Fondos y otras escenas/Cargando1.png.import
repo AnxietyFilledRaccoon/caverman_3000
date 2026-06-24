@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0v22bd2mqjy"
-path="res://.godot/imported/gaseosaNA.png-0fff41fca98eb47ff4de8fac4d4a1307.ctex"
+uid="uid://bgnrv0bssmqpj"
+path="res://.godot/imported/Cargando1.png-5a5221f324dd56632b9ec8ee30a14c2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/gaseosaNA.png"
-dest_files=["res://.godot/imported/gaseosaNA.png-0fff41fca98eb47ff4de8fac4d4a1307.ctex"]
+source_file="res://asets/Fondos y otras escenas/Cargando1.png"
+dest_files=["res://.godot/imported/Cargando1.png-5a5221f324dd56632b9ec8ee30a14c2b.ctex"]
 
 [params]
 

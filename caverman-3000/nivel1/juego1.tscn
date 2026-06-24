@@ -140,10 +140,10 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("6_swt8o")]
-offset_left = 1155.0
-offset_top = -1.0
-offset_right = 1155.0
-offset_bottom = 77.0
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 576.0
+offset_bottom = 81.0
 tiempo_personalizar = 15
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("12_w6fdp")]

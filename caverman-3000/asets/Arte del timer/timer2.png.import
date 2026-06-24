@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnrs7efy63j31"
-path="res://.godot/imported/Soga.png-7f096ca04c28f71a9f84397286ce14b2.ctex"
+uid="uid://jii6uvs3jjof"
+path="res://.godot/imported/timer2.png-14043b8de141d1f4cf36fbd61cd00562.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/Arte del timer/Soga.png"
-dest_files=["res://.godot/imported/Soga.png-7f096ca04c28f71a9f84397286ce14b2.ctex"]
+source_file="res://asets/Arte del timer/timer2.png"
+dest_files=["res://.godot/imported/timer2.png-14043b8de141d1f4cf36fbd61cd00562.ctex"]
 
 [params]
 

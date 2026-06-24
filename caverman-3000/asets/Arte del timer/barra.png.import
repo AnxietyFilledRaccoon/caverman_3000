@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y0avr37m3tfh"
-path="res://.godot/imported/Fuego.png-4de92ee1c272f5f357e72ff41f527707.ctex"
+uid="uid://dbjuvxtl81jrw"
+path="res://.godot/imported/barra.png-ea7c4cfd482dbee5b96a62f5c83d3093.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/Arte del timer/Fuego.png"
-dest_files=["res://.godot/imported/Fuego.png-4de92ee1c272f5f357e72ff41f527707.ctex"]
+source_file="res://asets/Arte del timer/barra.png"
+dest_files=["res://.godot/imported/barra.png-ea7c4cfd482dbee5b96a62f5c83d3093.ctex"]
 
 [params]
 

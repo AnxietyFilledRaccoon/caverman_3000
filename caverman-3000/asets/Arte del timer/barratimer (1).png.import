@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbmlee3hqo8c5"
-path="res://.godot/imported/FullTimer.png-888895b818e754d7d79f6f7e6079156b.ctex"
+uid="uid://dh36n0rnjqggd"
+path="res://.godot/imported/barratimer (1).png-fd4ca6c3e80d0932ed4a3b02ae38246e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/Arte del timer/FullTimer.png"
-dest_files=["res://.godot/imported/FullTimer.png-888895b818e754d7d79f6f7e6079156b.ctex"]
+source_file="res://asets/Arte del timer/barratimer (1).png"
+dest_files=["res://.godot/imported/barratimer (1).png-fd4ca6c3e80d0932ed4a3b02ae38246e.ctex"]
 
 [params]
 

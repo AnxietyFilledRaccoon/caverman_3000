@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxta6x6hcclfo"
-path="res://.godot/imported/Cruceta2.png-6f8b7bb86a35efe6540d92cebc574fc2.ctex"
+uid="uid://btu3v16btug7u"
+path="res://.godot/imported/timer.png-36c30ffd97eabe456572d6fa08f04b5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/Fondos y otras escenas/Botones/Cruceta2.png"
-dest_files=["res://.godot/imported/Cruceta2.png-6f8b7bb86a35efe6540d92cebc574fc2.ctex"]
+source_file="res://asets/Arte del timer/timer.png"
+dest_files=["res://.godot/imported/timer.png-36c30ffd97eabe456572d6fa08f04b5d.ctex"]
 
 [params]
 

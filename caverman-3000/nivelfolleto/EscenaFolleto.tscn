@@ -61,10 +61,10 @@ scale = Vector2(1.3788599, 1.3788601)
 texture = ExtResource("6_0rjy7")
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("7_tq1oo")]
-offset_left = 1155.0
-offset_top = -1.0
-offset_right = 1155.0
-offset_bottom = 77.0
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 576.0
+offset_bottom = 3.0
 tiempo_personalizar = 15
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("8_mb5f7")]

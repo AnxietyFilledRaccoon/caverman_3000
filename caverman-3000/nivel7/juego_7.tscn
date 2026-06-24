@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="4_so5ex"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="5_exl78"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="6_3p4mw"]
-[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/gaseosaN.png" id="6_i56ol"]
+[ext_resource type="Texture2D" uid="uid://ca118v6twiw7v" path="res://asets/nivel2/gaseosaN.png" id="6_i56ol"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="7_0kr47"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_qvuab"]
 
@@ -123,10 +123,10 @@ scale = Vector2(3, 3)
 texture = ExtResource("4_so5ex")
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("5_exl78")]
-offset_left = 1153.0
-offset_top = 1.0
-offset_right = 1153.0
-offset_bottom = 79.0
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 576.0
+offset_bottom = 3.0
 tiempo_personalizar = 20
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_qvuab")]

@@ -51,13 +51,6 @@ theme_override_fonts/font = ExtResource("3_v0lul")
 theme_override_font_sizes/font_size = 50
 text = "	JUGAR"
 
-[node name="Creditos" type="Button" parent="VBoxContainer" unique_id=698447093]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_v0lul")
-theme_override_font_sizes/font_size = 50
-text = "CREDITOS
-"
-
 [node name="Quitar" type="Button" parent="VBoxContainer" unique_id=1709574095]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_v0lul")
@@ -66,5 +59,4 @@ text = "QUITAR
 "
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_opcion_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quitar" to="." method="_on_quitar_pressed"]

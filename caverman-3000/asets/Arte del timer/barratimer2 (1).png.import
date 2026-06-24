@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca118v6twiw7v"
-path="res://.godot/imported/gaseosaN.png-92cc3c7f8c647d7c38d59f2d9dace172.ctex"
+uid="uid://begd6ng87ydr5"
+path="res://.godot/imported/barratimer2 (1).png-312a70647aeb598f3cc2a534e185d77f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asets/gaseosaN.png"
-dest_files=["res://.godot/imported/gaseosaN.png-92cc3c7f8c647d7c38d59f2d9dace172.ctex"]
+source_file="res://asets/Arte del timer/barratimer2 (1).png"
+dest_files=["res://.godot/imported/barratimer2 (1).png-312a70647aeb598f3cc2a534e185d77f.ctex"]
 
 [params]
 

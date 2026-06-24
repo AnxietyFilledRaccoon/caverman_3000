@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://clc513wh4hwcp" path="res://transicion_nivel.gd" id="1_h0lcw"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="2_c6xq1"]
-[ext_resource type="Texture2D" uid="uid://c52ypncwbotuw" path="res://asets/Fondos y otras escenas/Cargando.png" id="2_l2e25"]
+[ext_resource type="Texture2D" uid="uid://bgnrv0bssmqpj" path="res://asets/Fondos y otras escenas/Cargando1.png" id="2_l2e25"]
 
 [node name="TransicionNivel" type="CanvasLayer" unique_id=617358032]
 script = ExtResource("1_h0lcw")
