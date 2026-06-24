@@ -2,18 +2,19 @@
 
 [ext_resource type="Script" uid="uid://u24qgi85xyv2" path="res://nivel8/juego_8.gd" id="1_buvu7"]
 [ext_resource type="PackedScene" uid="uid://duac2uwcjf8a1" path="res://nivel8/playerlvl8.tscn" id="1_woyc6"]
-[ext_resource type="Texture2D" uid="uid://bvf75r0sa1ix4" path="res://icon.svg" id="3_upafv"]
-[ext_resource type="Texture2D" uid="uid://cosha1p0cboy5" path="res://asets/suelo.png" id="4_vnrs0"]
+[ext_resource type="Texture2D" uid="uid://cym7nr4ll8wcx" path="res://asets/Auto1.png" id="3_lxjtk"]
+[ext_resource type="Texture2D" uid="uid://clbf4kqnr00fo" path="res://asets/auto2.png" id="4_b4hcl"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="4_wb18d"]
 [ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="6_rqghr"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="7_6g3pc"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_psfck"]
+[ext_resource type="Texture2D" uid="uid://dwnu62oc00oum" path="res://asets/fondocalle.png" id="9_87820"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnrs0"]
-size = Vector2(50.954285, 40.567677)
+size = Vector2(125.793396, 42.15235)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upafv"]
-size = Vector2(128, 130)
+size = Vector2(309, 138)
 
 [node name="Juego8" type="Node2D" unique_id=2104362042]
 script = ExtResource("1_buvu7")
@@ -26,21 +27,26 @@ position = Vector2(67, 415)
 collision_layer = 2
 
 [node name="Colisionauto1" type="CollisionShape2D" parent="auto1" unique_id=1104955040]
+position = Vector2(-18.999996, 2.5)
 scale = Vector2(2.5120559, 3.1552217)
 shape = SubResource("RectangleShape2D_vnrs0")
 
 [node name="spriteauto1" type="Sprite2D" parent="auto1" unique_id=27107194]
-texture = ExtResource("3_upafv")
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("3_lxjtk")
 
 [node name="auto2" type="Area2D" parent="." unique_id=888407119]
 position = Vector2(1086, 226)
 collision_layer = 2
 
 [node name="Colisionauto2" type="CollisionShape2D" parent="auto2" unique_id=2002951717]
+position = Vector2(19.5, 0)
 shape = SubResource("RectangleShape2D_upafv")
 
 [node name="spriteauto2" type="Sprite2D" parent="auto2" unique_id=1934672846]
-texture = ExtResource("3_upafv")
+position = Vector2(0, -32)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("4_b4hcl")
 
 [node name="UI" type="Control" parent="." unique_id=1729826808]
 layout_mode = 3
@@ -57,16 +63,6 @@ offset_bottom = 40.0
 [node name="LabelResultado" type="Label" parent="UI/VBoxContainer" unique_id=1979230885]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
-
-[node name="Veredainicial" type="Sprite2D" parent="." unique_id=1374005008]
-z_index = -2
-position = Vector2(565, 566)
-texture = ExtResource("4_vnrs0")
-
-[node name="Veredafinal" type="Sprite2D" parent="." unique_id=314653504]
-z_index = -1
-position = Vector2(134, 70)
-texture = ExtResource("4_vnrs0")
 
 [node name="eventos" parent="." unique_id=743028521 instance=ExtResource("4_wb18d")]
 anchors_preset = -1
@@ -106,5 +102,17 @@ theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
 theme_override_fonts/font = ExtResource("6_rqghr")
 theme_override_font_sizes/font_size = 50
 text = " Reiniciar "
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1610942243]
+z_index = -1
+position = Vector2(194, 325)
+scale = Vector2(0.32053563, 0.32053563)
+texture = ExtResource("9_87820")
+
+[node name="Fondo2" type="Sprite2D" parent="." unique_id=138416650]
+z_index = -1
+position = Vector2(1000, 325)
+scale = Vector2(0.32053563, 0.32053563)
+texture = ExtResource("9_87820")
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
