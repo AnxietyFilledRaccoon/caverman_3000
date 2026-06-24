@@ -3,7 +3,7 @@ extends CanvasLayer
 #@onready var texto = $ColorRect/Label
 
 var siguiente_escena = ""
-@onready var mecanica_actual = $TextureRect/VBoxContainer/Labelmecanica
+@onready var mecanica_actual = $TextureRect/VBoxContainer/Texturemecanica
 @onready var label_nivel = $TextureRect/VBoxContainer/Labelmecanica2
 
 
