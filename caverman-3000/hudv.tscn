@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3awgd1drqfri"]
 
 [ext_resource type="Script" uid="uid://b7d8phrcokc6w" path="res://hudv.gd" id="1_tnee2"]
-[ext_resource type="Texture2D" uid="uid://dsawikvv5xjjs" path="res://asets/sube.png" id="2_3rjhu"]
+[ext_resource type="Texture2D" uid="uid://2asfg4x3rkra" path="res://asets/nivel2/tarjetaSubi (2).png" id="2_2d0m2"]
 [ext_resource type="Texture2D" uid="uid://d5nl40ocoslw" path="res://asets/Monedssol.png" id="3_2d0m2"]
 
 [node name="HUDV" type="CanvasLayer" unique_id=1486512705]
@@ -26,21 +26,21 @@ offset_bottom = 61.0
 [node name="vida1" type="TextureRect" parent="Control/HBoxContainer" unique_id=1350781244]
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("2_3rjhu")
+texture = ExtResource("2_2d0m2")
 expand_mode = 2
 stretch_mode = 4
 
 [node name="vida2" type="TextureRect" parent="Control/HBoxContainer" unique_id=1590385784]
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("2_3rjhu")
+texture = ExtResource("2_2d0m2")
 expand_mode = 2
 stretch_mode = 4
 
 [node name="vida3" type="TextureRect" parent="Control/HBoxContainer" unique_id=2035177920]
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("2_3rjhu")
+texture = ExtResource("2_2d0m2")
 expand_mode = 2
 stretch_mode = 4
 
