@@ -150,7 +150,7 @@ Programación
 Programador Lider
 Leonardo Rajoy
 Programador Secundario
-
+Leonardo Maidana
 Arte
 Felipe Dedominici
 
