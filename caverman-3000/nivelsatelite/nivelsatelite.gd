@@ -5,8 +5,8 @@ extends Node2D
 @onready var cavernicola: AnimatedSprite2D = $Cavernicola
 @onready var publicidades: Node2D = $Publicidades
 
-@onready var creditos: RichTextLabel = $Control/CenterContainer/Creditos
-@onready var mensajes: VBoxContainer = $Control/CenterContainer/Mensajes
+@onready var creditos: RichTextLabel = $CanvasLayer/Creditos
+@onready var mensajes: VBoxContainer = $CanvasLayer/Mensajes
 @onready var fade: ColorRect = $CanvasLayer/Fade
 
 @export var velocidad_creditos: float = 35.0

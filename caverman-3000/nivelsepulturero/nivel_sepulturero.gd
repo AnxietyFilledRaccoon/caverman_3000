@@ -120,15 +120,18 @@ func _fin_juego(gano: bool) -> void:
 		eventos.nivel_ganado()
 
 		await get_tree().create_timer(1.0).timeout
-
-		if ruta_siguiente_nivel != "":
-			if imagen_controles != null:
-				TransicionManager.cambiar_nivel(
-					"Sepulturero",
-					imagen_controles,
-					ruta_siguiente_nivel
-				)
-			else:
+		
+		TransicionManager.cambiar_nivel("Malavares",
+		preload("res://asets/Fondos y otras escenas/Botones/BarraEspaciadora.png"),
+		"")# puedo agregar en el espacio libre la siguiente pantalla
+		#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://nivelmalabares/juegomalabares.tscn")
+				
+				
+				
+				
+	else:
 				await get_tree().create_timer(2.0).timeout
 				get_tree().change_scene_to_file("res://game_over.tscn")
 				get_tree().change_scene_to_file(ruta_siguiente_nivel)

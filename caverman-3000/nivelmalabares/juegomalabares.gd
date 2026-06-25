@@ -55,10 +55,13 @@ func finalizar():
 	var eventos = get_node_or_null("eventos")
 	if eventos:
 		eventos.nivel_ganado()
+		await get_tree().create_timer(1.0).timeout
 		
+		TransicionManager.cambiar_nivel("Folleto",
+		preload("res://asets/Fondos y otras escenas/Botones/BarraEspaciadora.png"),
+		"")# puedo agregar en el espacio libre la siguiente pantalla
+		#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://nivelfolleto/EscenaFolleto.tscn")
 	#Pantalla final con resultados de plata y vida restante
-	var pantalla_final = pantalla_final_scene.instantiate()
-	add_child(pantalla_final)
-	pantalla_final.position = Vector2.ZERO
-	pantalla_final.size = get_viewport().get_visible_rect().size
-	personaje.terminar()
+	
