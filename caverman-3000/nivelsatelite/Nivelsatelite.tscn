@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bqdb5kbe23y6y"]
+
+[ext_resource type="Script" uid="uid://bwq1sl1hq1mnx" path="res://nivelsatelite/nivelsatelite.gd" id="1_i7t4o"]
+[ext_resource type="Texture2D" uid="uid://2idlcwcrvdi3" path="res://asets/FondoSatetelite.png" id="2_8qcph"]
+[ext_resource type="Texture2D" uid="uid://dwd11so3kvgo4" path="res://asets/CaverGolpe2.png" id="2_rvin3"]
+[ext_resource type="Texture2D" uid="uid://bvt5ugkxovc5t" path="res://asets/CaverGolpe3.png" id="3_8qcph"]
+[ext_resource type="Texture2D" uid="uid://21ou6r7pkikr" path="res://asets/Tierrasatelite.png" id="3_l4l48"]
+[ext_resource type="Texture2D" uid="uid://bggg1dc7k1j5f" path="res://asets/CaverGolpe1.png" id="4_vwwr2"]
+[ext_resource type="Texture2D" uid="uid://bc0wl8jukwrtr" path="res://asets/Lunasatelite.png" id="4_xo6ly"]
+[ext_resource type="Texture2D" uid="uid://c3hq0ydgm665h" path="res://asets/Sateliteee.png" id="5_83a4n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2t2bq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rvin3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8qcph")
+}],
+"loop": 1,
+"name": &"golpear",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vwwr2")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[node name="Nivelsatelite" type="Node2D" unique_id=1850816505]
+script = ExtResource("1_i7t4o")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1476697780]
+position = Vector2(576, 325.99994)
+scale = Vector2(0.43542734, 0.31492296)
+texture = ExtResource("2_8qcph")
+
+[node name="Tierra" type="Sprite2D" parent="." unique_id=474144]
+position = Vector2(576, 325.99994)
+scale = Vector2(0.43542734, 0.31492296)
+texture = ExtResource("3_l4l48")
+
+[node name="Luna" type="Sprite2D" parent="." unique_id=1514761430]
+position = Vector2(780, 293.99997)
+scale = Vector2(0.27627274, 0.27627277)
+texture = ExtResource("4_xo6ly")
+
+[node name="Caja" type="Sprite2D" parent="." unique_id=885708104]
+position = Vector2(417.31735, 355.69446)
+scale = Vector2(0.23710363, 0.23710364)
+texture = ExtResource("5_83a4n")
+
+[node name="Cavernicola" type="AnimatedSprite2D" parent="." unique_id=1118040516]
+position = Vector2(355.00003, 399)
+scale = Vector2(0.1336499, 0.1336499)
+sprite_frames = SubResource("SpriteFrames_2t2bq")
+animation = &"idle"
+
+[node name="Publicidades" type="Node2D" parent="." unique_id=1549877796]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1469104849]
+
+[node name="Fade" type="ColorRect" parent="CanvasLayer" unique_id=2087836291]
+visible = false
+offset_left = -34.0
+offset_top = -50.0
+offset_right = 6.0
+offset_bottom = -10.0
+scale = Vector2(30.58103, 18.94289)
+color = Color(0, 0, 0, 1)
+
+[node name="Mensajes" type="VBoxContainer" parent="CanvasLayer" unique_id=645880604]
+offset_left = -0.5
+offset_right = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="Creditos" type="RichTextLabel" parent="CanvasLayer" unique_id=1002386198]
+offset_left = -0.5
+offset_right = 0.5
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Control" type="Control" parent="." unique_id=293771765]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=763636957]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
