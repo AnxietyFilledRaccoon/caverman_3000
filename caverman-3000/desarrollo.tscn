@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dl4cs00o0ky1h"]
+
+[ext_resource type="Script" uid="uid://d0u3f3or6nj4b" path="res://desarrollo.gd" id="1_iujig"]
+[ext_resource type="Texture2D" uid="uid://cqhkwpuge5jkw" path="res://asets/Fondos y otras escenas/LandingPage.png" id="1_pdp6s"]
+
+[node name="Desarrollo" type="Control" unique_id=1724192382]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iujig")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=82240029]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pdp6s")
