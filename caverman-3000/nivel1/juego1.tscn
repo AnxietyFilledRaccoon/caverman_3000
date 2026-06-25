@@ -12,8 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
 [ext_resource type="Texture2D" uid="uid://do8hp7km6hxpm" path="res://asets/basura.png" id="8_h4yku"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="11_n2edi"]
-[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="12_n2edi"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="12_w6fdp"]
+[ext_resource type="Texture2D" uid="uid://b6wyafdwf3vrk" path="res://asets/Fondos y otras escenas/Botones/botónreiniciar (1).png" id="14_h4yku"]
+[ext_resource type="Texture2D" uid="uid://jb3esd45xbam" path="res://asets/Fondos y otras escenas/Botones/botónreiniciar (1) (1).png" id="15_3b3g1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2edi"]
 size = Vector2(205.00002, 145.62505)
@@ -158,23 +159,20 @@ offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("11_n2edi")
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1422301051]
+[node name="Reiniciar" type="TextureButton" parent="botonreinicio" unique_id=815778855]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
 offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_right = 220.0
+offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
-theme_override_fonts/font = ExtResource("12_n2edi")
-theme_override_font_sizes/font_size = 50
-text = " Reiniciar "
+texture_normal = ExtResource("14_h4yku")
+texture_hover = ExtResource("15_3b3g1")
 
 [connection signal="recolectar_items" from="item" to="Player" method="_on_moneda_recolectar_items"]
 [connection signal="recolectar_items" from="item2" to="Player" method="_on_moneda_recolectar_items"]

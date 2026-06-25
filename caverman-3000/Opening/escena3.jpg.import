@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq3qjdtex2130"
-path="res://.godot/imported/OP6.png-c6c36aabe62fb72a40b4b3a3e9d5b159.ctex"
+uid="uid://bss2lct1c130y"
+path="res://.godot/imported/escena3.jpg-f362b8c60d90546d0a3992b62d7d9c83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Opening/OP6.png"
-dest_files=["res://.godot/imported/OP6.png-c6c36aabe62fb72a40b4b3a3e9d5b159.ctex"]
+source_file="res://Opening/escena3.jpg"
+dest_files=["res://.godot/imported/escena3.jpg-f362b8c60d90546d0a3992b62d7d9c83.ctex"]
 
 [params]
 

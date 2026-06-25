@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://04yu8orkmh5l"
-path="res://.godot/imported/OP9.png-23be1f7a1d3a8db1b5376281d723f452.ctex"
+uid="uid://b6wyafdwf3vrk"
+path="res://.godot/imported/botónreiniciar (1).png-217e9113954a58ecbbd88c37c33ee782.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Opening/OP9.png"
-dest_files=["res://.godot/imported/OP9.png-23be1f7a1d3a8db1b5376281d723f452.ctex"]
+source_file="res://asets/Fondos y otras escenas/Botones/botónreiniciar (1).png"
+dest_files=["res://.godot/imported/botónreiniciar (1).png-217e9113954a58ecbbd88c37c33ee782.ctex"]
 
 [params]
 

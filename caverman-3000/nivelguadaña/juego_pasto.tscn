@@ -8,7 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_k181b"]
 [ext_resource type="PackedScene" uid="uid://c3awgd1drqfri" path="res://hudv.tscn" id="7_7caxa"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="8_q7d3x"]
-[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="9_nwn57"]
+[ext_resource type="Texture2D" uid="uid://b6wyafdwf3vrk" path="res://asets/Fondos y otras escenas/Botones/botónreiniciar (1).png" id="9_nwn57"]
+[ext_resource type="Texture2D" uid="uid://jb3esd45xbam" path="res://asets/Fondos y otras escenas/Botones/botónreiniciar (1) (1).png" id="10_p1gvh"]
 
 [node name="juegopasto" type="Node2D" unique_id=2010090408]
 script = ExtResource("1_8i8d0")
@@ -66,22 +67,19 @@ offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("8_q7d3x")
 
-[node name="Reiniciar" type="Button" parent="botonreinicio" unique_id=1582459101]
+[node name="Reiniciar" type="TextureButton" parent="botonreinicio" unique_id=1869082413]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
 offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_right = 220.0
+offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.21568628, 0.42745098, 0.8745098, 1)
-theme_override_fonts/font = ExtResource("9_nwn57")
-theme_override_font_sizes/font_size = 50
-text = " Reiniciar "
+texture_normal = ExtResource("9_nwn57")
+texture_hover = ExtResource("10_p1gvh")
 
 [connection signal="pressed" from="botonreinicio/Reiniciar" to="." method="_on_reiniciar_pressed"]
