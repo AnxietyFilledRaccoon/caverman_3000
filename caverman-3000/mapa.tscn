@@ -78,3 +78,4 @@ texture_hover = ExtResource("11_o68h1")
 [connection signal="pressed" from="fuerza" to="." method="_on_fuerza_pressed"]
 [connection signal="pressed" from="cliente" to="." method="_on_cliente_pressed"]
 [connection signal="pressed" from="tecno" to="." method="_on_tecno_pressed"]
+[connection signal="pressed" from="satelite" to="." method="_on_satelite_pressed"]

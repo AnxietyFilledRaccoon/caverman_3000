@@ -1,6 +1,12 @@
 extends CharacterBody2D
 @export var move_speed = 200
+#animacion del jugador
 @onready var animacion = $jugador
+#animacion de npc's
+@onready var npc1 = $"../SBnpc1/ASnpc1"
+@onready var npc2 = $"../SBnpc2/ASnpc2"
+@onready var npc3 = $"../SBnpc3/ASnpc3"
+
 var mirando_derecha = true
 var screen_size
 var items_recolectados = 0
@@ -11,6 +17,13 @@ var gravity = 1000
 func _ready():
 	screen_size = get_viewport_rect().size
 	items_recolectados = 0
+	
+	if npc1:
+		npc1.play("idle")
+	if npc2:
+		npc2.play("idle")
+	if npc3:
+		npc3.play("idle")
 
 
 func _physics_process(delta):
@@ -55,9 +68,32 @@ func recoger_items():
 	
 		items_recolectados += 1
 		print("items:", items_recolectados)
+		#llama a la metodo que actualiza a los npcs(animacion)
+		_actualizar_npcs()
+		
 		if items_recolectados >= meta_items:
 			ganar_juego() # aca puedo emitir una señal que llame al ganar juego dew gestor de eventos
 		
+
+func _actualizar_npcs() -> void:
+	if items_recolectados == 1:
+		_cambiar_npc_a_globo(npc1)
+	elif items_recolectados == 2:
+		_cambiar_npc_a_globo(npc2)
+	elif items_recolectados == 3:
+		_cambiar_npc_a_globo(npc3)
+	pass
+
+func _cambiar_npc_a_globo(npc: AnimatedSprite2D) -> void:
+	if npc == null:
+		return
+	
+	if npc.sprite_frames and npc.sprite_frames.has_animation("AnconGlobo"):
+		npc.play("AnconGlobo")
+		print("Si tengo animacion mira crack")
+	else:
+		print("No encontre animacion")
+
 func ganar_juego(): #esto deberia estar en un gestor de eventos
 
 	#aca hay que sumar plata al score

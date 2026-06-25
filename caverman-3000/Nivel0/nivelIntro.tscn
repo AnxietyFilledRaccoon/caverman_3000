@@ -1,17 +1,102 @@
 [gd_scene format=3 uid="uid://c8k14nb1tbbwk"]
 
 [ext_resource type="Script" uid="uid://cppx8c66bul4i" path="res://Nivel0/nivel_intro.gd" id="1_c74on"]
-[ext_resource type="Texture2D" uid="uid://dcv8ujp13w8ti" path="res://asets/placeholder1.png" id="2_c74on"]
+[ext_resource type="Texture2D" uid="uid://dl8jcpnmx6ysb" path="res://asets/mapanivel0.png" id="2_27xad"]
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="2_ke3u4"]
-[ext_resource type="Texture2D" uid="uid://dyyqhcwk6v4f0" path="res://asets/moneda.png" id="4_c74on"]
-[ext_resource type="Texture2D" uid="uid://df8yu5huydbb4" path="res://asets/2pesos.png" id="5_pumfm"]
 [ext_resource type="PackedScene" uid="uid://dguvi0ev8ud5h" path="res://Nivel0/player_intro.tscn" id="6_sbnaj"]
+[ext_resource type="Texture2D" uid="uid://b6lljspiheqon" path="res://asets/viejonpcinte.png" id="7_8ky7s"]
+[ext_resource type="Texture2D" uid="uid://tkahfw81mw2i" path="res://asets/npc3.png" id="7_db4mb"]
+[ext_resource type="Texture2D" uid="uid://bfj2g7av36qcv" path="res://asets/goticsnpcinte.png" id="8_1nwdm"]
+[ext_resource type="Texture2D" uid="uid://cbm6t55bhflv5" path="res://asets/npc1.png" id="8_27xad"]
+[ext_resource type="Texture2D" uid="uid://dqhh0o67uu7jf" path="res://asets/npc2.png" id="9_27xad"]
+[ext_resource type="Texture2D" uid="uid://1aakp2l7hhpv" path="res://asets/maestranpcinte.png" id="11_w0ltp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pb2dg"]
-size = Vector2(1999.2694, 43.479004)
+size = Vector2(2291.8032, 147.76923)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mf6g7"]
-size = Vector2(2021.3391, 46.177856)
+size = Vector2(2021.3391, 113.135735)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(55.390812, 554.1341)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(302.9198, 868.1435)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(1228.988, 402.70673)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(1011.5586, 260.70975)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+size = Vector2(70.44055, 1218.4205)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcnqv"]
+size = Vector2(43, 135)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1nwdm")
+}],
+"loop": 1,
+"name": &"AnconGlobo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_db4mb")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7numd"]
+size = Vector2(42, 135)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_w0ltp")
+}],
+"loop": 1,
+"name": &"AnconGlobo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_27xad")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1u0y"]
+size = Vector2(57, 139)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nwdm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8ky7s")
+}],
+"loop": 1,
+"name": &"AnconGlobo",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_27xad")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}]
 
 [node name="NivelIntro" type="Node2D" unique_id=1381418629]
 script = ExtResource("1_c74on")
@@ -21,41 +106,107 @@ position = Vector2(575, 323.49997)
 scale = Vector2(0.57771116, 0.4331081)
 
 [node name="Sprite2D" type="Sprite2D" parent="fondo" unique_id=1645049067]
-scale = Vector2(0.99999994, 1)
-texture = ExtResource("2_c74on")
+position = Vector2(3.461914, 16.162292)
+scale = Vector2(0.749, 0.749)
+texture = ExtResource("2_27xad")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo" unique_id=834076591]
-position = Vector2(3.4619613, 749.2357)
+[node name="CS1" type="CollisionShape2D" parent="fondo" unique_id=834076591]
+position = Vector2(19.04065, 753.8535)
 scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_pb2dg")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="fondo" unique_id=1341011605]
-position = Vector2(3.6784058, 361.3418)
+[node name="CS2" type="CollisionShape2D" parent="fondo" unique_id=1341011605]
+position = Vector2(-12.11676, -708.8299)
 scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_mf6g7")
 
+[node name="CS3" type="CollisionShape2D" parent="fondo" unique_id=1433565094]
+position = Vector2(-995.3068, -465.24176)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="CS4" type="CollisionShape2D" parent="fondo" unique_id=203847482]
+position = Vector2(-871.54266, 245.89716)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="CS5" type="CollisionShape2D" parent="fondo" unique_id=884431496]
+position = Vector2(399.85376, -486.5015)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="CS6" type="CollisionShape2D" parent="fondo" unique_id=1853503763]
+position = Vector2(-221.90027, 549.41895)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="CS7" type="CollisionShape2D" parent="fondo" unique_id=1579945190]
+position = Vector2(1022.4016, 135.40765)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_3gngh")
+
 [node name="item" parent="." unique_id=562826299 groups=["cavernicola"] instance=ExtResource("2_ke3u4")]
-position = Vector2(160, 585)
-textura = ExtResource("4_c74on")
-"tamaño" = 0.5
+position = Vector2(271, 233)
+"tamaño" = 5.0
 
 [node name="item2" parent="." unique_id=482945455 groups=["cavernicola"] instance=ExtResource("2_ke3u4")]
-position = Vector2(688, 614)
-textura = ExtResource("5_pumfm")
-"tamaño" = 0.2
+position = Vector2(406, 368)
+"tamaño" = 5.0
 
 [node name="item3" parent="." unique_id=216755964 groups=["cavernicola"] instance=ExtResource("2_ke3u4")]
-position = Vector2(478, 577)
-textura = ExtResource("4_c74on")
-"tamaño" = 0.5
+position = Vector2(813, 368)
+"tamaño" = 5.0
 
 [node name="item4" parent="." unique_id=653965781 groups=["cavernicola"] instance=ExtResource("2_ke3u4")]
-position = Vector2(291, 621)
-textura = ExtResource("5_pumfm")
-"tamaño" = 0.2
+position = Vector2(951, 573)
+"tamaño" = 5.0
 
 [node name="player_intro" parent="." unique_id=1103507205 groups=["cavernicola"] instance=ExtResource("6_sbnaj")]
-position = Vector2(17, 534)
+position = Vector2(51, 158)
+scale = Vector2(1.62, 1.62)
+
+[node name="SBnpc1" type="StaticBody2D" parent="." unique_id=427251630]
+position = Vector2(404, 154)
+scale = Vector2(1.385, 1.385)
+
+[node name="CS" type="CollisionShape2D" parent="SBnpc1" unique_id=1949846480]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_fcnqv")
+
+[node name="ASnpc1" type="AnimatedSprite2D" parent="SBnpc1" unique_id=1500532042]
+position = Vector2(-2, 0)
+scale = Vector2(0.07684309, 0.07684309)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"idle"
+
+[node name="SBnpc2" type="StaticBody2D" parent="." unique_id=1196448804]
+position = Vector2(-307, -192.00002)
+scale = Vector2(1.385, 1.385)
+
+[node name="CS" type="CollisionShape2D" parent="SBnpc2" unique_id=1470121487]
+position = Vector2(381, 430.5)
+shape = SubResource("RectangleShape2D_7numd")
+
+[node name="ASnpc2" type="AnimatedSprite2D" parent="SBnpc2" unique_id=1450070668]
+position = Vector2(384, 428)
+scale = Vector2(0.077, 0.077)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+animation = &"idle"
+
+[node name="SBnpc3" type="StaticBody2D" parent="." unique_id=790736417]
+position = Vector2(953.00006, 331.00003)
+scale = Vector2(1.385, 1.385)
+
+[node name="CS" type="CollisionShape2D" parent="SBnpc3" unique_id=87517587]
+position = Vector2(-0.23638916, -0.13537598)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_p1u0y")
+
+[node name="ASnpc3" type="AnimatedSprite2D" parent="SBnpc3" unique_id=1483614885]
+position = Vector2(-0.7364502, 0.36462402)
+scale = Vector2(0.07699999, 0.07699999)
+sprite_frames = SubResource("SpriteFrames_1nwdm")
+animation = &"idle"
 
 [connection signal="recolectar_items" from="item" to="player_intro" method="_on_item_recolectar_items"]
 [connection signal="recolectar_items" from="item2" to="player_intro" method="_on_item_recolectar_items"]

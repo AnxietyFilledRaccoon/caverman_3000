@@ -73,33 +73,9 @@ offset_bottom = -10.0
 scale = Vector2(30.58103, 18.94289)
 color = Color(0, 0, 0, 1)
 
-[node name="Mensajes" type="VBoxContainer" parent="CanvasLayer" unique_id=645880604]
-offset_left = -0.5
-offset_right = -0.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-
 [node name="Creditos" type="RichTextLabel" parent="CanvasLayer" unique_id=1002386198]
 offset_left = -0.5
 offset_right = 0.5
 grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-
-[node name="Control" type="Control" parent="." unique_id=293771765]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=763636957]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2

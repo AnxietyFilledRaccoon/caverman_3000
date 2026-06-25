@@ -5,8 +5,8 @@ extends Node2D
 @onready var cavernicola: AnimatedSprite2D = $Cavernicola
 @onready var publicidades: Node2D = $Publicidades
 
-@onready var creditos: RichTextLabel = $Control/CenterContainer/Creditos
-@onready var mensajes: VBoxContainer = $Control/CenterContainer/Mensajes
+@onready var creditos: RichTextLabel = $CanvasLayer/Creditos
+@onready var mensajes: VBoxContainer = $CanvasLayer/Mensajes
 @onready var fade: ColorRect = $CanvasLayer/Fade
 
 @export var velocidad_creditos: float = 35.0
@@ -32,6 +32,7 @@ var indice_mensaje: int = 0
 
 
 func _ready() -> void:
+	fade.visible = true
 	fade.color = Color.BLACK
 	fade.modulate.a = 0.0
 
@@ -46,8 +47,17 @@ func _ready() -> void:
 	if not cavernicola.animation_finished.is_connected(_on_cavernicola_animation_finished):
 		cavernicola.animation_finished.connect(_on_cavernicola_animation_finished)
 
+	creditos.visible = true
+	creditos.bbcode_enabled = true
+	creditos.position = Vector2(650, 620)
+	creditos.size = Vector2(400, 900)
+	creditos.z_index = 100
+	creditos.scroll_active = false
+	creditos.fit_content = false
+
 	_preparar_creditos()
 
+	print("Creditos cargados: ", creditos.text)
 
 func _process(delta: float) -> void:
 	if !juego_activo:
@@ -75,9 +85,6 @@ func _registrar_golpe() -> void:
 
 	_pedir_animacion_golpe()
 	_shake_caja()
-
-	if cantidad_golpes % 3 == 0:
-		_mostrar_mensaje()
 
 	if cantidad_golpes % 2 == 0:
 		_crear_publicidad()
@@ -134,24 +141,6 @@ func _crear_publicidad() -> void:
 	tween.tween_property(label, "position", destino, 1.2)
 	tween.parallel().tween_property(label, "modulate:a", 0.0, 1.2)
 	tween.tween_callback(label.queue_free)
-
-
-func _mostrar_mensaje() -> void:
-	if indice_mensaje >= mensajes_agradecimiento.size():
-		return
-
-	var label := Label.new()
-	label.text = mensajes_agradecimiento[indice_mensaje]
-	label.modulate.a = 0.0
-	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-
-	mensajes.add_child(label)
-
-	var tween = create_tween()
-	tween.tween_property(label, "modulate:a", 1.0, 0.4)
-
-	indice_mensaje += 1
-
 
 func _preparar_creditos() -> void:
 	creditos.text = """

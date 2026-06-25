@@ -37,3 +37,14 @@ func _on_tecno_pressed() -> void:
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://nivel1/juego1.tscn")
 	#aca colocar al nivel 1
+
+
+func _on_satelite_pressed() -> void:
+		await get_tree().create_timer(0.2).timeout 
+		TransicionManager.cambiar_nivel(
+		"Golpear satelite",
+		preload ("res://asets/Fondos y otras escenas/Botones/BarraEspaciadora.png"),"")# puedo agregar en el espacio libre la siguiente pantalla
+	#pero decidi que me de unos segundos antes de ejecutar el siguiente nivel, por eso lo hidce asi
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://nivelsatelite/Nivelsatelite.tscn")
+	#aca colocar al nivel 1
