@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://du5ikn16plho4" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/TecnoDesbloqueado.png" id="9_2eut3"]
 [ext_resource type="Texture2D" uid="uid://cchjrbx30f6as" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/SateliteBloqueado.png" id="10_rugew"]
 [ext_resource type="Texture2D" uid="uid://dvodksyr1b41a" path="res://asets/Fondos y otras escenas/Selector de niveles - individuales/SateliteDesbloqueado.png" id="11_o68h1"]
+[ext_resource type="Texture2D" uid="uid://btviyu4owkxrj" path="res://asets/Fondos y otras escenas/Botones/botónmenuprincipal (1).png" id="13_6fw57"]
+[ext_resource type="Texture2D" uid="uid://be41yhrbugku2" path="res://asets/Fondos y otras escenas/Botones/botónmenuprincipal (1) (1).png" id="14_00yci"]
 
 [node name="Mapa" type="Control" unique_id=1888434024]
 layout_mode = 3
@@ -75,6 +77,16 @@ offset_bottom = 205.0
 texture_normal = ExtResource("10_rugew")
 texture_hover = ExtResource("11_o68h1")
 
+[node name="menuprincipal" type="TextureButton" parent="." unique_id=1557068776]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 576.0
+offset_right = 797.0
+offset_bottom = 644.0
+texture_normal = ExtResource("13_6fw57")
+texture_hover = ExtResource("14_00yci")
+
 [connection signal="pressed" from="fuerza" to="." method="_on_fuerza_pressed"]
 [connection signal="pressed" from="cliente" to="." method="_on_cliente_pressed"]
 [connection signal="pressed" from="tecno" to="." method="_on_tecno_pressed"]
+[connection signal="pressed" from="menuprincipal" to="." method="_on_menuprincipal_pressed"]

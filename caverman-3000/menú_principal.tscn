@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dsddj8yqakmue" path="res://menú_principal.gd" id="1_ga2cg"]
 [ext_resource type="Texture2D" uid="uid://bm4vdgvbp8e3v" path="res://asets/portadaSinIA.png" id="2_v0lul"]
-[ext_resource type="FontFile" uid="uid://dlijtq8u5vrvf" path="res://Fuente/04B_30__.TTF" id="3_v0lul"]
+[ext_resource type="Texture2D" uid="uid://cqpn1cb355wpl" path="res://asets/Fondos y otras escenas/Botones/botonIniciar (1).png" id="3_00fqu"]
+[ext_resource type="Texture2D" uid="uid://emw01k5yb7e" path="res://asets/Fondos y otras escenas/Botones/botonIniciar (1) (1).png" id="4_2sy60"]
+[ext_resource type="Texture2D" uid="uid://f3gxjvnldhh7" path="res://asets/Fondos y otras escenas/Botones/botonquitar (1).png" id="4_yt5ow"]
+[ext_resource type="Texture2D" uid="uid://bbycbdlan8mcn" path="res://asets/Fondos y otras escenas/Botones/botonquitar (1) (1).png" id="6_ov86a"]
 
 [node name="Main menu" type="Control" unique_id=1640640316]
 layout_mode = 3
@@ -45,18 +48,17 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
-[node name="Play" type="Button" parent="VBoxContainer" unique_id=1959044671]
+[node name="Play" type="TextureButton" parent="VBoxContainer" unique_id=503250255]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_v0lul")
-theme_override_font_sizes/font_size = 50
-text = "	JUGAR"
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_00fqu")
+texture_hover = ExtResource("4_2sy60")
 
-[node name="Quitar" type="Button" parent="VBoxContainer" unique_id=1709574095]
+[node name="Quitar" type="TextureButton" parent="VBoxContainer" unique_id=1166229615]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_v0lul")
-theme_override_font_sizes/font_size = 50
-text = "QUITAR
-"
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_yt5ow")
+texture_hover = ExtResource("6_ov86a")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quitar" to="." method="_on_quitar_pressed"]
