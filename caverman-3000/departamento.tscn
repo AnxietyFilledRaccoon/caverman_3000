@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://q4pua585ws37"]
+
+[ext_resource type="Script" uid="uid://0pxk1caty43c" path="res://departamento.gd" id="1_oh3jd"]
+[ext_resource type="Texture2D" uid="uid://c7m2mm8fx3tg8" path="res://asets/Fondos y otras escenas/depto1.png" id="2_qrn75"]
+[ext_resource type="Texture2D" uid="uid://1vvksmq64k7c" path="res://asets/Fondos y otras escenas/depto2.png" id="3_o2b8t"]
+
+[sub_resource type="Animation" id="Animation_s503x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qrn75")]
+}
+
+[sub_resource type="Animation" id="Animation_13wf5"]
+resource_name = "alquiler"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_qrn75"), ExtResource("3_o2b8t")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_of787"]
+_data = {
+&"RESET": SubResource("Animation_s503x"),
+&"alquiler": SubResource("Animation_13wf5")
+}
+
+[node name="departamento" type="Control" unique_id=1812747981]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oh3jd")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1076875220]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.051970966, 0.05197096, 0.05197095, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1697500335]
+libraries/ = SubResource("AnimationLibrary_of787")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=286027951]
+position = Vector2(576.50006, 323.49997)
+scale = Vector2(0.42772645, 0.30780008)
+texture = ExtResource("2_qrn75")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

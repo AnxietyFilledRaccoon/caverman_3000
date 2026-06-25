@@ -57,3 +57,8 @@ func _on_menuprincipal_pressed() -> void:
 	get_tree().change_scene_to_file("res://menú_principal.tscn")
 	#aca colocar al nivel 1
 	
+
+
+func _on_departamento_pressed() -> void:
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://departamento.tscn")

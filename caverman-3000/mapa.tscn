@@ -86,6 +86,7 @@ offset_bottom = 644.0
 texture_normal = ExtResource("13_6fw57")
 texture_hover = ExtResource("14_00yci")
 
+[connection signal="pressed" from="departamento" to="." method="_on_departamento_pressed"]
 [connection signal="pressed" from="fuerza" to="." method="_on_fuerza_pressed"]
 [connection signal="pressed" from="cliente" to="." method="_on_cliente_pressed"]
 [connection signal="pressed" from="tecno" to="." method="_on_tecno_pressed"]
