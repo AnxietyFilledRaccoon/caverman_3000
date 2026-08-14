@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dguvi0ev8ud5h"]
 
 [ext_resource type="Script" uid="uid://dgq07vd1u3lrq" path="res://Nivel0/player_intro.gd" id="1_rihcy"]
-[ext_resource type="Texture2D" uid="uid://bkg1wc77lbs8f" path="res://asets/Clemente left_rigth(1).png" id="2_3lmjs"]
-[ext_resource type="Texture2D" uid="uid://creuaxqni4ffe" path="res://asets/Clementleft_rigth(2).png" id="3_j4wgy"]
-[ext_resource type="Texture2D" uid="uid://b4nccq1by362w" path="res://asets/Clementedown(1).png" id="4_5ygso"]
-[ext_resource type="Texture2D" uid="uid://c2trdoyhmqors" path="res://asets/ClementeDown(2).png" id="5_f8201"]
-[ext_resource type="Texture2D" uid="uid://druswf0cr6l03" path="res://asets/ClementeUp(1).png" id="6_ohsdb"]
-[ext_resource type="Texture2D" uid="uid://bqio2rclmp3ew" path="res://asets/ClementeUp(2).png" id="7_8mq76"]
-[ext_resource type="Texture2D" uid="uid://cktggaofqtry2" path="res://asets/Clemente idle.png" id="8_vihpr"]
+[ext_resource type="Texture2D" uid="uid://cuu4p4brj48gw" path="res://Nivel0/left_rigth1.png" id="2_3lmjs"]
+[ext_resource type="Texture2D" uid="uid://0x2pfgvjafn1" path="res://Nivel0/left_rigth2.png" id="3_j4wgy"]
+[ext_resource type="Texture2D" uid="uid://b8xpt1jjhe8j5" path="res://Nivel0/abajo1.png" id="4_5ygso"]
+[ext_resource type="Texture2D" uid="uid://ddsm1vmv67cds" path="res://Nivel0/abajo2.png" id="5_f8201"]
+[ext_resource type="Texture2D" uid="uid://b0s07hd2iosb0" path="res://Nivel0/arriba1.png" id="6_ohsdb"]
+[ext_resource type="Texture2D" uid="uid://u3ym6ca6j2ia" path="res://Nivel0/arriba2.png" id="7_8mq76"]
+[ext_resource type="Texture2D" uid="uid://dgccnyeko7eht" path="res://Nivel0/newidle (1).png" id="8_vihpr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6tfc"]
 size = Vector2(47, 86)
@@ -33,10 +33,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_f8201")
+"texture": ExtResource("4_5ygso")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_5ygso")
+"texture": ExtResource("5_f8201")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_5ygso")
@@ -59,7 +59,7 @@ animations = [{
 "texture": ExtResource("6_ohsdb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_8mq76")
+"texture": ExtResource("5_f8201")
 }],
 "loop": true,
 "name": &"caminarup",
@@ -82,8 +82,8 @@ position = Vector2(6.5, 1)
 shape = SubResource("RectangleShape2D_k6tfc")
 
 [node name="jugador" type="AnimatedSprite2D" parent="." unique_id=172090126]
-position = Vector2(8, -14)
-scale = Vector2(0.06241084, 0.06873053)
+position = Vector2(5, -10)
+scale = Vector2(0.049711656, 0.05056639)
 sprite_frames = SubResource("SpriteFrames_tg6t5")
-animation = &"idle"
+animation = &"caminarX"
 flip_h = true
