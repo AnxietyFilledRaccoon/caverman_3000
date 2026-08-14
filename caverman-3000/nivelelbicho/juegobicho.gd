@@ -54,6 +54,8 @@ func final_score():
 	
 func finalizar():
 	print("Nivel completado")
+	$zapato.activo = false
+	$zapato.queue_free()
 	var eventos = get_node_or_null("eventos")
 	if eventos:
 		eventos.nivel_ganado()
