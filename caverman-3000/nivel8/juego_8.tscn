@@ -33,8 +33,10 @@ scale = Vector2(2.5120559, 3.1552217)
 shape = SubResource("RectangleShape2D_vnrs0")
 
 [node name="spriteauto1" type="Sprite2D" parent="auto1" unique_id=27107194]
+position = Vector2(-35, 3)
 scale = Vector2(0.255, 0.255)
 texture = ExtResource("3_lxjtk")
+flip_h = true
 
 [node name="auto2" type="Area2D" parent="." unique_id=888407119]
 position = Vector2(1086, 226)
@@ -45,9 +47,10 @@ position = Vector2(19.5, 0)
 shape = SubResource("RectangleShape2D_upafv")
 
 [node name="spriteauto2" type="Sprite2D" parent="auto2" unique_id=1934672846]
-position = Vector2(0, -32)
+position = Vector2(35, -31)
 scale = Vector2(0.255, 0.255)
 texture = ExtResource("4_b4hcl")
+flip_h = true
 
 [node name="UI" type="Control" parent="." unique_id=1729826808]
 layout_mode = 3
