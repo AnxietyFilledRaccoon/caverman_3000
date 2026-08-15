@@ -29,7 +29,7 @@ animations = [{
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_ljmn2")
 }],
-"loop": 1,
+"loop": true,
 "name": &"caminar",
 "speed": 10.0
 }, {
@@ -37,7 +37,7 @@ animations = [{
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_0yvdd")
 }],
-"loop": 0,
+"loop": false,
 "name": &"idle",
 "speed": 3.0
 }]
@@ -53,7 +53,7 @@ shape = SubResource("RectangleShape2D_se0u2")
 
 [node name="AnimationPlayer" type="AnimatedSprite2D" parent="." unique_id=795290511]
 sprite_frames = SubResource("SpriteFrames_so5ex")
-animation = &"caminar"
+animation = &"idle"
 
 [node name="ColisionPlayer" type="CollisionShape2D" parent="." unique_id=2058001202]
 position = Vector2(-7, 0)
