@@ -53,6 +53,7 @@ func final_score():
 	pantalla_final.size = get_viewport().get_visible_rect().size
 	
 func finalizar():
+	GameManager.tecno_completada = true
 	print("Nivel completado")
 	$zapato.activo = false
 	$zapato.queue_free()

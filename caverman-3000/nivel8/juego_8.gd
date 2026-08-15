@@ -99,6 +99,7 @@ func _on_reiniciar_pressed() -> void:
 	get_tree().reload_current_scene()
 
 func _fin_juego(gano: bool):
+	GameManager.departamento_completada = true
 	juego_activo = false
 	
 	label_resultado.visible = true

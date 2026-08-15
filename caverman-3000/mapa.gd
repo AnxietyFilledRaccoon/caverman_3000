@@ -2,11 +2,19 @@ extends Control
 
 
 
+func _ready():
+	$fuerza.visible = true
+	$cliente.visible = GameManager.cliente_completada
+	$tecno.visible = GameManager.tecno_completada
+	$departamento.visible = GameManager.departamento_completada
+	$satelite.visible = GameManager.satelite_completada
 
-
-
+	
+	
+	
 func _on_fuerza_pressed() -> void:
 	await get_tree().create_timer(0.2).timeout 
+	
 	TransicionManager.cambiar_nivel(
 	"Preparar",
 	preload ("res://asets/Fondos y otras escenas/Botones/BarraEspaciadora3.png"),"")# puedo agregar en el espacio libre la siguiente pantalla
@@ -14,6 +22,7 @@ func _on_fuerza_pressed() -> void:
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://nivelketchup/escena_ketchup.tscn")
 	#aca colocar al nivel 1
+	
 
 
 func _on_cliente_pressed() -> void:

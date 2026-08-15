@@ -12,6 +12,7 @@ func _ready():
 		
 	tween.parallel().tween_property(self, "modulate:a", 1.0, 0.2)
 	#colocar un timer para pasar a otra escena
+	
 	await get_tree().create_timer(2.0).timeout
 
 	var pantalla_final = pantalla_final_scene.instantiate()

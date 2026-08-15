@@ -2,6 +2,12 @@ extends Node
 
 @export var total_vidas: int = 3
 var platita_total: int = 0
+
+var fuerza_completada = false
+var cliente_completada = false
+var tecno_completada = false
+var departamento_completada = false
+var satelite_completada = false
 # Señal para avisar a la interfaz que las vidas cambiaron
 signal vidas_actualizadas(vidas: int)
 # Señalcita para avisar a la interfaz sobre que la platita cambio
