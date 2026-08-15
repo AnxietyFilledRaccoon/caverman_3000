@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bn53t8wyus1jo" path="res://nivel1/item.tscn" id="1_m75pg"]
 [ext_resource type="PackedScene" uid="uid://pmwdcsg6jerg" path="res://nivel1/player.tscn" id="2_epaet"]
 [ext_resource type="Texture2D" uid="uid://cfdy4e62lisyn" path="res://asets/plaza1.png" id="2_w6fdp"]
-[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/metal.png" id="3_utxh4"]
+[ext_resource type="Texture2D" uid="uid://biotiuf0f2hxo" path="res://asets/nivel1/metal.png" id="3_utxh4"]
 [ext_resource type="Script" uid="uid://bwed8ti7xmduw" path="res://nivel1/canvas_layer.gd" id="4_swt8o"]
-[ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/pescado.png" id="5_n2edi"]
-[ext_resource type="Texture2D" uid="uid://dsu7oggfjsr3o" path="res://asets/botella.png" id="5_rxpji"]
-[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/basuraN.png" id="6_rxpji"]
+[ext_resource type="Texture2D" uid="uid://dlp0ybgt5lxsy" path="res://asets/nivel1/pescado.png" id="5_n2edi"]
+[ext_resource type="Texture2D" uid="uid://dsu7oggfjsr3o" path="res://asets/nivel1/botella.png" id="5_rxpji"]
+[ext_resource type="Texture2D" uid="uid://cwnegmam03ni0" path="res://asets/nivel1/basuraN.png" id="6_rxpji"]
 [ext_resource type="PackedScene" uid="uid://rayxtj3essvp" path="res://eventos.tscn" id="6_swt8o"]
 [ext_resource type="Texture2D" uid="uid://do8hp7km6hxpm" path="res://asets/basura.png" id="8_h4yku"]
 [ext_resource type="Texture2D" uid="uid://b8vrcowwwgul7" path="res://asets/Fondos y otras escenas/PantallaPerdida.png" id="11_n2edi"]
@@ -145,7 +145,7 @@ offset_left = 576.0
 offset_top = 3.0
 offset_right = 576.0
 offset_bottom = 81.0
-tiempo_personalizar = 15
+tiempo_personalizar = 8
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("12_w6fdp")]
 

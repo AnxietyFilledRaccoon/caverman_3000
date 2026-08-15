@@ -53,7 +53,7 @@ offset_left = 576.0
 offset_top = 3.0
 offset_right = 576.0
 offset_bottom = 3.0
-tiempo_personalizar = 20
+tiempo_personalizar = 8
 
 [node name="HUDV" parent="." unique_id=1486512705 instance=ExtResource("7_7caxa")]
 
